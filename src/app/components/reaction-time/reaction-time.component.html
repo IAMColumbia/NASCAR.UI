@@ -1,0 +1,35 @@
+<div class="menu" *ngIf="!started">
+  <div class="container">
+    <div class="menu-content">
+      <h1>Are You Faster Than A NASCAR Driver?</h1>
+    </div>
+    <div id="btn-box">
+      <button class="btn" id="play-btn" type="button" (click)="startGame()">
+        Play
+      </button>
+      <br />
+      <button class="btn" id="leader-board-btn">Leader Board</button>
+    </div>
+  </div>
+</div>
+
+<div class="clickable-area" (click)="realClick()" *ngIf="started && !finished">
+  <div class="start" *ngIf="started && !showMid && !showClick"></div>
+  <div class="mid" *ngIf="showMid"></div>
+  <div class="click" *ngIf="showClick && !showMid"></div>
+</div>
+
+<div class="menu" *ngIf="finished">
+  <div class="container">
+    <div class="menu-content">
+      <h1>SCORE</h1>
+      <h2>Attempt: {{ reactionTime }}</h2>
+      <h2>Best: 100ms</h2>
+    </div>
+    <div id="btn-box">
+      <button class="btn" (click)="resetGame()">Play Again</button>
+      <br />
+      <button class="btn">Leaderboard</button>
+    </div>
+  </div>
+</div>

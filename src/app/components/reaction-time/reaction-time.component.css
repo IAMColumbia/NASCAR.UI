@@ -1,0 +1,107 @@
+.menu {
+    background-image: url(./assets/img/ChicagoSRW_BG_Pattern_Light_Big_02.jpg);
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.menu .btn {
+    border: none;
+    background: blanchedalmond;
+    font-size: 1em;
+    padding: auto;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 4px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.menu-content{
+    /* border: 1px solid black; */
+    width: 95vw;
+    background: white;
+    opacity: 0.8;
+    
+}
+#btn-box{
+    /* border: 1px solid black; */
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    margin:0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.clickable-area {
+    height: 100vh;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    color: black;
+    display: grid;
+    place-items: center;
+    font-size: 2em;
+}
+
+.start {
+    background: white url(./assets/img/start.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    color: black;
+    display: grid;
+    place-items: center;
+    font-size: 2em;
+}
+
+.mid {
+    background: white url(./assets/img/mid.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    color: black;
+    display: grid;
+    place-items: center;
+    font-size: 2em;
+}
+
+.click {
+    background: white url(./assets/img/click.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    color: black;
+    display: grid;
+    place-items: center;
+    font-size: 2em;
+}
+
+.fake-button{
+    visibility: hidden;
+}

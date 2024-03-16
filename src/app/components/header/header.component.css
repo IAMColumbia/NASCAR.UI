@@ -1,0 +1,49 @@
+header {
+    background: white;
+    color: black;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+}
+
+a {
+    color: inherit;
+    display: inline-block;
+    padding: 15px 12px;
+    line-height: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    background: none;
+    border: medium;
+    text-decoration: none;
+}
+
+.container {
+    margin: 0px auto;
+    max-width: 1010px;
+    position: relative;
+}
+
+a.logo {
+    display: inline-block;
+    padding: 15px 12px;
+    line-height: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    border: medium;
+}
+
+a:hover {
+    background-color: #e72929;
+    color: white;
+}
+
+nav {
+    vertical-align: top;
+    float: right;
+}

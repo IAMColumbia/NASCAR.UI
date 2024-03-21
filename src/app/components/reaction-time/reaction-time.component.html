@@ -1,4 +1,4 @@
-<div class="menu" *ngIf="!started">
+<div class="menu" *ngIf="!started && !showLeaderBoard">
   <div class="container">
     <div class="menu-content">
       <h1>Are You Faster Than A NASCAR Driver?</h1>
@@ -8,7 +8,9 @@
         Play
       </button>
       <br />
-      <button class="btn" id="leader-board-btn">Leader Board</button>
+      <button class="btn" id="leader-board-btn" (click)="displayLeaderBoard()">
+        Leaderboard
+      </button>
     </div>
   </div>
 </div>
@@ -19,7 +21,7 @@
   <div class="click" *ngIf="showClick && !showMid"></div>
 </div>
 
-<div class="menu" *ngIf="finished">
+<div class="menu" *ngIf="finished && !showLeaderBoard">
   <div class="container">
     <div class="menu-content">
       <h1>SCORE</h1>
@@ -29,7 +31,9 @@
     <div id="btn-box">
       <button class="btn" (click)="resetGame()">Play Again</button>
       <br />
-      <button class="btn">Leaderboard</button>
+      <button class="btn" (click)="displayLeaderBoard()">Leaderboard</button>
     </div>
   </div>
 </div>
+
+<app-leaderboard *ngIf="showLeaderBoard"></app-leaderboard>

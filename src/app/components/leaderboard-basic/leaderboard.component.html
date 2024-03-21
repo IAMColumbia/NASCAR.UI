@@ -1,0 +1,17 @@
+<div>
+  <table>
+    <thead>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Score</th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let record of records">
+        <td>{{ record.rank }}</td>
+        <td>{{ record.user }}</td>
+        <td>{{ record.score }}ms</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

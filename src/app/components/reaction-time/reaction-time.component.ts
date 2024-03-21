@@ -10,6 +10,7 @@ started:boolean = false;
 finished:boolean = false;
 showMid:boolean = false;
 showClick:boolean = false;
+showLeaderBoard:boolean = false;
 startTime: number = 0;
 endTime: number = 0;
 reactionTime: number = 0;
@@ -60,6 +61,12 @@ resetGame(){
   this.startTime = 0;
   this.endTime = 0;
   this.reactionTime = 0;
+}
+
+displayLeaderBoard(){
+  this.showLeaderBoard = true;
+  console.log(this.showLeaderBoard);
+  console.log(this.finished);
 }
 
 }

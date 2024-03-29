@@ -43,8 +43,10 @@ export class LoginComponent implements OnInit{
   }
 
   async handleCredentialResponse(response: CredentialResponse){
+    debugger;
     await this.service.LoginWithGoogle(response.credential).subscribe(
       (x:any) => {
+        debugger;
         localStorage.setItem("token", x.token);
         this._ngZone.run(()=> {
           this.router.navigate(['']);

@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit{
       // @ts-ignore
       google.accounts.id.renderButton(
         // @ts-ignore
-        document.getElementById("button-div"),{theme: "outline", size: "large", width: "100%"}
+        document.getElementById("button-div"),{type: "standard", theme: "filled_blue", size: "large", shape: "rectangular", width: "900px", logo_alignment: "left"}
       );
       // @ts-ignore
       google.accounts.id.prompt((notification: PromptMomentNotification)=>{});
@@ -43,11 +43,13 @@ export class LoginComponent implements OnInit{
   }
 
   async handleCredentialResponse(response: CredentialResponse){
+    //debugger;
     await this.service.LoginWithGoogle(response.credential).subscribe(
       (x:any) => {
-        localStorage.setItem("token", x.token);
+        //debugger;
+        //localStorage.setItem("token", x.token);
         this._ngZone.run(()=> {
-          this.router.navigate(['']);
+          this.router.navigate(['/logout']);
         })},
         (error:any) => {
           debugger

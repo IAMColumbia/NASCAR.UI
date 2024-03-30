@@ -8,10 +8,12 @@ import { HomeComponent } from './components/home/home.component';
 import { ReactionTimeComponent } from './components/reaction-time/reaction-time.component';
 import { LeaderboardComponent } from './components/leaderboard-basic/leaderboard.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { MaterialModule } from './material/material-module';
+import { Interceptor } from './services/interceptor';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -29,8 +31,13 @@ import { MaterialModule } from './material/material-module';
     HttpClientModule,
     MaterialModule
   ],
-  providers: [
-    provideAnimationsAsync()
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: Interceptor,
+    multi: true
+  },
+    provideAnimationsAsync(),
+    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}}
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,93 @@
+{
+    "questions": [{
+        "questionText": "How many colors are in the Chicago NASCAR logo?",
+        "options": [{
+                "text": "1"
+            },
+            {
+                "text": "2"
+            },
+            {
+                "text": "3",
+                "correct": true
+            },
+            {
+                "text": "4"
+            }
+        ],
+        "explanation": "TODO"
+        },
+        {
+            "questionText": "What type of pizza is Chicago known for?",
+            "options": [{
+                "text": "Deep Dish",
+                "correct": true
+            },
+            {
+                "text": "Tavern"
+            },
+            {
+                "text": "Thin"
+            },
+            {
+                "text": "Pan"
+            }
+        ],
+        "explanation": "TODO"
+        },
+        {
+            "questionText": "ow many stars are in the Chicago flag?",
+            "options": [{
+                "text": "1"
+            },
+            {
+                "text": "2"
+            },
+            {
+                "text": "3",
+                "correct": true
+            },
+            {
+                "text": "4"
+            }
+        ],
+        "explanation": "TODO"
+        },
+        {
+            "questionText": "What is the nickname often used to refer to Chicago?",
+            "options": [{
+                "text": "The Windy City",
+                "correct": true
+            },
+            {
+                "text": "2"
+            },
+            {
+                "text": "3"
+            },
+            {
+                "text": "4"
+            }
+        ],
+        "explanation": "TODO"
+        },
+        {
+            "questionText": "What do you NOT put on a Chicago hotdog?",
+            "options": [{
+                "text": "Peppers"
+            },
+            {
+                "text": "Relish"
+            },
+            {
+                "text": "Mustard"
+            },
+            {
+                "text": "Kethchup",
+                "correct": true
+            }
+        ],
+        "explanation": "TODO"
+        }
+    ]
+}

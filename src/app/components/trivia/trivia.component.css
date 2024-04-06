@@ -12,7 +12,7 @@
     transform: translate(-50%, -50%);
 }
 
-#menu{
+#menu, #trivia{
     width: 100vw;
     height: 100vh;
     background: white url(./assets/background.svg) no-repeat center;
@@ -24,7 +24,7 @@
     color:white;
 }
 
-#menu-content{
+#menu-content, #trivia-content{
     background: #DAF0F8;
     width: 90vw;
     height: 50vh;
@@ -59,4 +59,25 @@
 
 #trivia{
     padding: 5em;
+}
+
+li{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.answer-choice{
+    color: white;
+    width:70%;
+    transform: skewX(-15deg);
+    background: #00294A;
+    border: 5px solid #FFFFFF;
+    border-radius: 10px;
+    box-shadow: -4px 7px #4E4E4E;
+    text-align: center;
+}
+
+#question{
+    color: black;
 }

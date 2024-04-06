@@ -25,12 +25,24 @@
   </div>
 
   <div id="trivia" *ngIf="started">
-    <div id="trivia-content">
-      <div id="progress">{{ questionNum }}/5</div>
-      <div id="timer">0</div>
-      <div id="score">{{ score }} pts</div>
-      <div id="question"></div>
-      <div id="answers"></div>
+    <div id="container">
+      <div id="trivia-content">
+        <div id="stats">
+          <div id="progress">{{ questionNum }}/5</div>
+          <div id="timer">{{ timer }}</div>
+          <div id="score">{{ score }} pts</div>
+        </div>
+
+        <div id="question">{{ questions[questionNum]?.questionText }}</div>
+
+        <div id="answers">
+          <ol *ngFor="let option of questions[questionNum]?.options">
+            <li (click)="Answer(questionNum + 1, option)">
+              <div class="answer-choice">{{ option.text }}</div>
+            </li>
+          </ol>
+        </div>
+      </div>
     </div>
   </div>
 </div>

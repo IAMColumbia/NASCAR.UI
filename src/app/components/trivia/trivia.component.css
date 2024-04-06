@@ -24,7 +24,7 @@
     color:white;
 }
 
-#menu-content, #trivia-content{
+#menu-content, #trivia-content, #end-screen-content{
     background: #DAF0F8;
     width: 90vw;
     height: 50vh;

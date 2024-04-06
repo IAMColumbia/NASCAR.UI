@@ -44,11 +44,11 @@
                 "text": "2"
             },
             {
-                "text": "3",
-                "correct": true
+                "text": "3"
             },
             {
-                "text": "4"
+                "text": "4",
+                "correct": true
             }
         ],
         "explanation": "TODO"

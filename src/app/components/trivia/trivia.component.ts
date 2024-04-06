@@ -14,13 +14,15 @@ export class TriviaComponent implements OnInit{
   //game: TriviaRecord;
   started: boolean = false;
   levelSelect: boolean = false;
+  triviaCompleted: Boolean = false;
+
   difficulty: number = 0;
   questionNum: number = 0;
   score: number = 0;
   questions: any = [];
+
   timer = 5;
   interval$: any;
-  triviaCompleted: Boolean = false;
 
   ngOnInit(): void {
   } 
@@ -58,27 +60,25 @@ export class TriviaComponent implements OnInit{
   }
 
   Answer(questionNumber: number, option: any){
-    //if last question go to end screen
-    if(questionNumber === this.questions.length){
-      this.triviaCompleted = true;
-      this.StopTimer();
-    }
+    this.StopTimer();
     //if correct
     if(option.correct){
       this.score += 100;
+    }
+
+    //if last question go to end screen
+    if(questionNumber === this.questions.length){
       setTimeout(() => {
-        this.questionNum++;
-        this.ResetTimer();
-      }, 1000);
+        this.triviaCompleted = true;
+      },1000);
     }
     else{
       setTimeout(() => {
         this.questionNum++;
         this.ResetTimer();
+        this.StartTimer();
       },1000);
     }
-
-
   }
 
   StartTimer(){
@@ -86,13 +86,13 @@ export class TriviaComponent implements OnInit{
         .subscribe(val => {
           this.timer--;
           if(this.timer === 0){
-            this.questionNum++;
-            this.timer = 5;
+            let option = {text: ""}
+            this.Answer(this.questionNum+1, option);
           }
         });
     setTimeout(()=>{
       this.interval$.unsubscribe();
-    },25000);
+    },800000);
   }
 
   StopTimer(){
@@ -103,10 +103,14 @@ export class TriviaComponent implements OnInit{
   ResetTimer(){
     this.StopTimer();
     this.timer = 5;
-    this.StartTimer();
   }
 
   ResetQuiz(){
-
+    this.ResetTimer();
+    this.triviaCompleted = false;
+    this.levelSelect = true;
+    this.started = false;
+    this.questionNum = 0;
+    this.score = 0;
   }
 }

@@ -24,11 +24,11 @@
     </div>
   </div>
 
-  <div id="trivia" *ngIf="started">
+  <div id="trivia" *ngIf="started && !triviaCompleted">
     <div id="container">
       <div id="trivia-content">
         <div id="stats">
-          <div id="progress">{{ questionNum }}/5</div>
+          <div id="progress">{{ questionNum + 1 }}/5</div>
           <div id="timer">{{ timer }}</div>
           <div id="score">{{ score }} pts</div>
         </div>
@@ -42,6 +42,17 @@
             </li>
           </ol>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="end-screen" *ngIf="triviaCompleted && started">
+    <div id="container">
+      <div id="end-screen-content">
+        <h1>COMPLETE!</h1>
+        <h2>Score</h2>
+        <h2>{{ score }}</h2>
+        <button (click)="ResetQuiz()">Continue</button>
       </div>
     </div>
   </div>

@@ -14,6 +14,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { MaterialModule } from './material/material-module';
 import { Interceptor } from './services/interceptor';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import { TriviaComponent } from './components/trivia/trivia.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
     ReactionTimeComponent,
     LeaderboardComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    TriviaComponent
   ],
   imports: [
     BrowserModule,

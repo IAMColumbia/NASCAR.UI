@@ -15,7 +15,7 @@
 #menu, #trivia{
     width: 100vw;
     height: 100vh;
-    background: white url(./assets/background.svg) no-repeat center;
+    background: rgb(10, 27, 55) url(./assets/dark-pattern.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -29,6 +29,7 @@
     width: 90vw;
     height: 50vh;
     border-radius: 25px;
+    z-index: 1;
 }
 
 #start-button{

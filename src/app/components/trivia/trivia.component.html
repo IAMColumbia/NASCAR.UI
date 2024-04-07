@@ -1,4 +1,4 @@
-<div>
+<div id="base">
   <div id="menu" *ngIf="!levelSelect && !started">
     <div id="container">
       <h1 id="title">
@@ -33,9 +33,11 @@
           <div id="score">{{ score }} pts</div>
         </div>
 
-        <div id="question">{{ questions[questionNum]?.questionText }}</div>
+        <div id="question" *ngIf="questionDisplay">
+          {{ questions[questionNum]?.questionText }}
+        </div>
 
-        <div id="answers">
+        <div id="answers" *ngIf="answerDisplay">
           <ol *ngFor="let option of questions[questionNum]?.options">
             <li (click)="Answer(questionNum + 1, option)">
               <div class="answer-choice">{{ option.text }}</div>
@@ -52,7 +54,7 @@
         <h1>COMPLETE!</h1>
         <h2>Score</h2>
         <h2>{{ score }}</h2>
-        <button (click)="ResetQuiz()">Continue</button>
+        <button (click)="NextLevel()">Continue</button>
       </div>
     </div>
   </div>

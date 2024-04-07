@@ -3,6 +3,7 @@ import { TriviaRecord } from '../../models/trivia-game';
 import { Question } from '../../models/question';
 import { TriviaService } from '../../services/trivia.service';
 import { interval } from 'rxjs';
+import { NgOptimizedImage } from '@angular/common'
 
 @Component({
   selector: 'app-trivia',
@@ -15,6 +16,8 @@ export class TriviaComponent implements OnInit{
   started: boolean = false;
   levelSelect: boolean = false;
   triviaCompleted: Boolean = false;
+  questionDisplay: Boolean = false;
+  answerDisplay: Boolean = false;
 
   difficulty: number = 0;
   questionNum: number = 0;
@@ -25,6 +28,8 @@ export class TriviaComponent implements OnInit{
   interval$: any;
 
   ngOnInit(): void {
+    this.ResetQuiz();
+    this.levelSelect = false;
   } 
 
   constructor(private triviaSerivce: TriviaService){}
@@ -56,11 +61,21 @@ export class TriviaComponent implements OnInit{
           });
     }
 
-    this.StartTimer();
+    this.DisplayQuestion();
+    
+  }
+
+  DisplayQuestion(){
+    this.questionDisplay = true;
+    setTimeout(()=>{
+      this.StartTimer();
+    }, 500);
+    
+
   }
 
   Answer(questionNumber: number, option: any){
-    this.StopTimer();
+    this.StopQuestionTimer();
     //if correct
     if(option.correct){
       this.score += 100;
@@ -70,18 +85,43 @@ export class TriviaComponent implements OnInit{
     if(questionNumber === this.questions.length){
       setTimeout(() => {
         this.triviaCompleted = true;
-      },1000);
+      },500);
     }
     else{
       setTimeout(() => {
         this.questionNum++;
-        this.ResetTimer();
-        this.StartTimer();
-      },1000);
+        this.answerDisplay = false;
+        this.timer = 5;
+        this.DisplayQuestion();
+      },500);
     }
   }
 
-  StartTimer(){
+  ResetQuiz(){
+    this.triviaCompleted = false;
+    this.levelSelect = false;
+    this.started = false;
+    this.questionDisplay = false;
+    this.answerDisplay = false;
+    this.questionNum = 0;
+    this.score = 0;
+    this.timer = 5;
+  }
+
+  NextLevel(){
+    this.triviaCompleted = false;
+    this.levelSelect = true;
+    this.started = false;
+    this.questionDisplay = false;
+    this.answerDisplay = false;
+    this.questionNum = 0;
+    this.score = 0;
+    this.StopQuestionTimer();
+    this.timer = 5;
+    
+  }
+
+  StartQuestionTimer(){
     this.interval$ = interval(1000)
         .subscribe(val => {
           this.timer--;
@@ -95,22 +135,27 @@ export class TriviaComponent implements OnInit{
     },800000);
   }
 
-  StopTimer(){
+  StopQuestionTimer(){
     this.interval$.unsubscribe();
-    this.timer = 0;
   }
 
-  ResetTimer(){
-    this.StopTimer();
-    this.timer = 5;
+  ResetQuestionTimer(){
+    this.StopQuestionTimer();
+    this.timer = 30;
   }
-
-  ResetQuiz(){
-    this.ResetTimer();
-    this.triviaCompleted = false;
-    this.levelSelect = true;
-    this.started = false;
-    this.questionNum = 0;
-    this.score = 0;
+  
+  StartTimer(){
+    this.interval$ = interval(1000)
+        .subscribe(val => {
+          this.timer--;
+          if(this.timer === 0){
+            this.answerDisplay = true;
+            this.ResetQuestionTimer();
+            this.StartQuestionTimer();
+          }
+        });
+    setTimeout(()=>{
+      this.interval$.unsubscribe();
+    },800000);
   }
 }

@@ -8,10 +8,5 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   constructor(private router: Router){}
-refresh(route:string){
-  this.router.navigate([`/${route}`]).then(()=>{
-    window.location.reload();
-  });
-  
-}
+
 }

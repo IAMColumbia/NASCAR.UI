@@ -1,0 +1,84 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    margin:0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#menu, #trivia{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(10, 27, 55) url(./assets/dark-pattern.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    color:white;
+}
+
+#menu-content, #trivia-content, #end-screen-content{
+    background: #DAF0F8;
+    width: 90vw;
+    height: 50vh;
+    border-radius: 25px;
+    z-index: 1;
+}
+
+#start-button{
+    color: white;
+    width:70%;
+    transform: skewX(-15deg);
+    background: #00294A;
+    border: 5px solid #FFFFFF;
+    border-radius: 10px;
+    box-shadow: -4px 7px #4E4E4E;
+}
+
+#start-button-text{
+    transform: skewX(15deg);
+    padding: 10px;
+    font-size: 32px;
+}
+
+#buttons{
+    width: 75vw;
+    padding: 5em;
+    margin: auto;
+}
+
+.button{
+    cursor: pointer;
+}
+
+#trivia{
+    padding: 5em;
+}
+
+li{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.answer-choice{
+    color: white;
+    width:70%;
+    transform: skewX(-15deg);
+    background: #00294A;
+    border: 5px solid #FFFFFF;
+    border-radius: 10px;
+    box-shadow: -4px 7px #4E4E4E;
+    text-align: center;
+}
+
+#question{
+    color: black;
+}

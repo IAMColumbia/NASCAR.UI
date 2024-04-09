@@ -1,0 +1,68 @@
+<div id="base">
+  <div id="menu" *ngIf="!levelSelect && !started">
+    <div id="container">
+      <h1 id="title">
+        Welcome to <br />
+        NASCAR <br />Chicago<br />
+        2024 Trivia!
+      </h1>
+      <div id="menu-content">
+        <button id="start-button">
+          <div (click)="StartGame()" id="start-button-text" class="button">
+            Start
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="level-select" *ngIf="levelSelect">
+    <div id="buttons">
+      <button class="button" (click)="LevelSelect(1)">Easy</button>
+      <button class="button" (click)="LevelSelect(2)">Medium</button>
+      <button class="button" (click)="LevelSelect(3)">Hard</button>
+    </div>
+  </div>
+
+  <div id="trivia" *ngIf="started && !triviaCompleted">
+    <div id="container">
+      <div id="trivia-content">
+        <div id="stats">
+          <div id="progress">{{ questionNum + 1 }}/5</div>
+          <div id="timer">{{ timer }}</div>
+          <div id="score">{{ score }} pts</div>
+        </div>
+
+        <div id="question" *ngIf="questionDisplay">
+          {{ questions[questionNum]?.questionText }}
+        </div>
+
+        <div id="answers" *ngIf="answerDisplay">
+          <ol *ngFor="let option of questions[questionNum]?.options">
+            <li (click)="Answer(questionNum + 1, option)">
+              <div class="answer-choice">{{ option.text }}</div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="end-screen" *ngIf="triviaCompleted && started">
+    <div id="container">
+      <div id="end-screen-content">
+        <h1>COMPLETE!</h1>
+        <h2>Score</h2>
+        <h2>{{ score }}</h2>
+        <mat-tab-group>
+          <mat-tab label="Question 1">{{ questions[0]?.explanation }}</mat-tab>
+          <mat-tab label="Question 2">{{ questions[1]?.explanation }}</mat-tab>
+          <mat-tab label="Question 3">{{ questions[2]?.explanation }}</mat-tab>
+          <mat-tab label="Question 4">{{ questions[3]?.explanation }}</mat-tab>
+          <mat-tab label="Question 5">{{ questions[4]?.explanation }}</mat-tab>
+        </mat-tab-group>
+        <button (click)="NextLevel()">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,6 +12,7 @@ import{MatFormFieldModule} from "@angular/material/form-field";
 import{MatInputModule} from "@angular/material/input";
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import {MatTabsModule} from "@angular/material/tabs"
 
 @NgModule({
     declarations:[],
@@ -30,7 +31,8 @@ import { MatSortModule } from '@angular/material/sort';
         MatFormFieldModule,
         MatInputModule,
         MatPaginatorModule,
-        MatSortModule
+        MatSortModule,
+        MatTabsModule
     ]
 })
 export class MaterialModule{}

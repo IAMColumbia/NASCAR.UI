@@ -12,8 +12,9 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { MaterialModule } from './material/material-module';
-import { Interceptor } from './services/interceptor';
+//import { Interceptor } from './services/interceptor';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import { TriviaComponent } from './components/trivia/trivia.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
     ReactionTimeComponent,
     LeaderboardComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    TriviaComponent
   ],
   imports: [
     BrowserModule,
@@ -31,11 +33,11 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
     HttpClientModule,
     MaterialModule
   ],
-  providers: [{
+  providers: [/* {
     provide: HTTP_INTERCEPTORS,
-    useClass: Interceptor,
+    //useClass: Interceptor,
     multi: true
-  },
+  }, */
     provideAnimationsAsync(),
     {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}}
   ],

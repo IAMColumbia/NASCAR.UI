@@ -15,7 +15,7 @@
                 "text": "4"
             }
         ],
-        "explanation": "TODO"
+        "explanation": "Question1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. TODO"
         },
         {
             "questionText": "What type of pizza is Chicago known for?",
@@ -33,7 +33,7 @@
                 "text": "Pan"
             }
         ],
-        "explanation": "TODO"
+        "explanation": "Question 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
         },
         {
             "questionText": "How many stars are in the Chicago flag?",
@@ -51,7 +51,7 @@
                 "correct": true
             }
         ],
-        "explanation": "TODO"
+        "explanation": "Question 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
         },
         {
             "questionText": "What is the nickname often used to refer to Chicago?",
@@ -69,7 +69,7 @@
                 "text": "4"
             }
         ],
-        "explanation": "TODO"
+        "explanation": "Question 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
         },
         {
             "questionText": "What do you NOT put on a Chicago hotdog?",
@@ -87,7 +87,7 @@
                 "correct": true
             }
         ],
-        "explanation": "TODO"
+        "explanation": "Question 5: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
         }
     ]
 }

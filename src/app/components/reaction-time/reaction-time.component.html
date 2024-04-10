@@ -1,3 +1,15 @@
+<div id="overlay" *ngIf="tooSoon">
+  <div id="too-soon-content">
+    <p>FALSE START!</p>
+    <img src="../../../assets/img/black-flag.png" />
+    <p>
+      Tap the screen when <br />
+      the flag is waved!
+    </p>
+    <button (click)="resetGame()">Try Again</button>
+  </div>
+</div>
+
 <div class="menu" *ngIf="!started && !showLeaderBoard">
   <div class="container">
     <div class="menu-content">

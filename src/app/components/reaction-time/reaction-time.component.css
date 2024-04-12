@@ -1,7 +1,12 @@
-.menu {
-    background-image: url(./assets/img/ChicagoSRW_BG_Pattern_Light_Big_02.jpg);
+#reaction-game{
     width: 100vw;
     height: 100vh;
+    margin: 0;
+}
+.menu {
+    background-image: url(./assets/img/ChicagoSRW_BG_Pattern_Light_Big_02.jpg);
+    width: 100%;
+    height: 100%;
     text-align: center;
 }
 
@@ -19,14 +24,10 @@
 }
 
 .menu-content{
-    /* border: 1px solid black; */
     width: 95vw;
     background: white;
     opacity: 0.8;
     
-}
-#btn-box{
-    /* border: 1px solid black; */
 }
 
 .container, #too-soon-content{
@@ -34,7 +35,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid black; */
     margin:0;
     position: absolute;
     top: 50%;
@@ -44,7 +44,7 @@
 }
 
 .clickable-area {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     cursor: pointer;
     overflow: hidden;
@@ -56,12 +56,12 @@
 }
 
 .start {
-    background: white url(./assets/img/start.png) no-repeat center;
+    background: url(./assets/img/start.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     cursor: pointer;
     overflow: hidden;
@@ -78,7 +78,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     cursor: pointer;
     overflow: hidden;
@@ -95,7 +95,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     cursor: pointer;
     overflow: hidden;
@@ -108,82 +108,122 @@
 
 #overlay{
     position: fixed;
-    display: block;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
-    z-index: 2;
+    z-index: 100;
 }
 
-#too-soon-content{
-    width: 84.28%;
-    height: 54.11%;
-    height: 504.36px;
-    background: #D9D9D9;
-    border: 14px solid #FFFFFF;
+#pop-up{
+    /* center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
+
+    /* Style */
+    width: 84.18%;
+    height: 53.6%;
+    background: #d9d9d9;
+    margin: auto;
+    padding: 8.6%, 8.6%;
+    border: 14px solid #ffffff;
     border-radius: 22px;
-    container: flex;
+
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
 }
 
 #pop-up-title {
-    height: 25%;
-    top: 10%;
-
-    font-family: 'Neue Haas Grotesk Display Pro';
+    height: 8.6%;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    font-family: "neue-haas-grotesk-display", sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    /* identical to box height */
+    font-size: 3.65vh;
+    text-wrap: nowrap;
     text-align: center;
-
     color: #000000;
-
-
 }
 
 #pop-up-flag{
-    height: 25%;
-    width: 226px;
-    left: calc(50% - 226px/2 - 1px);
-    top: 36.27%;
-    bottom: 52.69%;
-
-
+    width: 62.25%;
+    height: 19.89%;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #pop-up-message{
-    height: 25%;
-    width: 243px;
-    height: 58px;
-    left: calc(50% - 243px/2 - 0.5px);
-    top: calc(50% - 58px/2 + 49px);
+    height: 11.6%;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 2.57vh;
     text-align: center;
-
     color: #000000;
+    line-height: calc(1.2 * 2.57vh);
+}
 
+.pop-up-button{
+    width: 86%;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    
+    border: 6px solid #FFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: skew(-18deg);
+    border-radius: 16px;
+
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 900;
+    font-size: 4.29vh;
+    text-align: center;
+    color: #FFF;
+
+    cursor: pointer;
 
 }
 
-#pop-up-button{
-    width: 80%;
-    height: 10%;
+#pop-up-btn-instruction{
+    background: #03AF51;
+}
+
+#pop-up-btn-try-again{
     background: #050606;
-    color: #FFFFFF;
-    border: 6px solid #FFFFFF;
-    transform: skew(-10deg);
-    border-radius: 5px;
-    left: 10%;
-    top: 85%;
 }
 
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+    #reaction-game{
+        width: 800px;
+        height: 100vh;
+        margin: auto;
+    }
+
+    #pop-up{
+        width: 700px;
+    }
+} /* closes 769px+ */
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	
+} /* closes 1024px+ */

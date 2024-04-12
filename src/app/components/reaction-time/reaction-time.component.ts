@@ -12,16 +12,30 @@ showMid:boolean = false;
 showClick:boolean = false;
 showLeaderBoard:boolean = false;
 tooSoon:boolean = false;
+instructions:boolean = false;
 
 startTime: number = 0;
 endTime: number = 0;
 reactionTime: number = 0;
 
+scoreRound1: number = 0;
+scoreRound2: number = 0;
+scoreRound3: number = 0;
+
+completedRound1: boolean = false;
+completedRound2: boolean = false;
+completedRound3: boolean = false;
+
 ngOnInit(): void {
 }
 
-startGame(): void{
+displayInstructions(): void{
+  this.instructions = true;
   this.started = true;
+}
+
+startGame(): void{
+  this.instructions = false;
   setTimeout(()=>{
     if(!this.tooSoon){
       this.showMid = true;

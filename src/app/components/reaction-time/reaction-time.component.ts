@@ -18,14 +18,6 @@ startTime: number = 0;
 endTime: number = 0;
 reactionTime: number = 0;
 
-scoreRound1: number = 0;
-scoreRound2: number = 0;
-scoreRound3: number = 0;
-
-completedRound1: boolean = false;
-completedRound2: boolean = false;
-completedRound3: boolean = false;
-
 ngOnInit(): void {
 }
 

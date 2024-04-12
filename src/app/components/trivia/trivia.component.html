@@ -19,8 +19,16 @@
   <div id="level-select" *ngIf="levelSelect">
     <div id="buttons">
       <button class="button" (click)="LevelSelect(1)">Easy</button>
-      <button class="button" (click)="LevelSelect(2)">Medium</button>
-      <button class="button" (click)="LevelSelect(3)">Hard</button>
+      <button class="button" (click)="LevelSelect(2)" *ngIf="completedRound1">
+        Medium
+      </button>
+      <button
+        class="button"
+        (click)="LevelSelect(3)"
+        *ngIf="completedRound1 && completedRound2"
+      >
+        Hard
+      </button>
     </div>
   </div>
 

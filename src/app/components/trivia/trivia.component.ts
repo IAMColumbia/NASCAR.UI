@@ -12,7 +12,6 @@ import { NgOptimizedImage } from '@angular/common'
 })
 export class TriviaComponent implements OnInit{
 
-  //game: TriviaRecord;
   started: boolean = false;
   levelSelect: boolean = false;
   triviaCompleted: Boolean = false;
@@ -26,6 +25,14 @@ export class TriviaComponent implements OnInit{
 
   timer = 5;
   interval$: any;
+
+  scoreRound1: number = 0;
+  scoreRound2: number = 0;
+  scoreRound3: number = 0;
+
+  completedRound1: boolean = false;
+  completedRound2: boolean = false;
+  completedRound3: boolean = false;
 
   ngOnInit(): void {
     this.ResetQuiz();
@@ -76,22 +83,40 @@ export class TriviaComponent implements OnInit{
 
   Answer(questionNumber: number, option: any){
     this.StopQuestionTimer();
+
+    option.chosen = true;
+
     //if correct
     if(option.correct){
-      this.score += 100;
+      this.score += (this.difficulty * 100);
+      this.questions[this.questionNum].correct = true;
     }
 
     //if last question go to end screen
     if(questionNumber === this.questions.length){
       setTimeout(() => {
         this.triviaCompleted = true;
+        if(this.difficulty === 1){
+          this.completedRound1 = true;
+          this.scoreRound1 = this.score;
+        }
+        else if(this.difficulty === 2){
+          this.completedRound2 = true;
+          this.scoreRound2 = this.score;
+        }
+        else if(this.difficulty === 3){
+          this.completedRound3 = true;
+          this.scoreRound3 = this.score;
+        }
+
+        console.log(this.questions);
       },500);
     }
     else{
       setTimeout(() => {
         this.questionNum++;
         this.answerDisplay = false;
-        this.timer = 5;
+        this.timer = 2;
         this.DisplayQuestion();
       },500);
     }
@@ -105,7 +130,7 @@ export class TriviaComponent implements OnInit{
     this.answerDisplay = false;
     this.questionNum = 0;
     this.score = 0;
-    this.timer = 5;
+    this.timer = 2;
   }
 
   NextLevel(){
@@ -117,7 +142,7 @@ export class TriviaComponent implements OnInit{
     this.questionNum = 0;
     this.score = 0;
     this.StopQuestionTimer();
-    this.timer = 5;
+    this.timer = 2;
     
   }
 

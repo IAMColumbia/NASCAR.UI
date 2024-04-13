@@ -8,12 +8,12 @@ import { LeaderboardService } from '../../services/leaderboard.service';
   styleUrl: './leaderboard.component.css'
 })
 export class LeaderboardComponent {
-  records: LeaderBoardRecord[]=[];
+  scores: any=[];
   constructor(private leaderboardService: LeaderboardService){}
 
   ngOnInit(): void{
     this.leaderboardService
     .getLeaderBoardRecords()
-    .subscribe((result: LeaderBoardRecord[]) => (this.records = result));
+    .subscribe(res => {this.scores = res.scores});
   }
 }

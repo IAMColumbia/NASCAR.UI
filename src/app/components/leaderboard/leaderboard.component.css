@@ -1,0 +1,216 @@
+
+#leaderboard{
+  background: #091D38 url(./assests/leaderboard-background.png)no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding-top: 13.42%;
+  padding-bottom: 20.26%;
+  padding-left: 7.849%;
+  padding-right: 7.84802%;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+#content{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 3.894389%;
+}
+
+#title{
+  position: relative;
+  width: 98.2%;
+  height: 10%;
+  background: #000000;
+  border: 6px solid #FFFFFF;
+  margin:0 auto;
+  transform: skew(-14deg);
+  border-radius: 12px;
+
+  color: #FFF;
+  font-size: 6.1vh;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 6.1vh;
+  text-align: center;
+}
+
+#scores{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.18vh;
+  width: 96.468%;
+  height: 59.666%;
+  justify-content: center;
+  align-items: center;
+}
+
+#score{
+  box-sizing: content-box;
+  width: 91.83%;
+  height: 11.73%;
+  display: flex;
+  flex-direction: row;
+  background: #D9D9D9;
+  border-radius: 19px;
+  border: 6px solid #FFFFFF;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3.42% 4.04%;
+}
+
+#avatar{
+  height: 99.5%;
+  width: 15.9%;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+#driver-indicator{
+  box-sizing: content-box;
+  width: 113.19%;
+  height: 26.74%;
+
+  border-radius: 4px;
+  border: 1.5px solid #000;
+  background: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nascar-logo{
+  width: 95.48%;
+  height: 64.27%;
+
+}
+
+#username{
+  box-sizing: content-box;
+  width:44.745%;
+  line-height: 20px;
+  text-wrap:nowrap;
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 450;
+}
+
+#time{
+  width: 30.576%;
+  height: 85.217%;
+  border-radius: 15px;
+  background-color: #00294A;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#time p{
+  color: #FFFFFF;
+
+  line-height: 20px;
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 450;
+  margin: 0;
+}
+
+#paginator{
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: row;
+  padding: 3 9;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 27.327%;
+  height: 4.5897%;
+  border: 3px solid #FFFFFF;
+  background: #D9D9D9;
+  border-radius: 7px;
+  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.v-line{
+  height: 81.81%;
+  width: 1.098%;
+  background: #FFFFFF;
+}
+
+#page-num{
+  color: #FFFFFF;
+
+  line-height: 2.58vh;
+
+  font-size: 2.58vh;
+  font-style: normal;
+  font-weight: 450;
+  margin: 0;
+}
+
+#back-arrow{
+  box-sizing: content-box;
+  width: 13.186%;
+  height: 45.45%;
+  cursor: pointer;
+}
+
+#next-arrow{
+  box-sizing: content-box;
+  width: 13.186%;
+  height: 45.45%;
+  cursor: pointer;
+}
+
+#nav-bar{
+  box-sizing: content-box;
+  width: 100%;
+  height: 14.32%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 2vw;
+}
+
+#home-icon{
+  width: 29.129%;
+  height: 89.32%;
+  padding: 0;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+#leaderboard-icon{
+  width: 37.23%;
+  height: 100%;
+}
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+  
+} /* closes 769px+ */
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+
+} /* closes 1024px+ */

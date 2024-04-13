@@ -1,0 +1,28 @@
+{
+    "scores":[{
+        "name": "Jaylee",
+        "score": 245,
+        "nascar": false
+    },
+    {
+        "name": "Will",
+        "score": 246,
+        "nascar": false
+    },
+    {
+        "name": "Aaron",
+        "score": 284,
+        "nascar": false
+    },
+    {
+        "name": "Richard Petty",
+        "score": 305,
+        "nascar": true
+    },
+    {
+        "name": "Beth",
+        "score": 400,
+        "nascar": false
+    }
+    ]
+}

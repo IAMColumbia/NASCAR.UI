@@ -3,97 +3,102 @@
     <div id="title">SCORES</div>
     <div id="scores">
       <div id="score" *ngFor="let score of scores">
-        <div id="avatar"></div>
+        <div id="avatar" *ngIf="score.nascar">
+          <div id="driver-indicator">
+            <img
+              id="nascar-logo"
+              src="../../../assets/img/nascar-indicator.png"
+            />
+          </div>
+        </div>
+        <div id="avatar" *ngIf="!score.nascar"></div>
         <div id="username">{{ score.name }}</div>
         <div id="time">
           <p>{{ score.score }} ms</p>
         </div>
       </div>
-      <div id="paginator">
-        <svg
-          id="back-arrow"
-          width="12"
-          height="15"
-          viewBox="0 0 12 15"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.3678 2L2 7.5L10.3678 13"
-            stroke="white"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        <div class="v-line"></div>
-        <p id="page-num">1</p>
-        <div class="v-line"></div>
-        <svg
-          id="next-arrow"
-          width="12"
-          height="15"
-          viewBox="0 0 12 15"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1.68965 2L10.0575 7.5L1.68965 13"
-            stroke="white"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
     </div>
-
+    <div id="paginator">
+      <svg
+        id="back-arrow"
+        width="12"
+        height="15"
+        viewBox="0 0 12 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.3678 2L2 7.5L10.3678 13"
+          stroke="white"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <div class="v-line"></div>
+      <p id="page-num">1</p>
+      <div class="v-line"></div>
+      <svg
+        id="next-arrow"
+        width="12"
+        height="15"
+        viewBox="0 0 12 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.68965 2L10.0575 7.5L1.68965 13"
+          stroke="white"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
     <div id="nav-bar">
-      <button id="home-btn">
-        <svg
-          id="home-icon"
-          viewBox="0 0 97 92"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            x="-3"
-            y="3"
-            width="91"
-            height="86"
-            rx="10"
-            transform="matrix(-1 0 0 1 91 0)"
-            fill="#127BC0"
-            stroke="white"
-            stroke-width="6"
-            stroke-linejoin="round"
-          />
-          <rect
-            width="14.0317"
-            height="24.7619"
-            rx="3"
-            transform="matrix(-1 0 0 1 68.0932 47.2383)"
-            fill="white"
-          />
-          <rect
-            width="13.9959"
-            height="24.4928"
-            rx="3"
-            transform="matrix(-1 0 0 1 44.1567 47.238)"
-            fill="white"
-          />
-          <rect
-            width="11.5556"
-            height="12.381"
-            transform="matrix(-1 0 0 1 54.8868 47.238)"
-            fill="white"
-          />
-          <path
-            d="M51.5731 22.5467C50.379 21.1943 48.2698 21.1943 47.0756 22.5467L27.4651 44.7555C25.7548 46.6924 27.13 49.7412 29.7139 49.7412H68.9348C71.5187 49.7412 72.8939 46.6924 71.1836 44.7555L51.5731 22.5467Z"
-            fill="white"
-          />
-        </svg>
-      </button>
+      <svg
+        id="home-icon"
+        viewBox="0 0 97 92"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="-3"
+          y="3"
+          width="91"
+          height="86"
+          rx="10"
+          transform="matrix(-1 0 0 1 91 0)"
+          fill="#127BC0"
+          stroke="white"
+          stroke-width="6"
+          stroke-linejoin="round"
+        />
+        <rect
+          width="14.0317"
+          height="24.7619"
+          rx="3"
+          transform="matrix(-1 0 0 1 68.0932 47.2383)"
+          fill="white"
+        />
+        <rect
+          width="13.9959"
+          height="24.4928"
+          rx="3"
+          transform="matrix(-1 0 0 1 44.1567 47.238)"
+          fill="white"
+        />
+        <rect
+          width="11.5556"
+          height="12.381"
+          transform="matrix(-1 0 0 1 54.8868 47.238)"
+          fill="white"
+        />
+        <path
+          d="M51.5731 22.5467C50.379 21.1943 48.2698 21.1943 47.0756 22.5467L27.4651 44.7555C25.7548 46.6924 27.13 49.7412 29.7139 49.7412H68.9348C71.5187 49.7412 72.8939 46.6924 71.1836 44.7555L51.5731 22.5467Z"
+          fill="white"
+        />
+      </svg>
       <svg
         id="leaderboard-icon"
         viewBox="0 0 124 103"
@@ -145,31 +150,29 @@
           fill="white"
         />
       </svg>
-      <button id="home-btn">
-        <svg
-          id="home-icon"
-          viewBox="0 0 97 92"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            x="-3"
-            y="3"
-            width="91"
-            height="86"
-            rx="10"
-            transform="matrix(-1 0 0 1 91 0)"
-            fill="#FFD304"
-            stroke="white"
-            stroke-width="6"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M66.9253 44.9554C68.8065 46.1302 68.8065 48.8698 66.9253 50.0446L38.839 67.5839C36.8409 68.8317 34.25 67.3951 34.25 65.0393L34.25 29.9607C34.25 27.6049 36.8409 26.1683 38.8391 27.4161L66.9253 44.9554Z"
-            fill="white"
-          />
-        </svg>
-      </button>
+      <svg
+        id="home-icon"
+        viewBox="0 0 97 92"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="-3"
+          y="3"
+          width="91"
+          height="86"
+          rx="10"
+          transform="matrix(-1 0 0 1 91 0)"
+          fill="#FFD304"
+          stroke="white"
+          stroke-width="6"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M66.9253 44.9554C68.8065 46.1302 68.8065 48.8698 66.9253 50.0446L38.839 67.5839C36.8409 68.8317 34.25 67.3951 34.25 65.0393L34.25 29.9607C34.25 27.6049 36.8409 26.1683 38.8391 27.4161L66.9253 44.9554Z"
+          fill="white"
+        />
+      </svg>
     </div>
   </div>
 </div>

@@ -1,6 +1,43 @@
 #container{
-    padding: 5em;
-    width: 50vw;
-    margin: auto;
-    text-align: center;
+    background: #000000;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
+
+#mobile{
+    display: block;
+}
+
+#desktop{
+    display: none;
+}
+
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+    
+
+    
+
+    
+  } /* closes 769px+ */
+  
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+    #desktop{
+        display: block;
+        min-width: 1040px;
+        min-height: 1000px;
+        overflow: hidden;
+    }
+
+    #container{
+        min-width: 1040px;
+        min-height: 1000px;
+        overflow: hidden;
+    }
+    #mobile{
+        display: none;
+    }
+  } /* closes 1024px+ */

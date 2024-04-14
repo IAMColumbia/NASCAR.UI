@@ -5,16 +5,8 @@
     font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
-body {
-    margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
-}
-
 a {
     text-decoration: none;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: "neue-haas-grotesk-display", sans-serif; }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

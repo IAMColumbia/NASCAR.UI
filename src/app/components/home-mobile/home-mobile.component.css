@@ -1,0 +1,28 @@
+#container{
+    background: #000000;
+    width: 100vw;
+    height: 100vh;
+}
+
+#m-link-box{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 62.5vh;
+    left: 0;
+    bottom: 0;
+    justify-content: space-between;
+}
+
+#m-trivia{
+    width:100vw;
+}
+
+#m-reaction{
+    width: 92.5vw;
+}
+
+#m-activity{
+    width: 81vw;
+}

@@ -1,0 +1,63 @@
+<img src="../../../assets/img/home-graphic.png" />
+<div id="links">
+  <div class="trivia" (mouseover)="showTriviaAbout()"></div>
+  <svg
+    id="reaction"
+    viewBox="0 0 524 211"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    (mouseover)="showReactionAbout()"
+  >
+    <path
+      d="M0.257812 210.738L57.9131 0.738281H523.834L466.354 210.738H0.257812Z"
+      fill="#ED2024"
+    />
+  </svg>
+  <svg
+    id="activity"
+    viewBox="0 0 539 211"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    (mouseover)="showActivityAbout()"
+  >
+    <path
+      d="M539.347 210.706L0.242188 210.704L57.8887 0.742188L539.356 0.738281L539.347 210.706Z"
+      fill="#2D5FA8"
+    />
+  </svg>
+</div>
+
+<div
+  id="test"
+  (mouseleave)="hideTriviaAbout()"
+  (click)="redirect('trivia')"
+  *ngIf="triviaAbout"
+></div>
+
+<svg
+  id="reaction-about"
+  viewBox="0 0 748 983"
+  fill="none"
+  (mouseleave)="hideReactionAbout()"
+  (click)="redirect('reaction-game')"
+  *ngIf="reactionAbout"
+>
+  <path
+    d="M747.339 -42.3242L282.043 -41.9941L0.765625 982.71L466.871 982.738L747.339 -42.3242Z"
+    fill="#F2000A"
+  />
+</svg>
+
+<svg
+  id="activity-about"
+  viewBox="0 0 540 983"
+  fill="none"
+  (mouseleave)="hideActivityAbout()"
+  (click)="redirect('')"
+  *ngIf="activityAbout"
+>
+  <path
+    d="M840.387 -42.3242L282.02 -42.0027L0.742188 982.701L559.919 982.738L840.387 -42.3242Z"
+    fill="#2D5FA8"
+  />
+</svg>

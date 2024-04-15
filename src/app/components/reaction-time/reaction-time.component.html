@@ -30,10 +30,21 @@
     </button>
   </div>
 
+  <div class="overlay"></div>
+
   <div class="menu" *ngIf="!started && !showLeaderBoard">
     <div class="container">
       <div class="menu-content">
-        <h1>Are You Faster Than A NASCAR Driver?</h1>
+        <img
+          id="Check-Img"
+          src="../../../assets/img/CheckerFlags.svg"
+          alt="Crossed Checkerd Flags"
+        />
+        <img
+          id="Title-Img"
+          src="../../../assets/img/Title.svg"
+          alt="Are you faster than a Nascar driver?"
+        />
       </div>
       <div id="btn-box">
         <button
@@ -41,18 +52,26 @@
           id="play-btn"
           type="button"
           (click)="displayInstructions()"
-        >
-          Play
-        </button>
-        <br />
+        ></button>
         <button
           class="btn"
           id="leader-board-btn"
           (click)="displayLeaderBoard()"
-        >
-          Leaderboard
-        </button>
+        ></button>
+        <a href="#" routerLink="/"
+          ><button class="btn" id="home-btn"></button>
+        </a>
       </div>
+    </div>
+    <div class="footer">
+      <img
+        src="../../../assets/img/ColumbiaLogo.png"
+        alt="Columbia College Chicago Logo"
+      />
+      <img
+        src="../../../assets/img/NascarChicagoLogo.png"
+        alt="Chicago Nascar Logo"
+      />
     </div>
   </div>
 
@@ -69,9 +88,7 @@
   <div class="menu" *ngIf="finished && !showLeaderBoard">
     <div class="container">
       <div class="menu-content">
-        <h1>SCORE</h1>
-        <h2>Attempt: {{ reactionTime }}</h2>
-        <h2>Best: 100ms</h2>
+        <h1>SCORE: {{ reactionTime }}ms</h1>
       </div>
       <div id="btn-box">
         <button class="btn" (click)="resetGame()">Play Again</button>

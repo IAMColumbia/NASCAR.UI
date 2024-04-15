@@ -16,25 +16,16 @@
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
-    
-
-    
-
-    
   } /* closes 769px+ */
   
 /* Minimum width for desktop screens. */
 @media all and (min-width: 1024px) {
     #desktop{
         display: block;
-        min-width: 1040px;
-        min-height: 1000px;
         overflow: hidden;
     }
 
     #container{
-        min-width: 1040px;
-        min-height: 1000px;
         overflow: hidden;
     }
     #mobile{

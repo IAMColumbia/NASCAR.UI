@@ -14,6 +14,8 @@ showLeaderBoard:boolean = false;
 tooSoon:boolean = false;
 instructions:boolean = false;
 
+timeout: any;
+
 startTime: number = 0;
 endTime: number = 0;
 reactionTime: number = 0;
@@ -28,18 +30,23 @@ displayInstructions(): void{
 
 startGame(): void{
   this.instructions = false;
-  setTimeout(()=>{
+  this.timeout = setTimeout(()=>{
     if(!this.tooSoon){
+      this.midTimer();
+      
+    }
+  },Math.random() * 3000 + 1000);
+}
+
+midTimer(){
       this.showMid = true;
-      setTimeout(()=>{
+      this.timeout = setTimeout(()=>{
       if(!this.tooSoon){
         this.showMid = false;
         this.showClick = true;
         this.startTime = new Date().getTime();
       }
-      },Math.random() * 3000 + 1000)
-    }
-  },Math.random() * 3000 + 1000);
+    },Math.random() * 3000 + 1000)
 }
 
 realClick(){
@@ -58,6 +65,7 @@ realClick(){
 }
 
 resetGame(){
+  clearTimeout(this.timeout);
   this.started = true;
   this.finished = false;
   this.showMid = false;

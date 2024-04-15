@@ -7,6 +7,9 @@
 
 
 .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     align-content: flex-end;
     background-image: url(./assets/img/ReactionBackground.svg);
     background-repeat: repeat;
@@ -104,7 +107,9 @@
     flex-wrap: nowrap;
     float: right;
     align-items: center;
-    z-index: 3;
+    width:39.69%;
+    margin-right: 0;
+    margin-left: 60%;
 }
 
 .footer img{
@@ -307,5 +312,4 @@
 
 /* Minimum width for desktop screens. */
 @media all and (min-width: 1024px) {
-	
 } /* closes 1024px+ */

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { LeaderBoardRecord } from '../../models/leaderboard-record';
 import { LeaderboardService } from '../../services/leaderboard.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-leaderboard',
@@ -9,11 +9,19 @@ import { LeaderboardService } from '../../services/leaderboard.service';
 })
 export class LeaderboardComponent {
   scores: any=[];
-  constructor(private leaderboardService: LeaderboardService){}
+  constructor(private leaderboardService: LeaderboardService, private router: Router){}
 
   ngOnInit(): void{
     this.leaderboardService
     .getLeaderBoardRecords()
     .subscribe(res => {this.scores = res.scores});
+  }
+
+  playGame(){
+    window.location.reload();
+  }
+
+  redirect(route: string){
+    this.router.navigateByUrl('/'+route)
   }
 }

@@ -1,50 +1,78 @@
 header {
-    background: white;
-    color: black;
     width: 100%;
-    font-size: 18px;
-    line-height: 1;
     position: fixed;
     z-index: 1;
     top: 0px;
-}
+
+    color: #D4D4D4;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    }
 
 a {
-    color: inherit;
-    display: inline-block;
-    padding: 15px 12px;
-    line-height: inherit;
+    color: #D4D4D4;
     cursor: pointer;
-    font-size: inherit;
-    font-family: inherit;
     background: none;
     border: medium;
     text-decoration: none;
-    width: 33%;
+    margin: 0;
 }
 
 .container {
-    margin: 0px auto;
-    max-width: 1010px;
-    position: relative;
-}
-
-a.logo {
-    display: inline-block;
-    padding: 15px 12px;
-    line-height: inherit;
-    cursor: pointer;
-    font-size: inherit;
-    font-family: inherit;
-    border: medium;
-}
-
-a:hover {
-    background-color: #e72929;
-    color: white;
+    margin: 27.54px 28.89px;
 }
 
 nav {
-    vertical-align: top;
-    float: right;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+#nav-left{
+    display: flex;  
+    flex-direction: row;
+    row-gap: 10px;
+}
+
+#team-link{
+    text-align: right;
+    padding-left: 1.5px;
+    margin-left: 8px;
+}
+
+#process-link{
+    text-align: center;
+    margin-right: 8px;
+}
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+  header{
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  .container {
+    margin: 43px 50px;
+}
+
+a:hover {
+    font-size: 45px;
+}
+
+#team-link{
+    margin-left: 40px;
+}
+
+#process-link{
+    margin-right: 40px;
+}
+} /* closes 769px+ */
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+
+} /* closes 1024px+ */

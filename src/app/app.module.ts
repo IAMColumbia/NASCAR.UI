@@ -11,10 +11,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
-import { MaterialModule } from './material/material-module';
 //import { Interceptor } from './services/interceptor';
-import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import { TriviaComponent } from './components/trivia/trivia.component';
+import { HomeMobileComponent } from './components/home-mobile/home-mobile.component';
+import { HomeDesktopComponent } from './components/home-desktop/home-desktop.component';
 
 @NgModule({
   declarations: [
@@ -25,21 +25,20 @@ import { TriviaComponent } from './components/trivia/trivia.component';
     LeaderboardComponent,
     LoginComponent,
     LogoutComponent,
-    TriviaComponent
+    TriviaComponent,
+    HomeMobileComponent,
+    HomeDesktopComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    MaterialModule
+    HttpClientModule
   ],
   providers: [/* {
     provide: HTTP_INTERCEPTORS,
     //useClass: Interceptor,
     multi: true
   }, */
-    provideAnimationsAsync(),
-    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}}
   ],
   bootstrap: [AppComponent]
 })

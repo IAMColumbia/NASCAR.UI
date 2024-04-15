@@ -1,0 +1,45 @@
+<img id="background" src="../../../assets/img/home-graphic.png" />
+
+<img id="blurb" src="../../../assets/img/Group 101.png" alt="" />
+
+<div id="links">
+  <img
+    class="trivia"
+    (mouseover)="showTriviaAbout()"
+    src="../../../assets/img/Group 96.png"
+  />
+  <img
+    id="reaction"
+    (mouseover)="showReactionAbout()"
+    src="../../../assets/img/Group 97.png"
+  />
+  <img
+    id="activity"
+    (mouseover)="showActivityAbout()"
+    src="../../../assets/img/Group 74.png"
+  />
+</div>
+
+<img
+  id="trivia-about"
+  (mouseleave)="hideTriviaAbout()"
+  (click)="redirect('trivia')"
+  *ngIf="triviaAbout"
+  src="../../../assets/img/Group 98.png"
+/>
+
+<img
+  id="reaction-about"
+  (mouseleave)="hideReactionAbout()"
+  (click)="redirect('reaction-game')"
+  *ngIf="reactionAbout"
+  src="../../../assets/img/Group 99.png"
+/>
+
+<img
+  id="activity-about"
+  (mouseleave)="hideActivityAbout()"
+  (click)="redirect('')"
+  *ngIf="activityAbout"
+  src="../../../assets/img/Group 100.png"
+/>

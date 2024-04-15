@@ -4,6 +4,13 @@
     height: 100vh;
 }
 
+#blurb{
+    margin-top: 10.31vh;
+    margin-left: 7.44vw;
+    width: 73.8vw;
+    height: 25.6vh;
+}
+
 #m-link-box{
     position: absolute;
     display: flex;
@@ -16,13 +23,18 @@
 }
 
 #m-trivia{
-    width:100vw;
+    width:100%;
+    height: 21.06%;
+    cursor: pointer;
 }
 
 #m-reaction{
-    width: 92.5vw;
+    width: 92.5%;
+    cursor: pointer;
 }
 
 #m-activity{
-    width: 81vw;
+    width: 81%;
+    height: 36.16%;
+    cursor: pointer;
 }

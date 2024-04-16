@@ -207,7 +207,9 @@
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
-  
+  #scores{
+    margin:auto;
+  }
 } /* closes 769px+ */
 
 /* Minimum width for desktop screens. */

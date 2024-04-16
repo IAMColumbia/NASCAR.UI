@@ -143,7 +143,7 @@
 }
 
 .start {
-    background: url(./assets/img/start.png) no-repeat center center fixed;
+    background: url(./assets/img/start.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -300,13 +300,13 @@
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
     #reaction-game{
-        width: 800px;
-        height: 100vh;
+        width: 430px;
+        height: 932px;
         margin: auto;
     }
 
     #pop-up{
-        width: 700px;
+        width: 370px;
     }
 } /* closes 769px+ */
 

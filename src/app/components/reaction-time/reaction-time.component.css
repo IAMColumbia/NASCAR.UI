@@ -32,7 +32,8 @@
 
 .overlay {
     
-    background-color: #093678de;
+    background-color: #00294A;
+    mix-blend-mode: multiply;
     width: 100%;
     height: 100%;
     position: fixed;

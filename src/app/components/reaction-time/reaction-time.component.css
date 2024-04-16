@@ -7,6 +7,9 @@
 
 
 .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     align-content: flex-end;
     background-image: url(./assets/img/ReactionBackground.svg);
     background-repeat: repeat;
@@ -105,8 +108,9 @@
     flex-wrap: nowrap;
     float: right;
     align-items: center;
-    z-index: 3;
-    
+    width:39.69%;
+    margin-right: 0;
+    margin-left: 60%;
 }
 
 .footer img{
@@ -140,7 +144,7 @@
 }
 
 .start {
-    background: url(./assets/img/start.png) no-repeat center center fixed;
+    background: url(./assets/img/start.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -297,17 +301,16 @@
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
     #reaction-game{
-        width: 800px;
-        height: 100vh;
+        width: 430px;
+        height: 932px;
         margin: auto;
     }
 
     #pop-up{
-        width: 700px;
+        width: 370px;
     }
 } /* closes 769px+ */
 
 /* Minimum width for desktop screens. */
 @media all and (min-width: 1024px) {
-	
 } /* closes 1024px+ */

@@ -1,3 +1,10 @@
+#base{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
 #container{
     display: flex;
     flex-direction: column;
@@ -48,10 +55,18 @@
     font-size: 32px;
 }
 
-#buttons{
-    width: 75vw;
-    padding: 5em;
-    margin: auto;
+#level-select{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#level-select svg{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .button{

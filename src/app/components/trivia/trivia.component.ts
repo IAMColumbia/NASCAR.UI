@@ -45,23 +45,22 @@ export class TriviaComponent implements OnInit{
     this.levelSelect = true;
   }
 
-  LevelSelect(difficulty: number): void{
-    this.difficulty = difficulty;
+  LevelSelect(): void{
     this.started = true;
     this.levelSelect = false;
-    if(difficulty === 1){
+    if(this.difficulty === 1){
       this.triviaSerivce.GetLevelOneQuestions()
           .subscribe(res => {
             this.questions = res.questions;
           });
     }
-    else if(difficulty === 2){
+    else if(this.difficulty === 2){
       this.triviaSerivce.GetLevelTwoQuestions()
           .subscribe(res => {
             this.questions = res.questions;
           });
     }
-    else if(difficulty === 3){
+    else if(this.difficulty === 3){
       this.triviaSerivce.GetLevelThreeQuestions()
           .subscribe(res => {
             this.questions = res.questions;
@@ -69,7 +68,14 @@ export class TriviaComponent implements OnInit{
     }
 
     this.DisplayQuestion();
-    
+  }
+
+  DisplayLevelSelectPopUp(level: number){
+    this.difficulty = level;
+  }
+
+  RemoveLevelPopUp(){
+    this.difficulty = 0;
   }
 
   DisplayQuestion(){
@@ -129,6 +135,7 @@ export class TriviaComponent implements OnInit{
     this.questionDisplay = false;
     this.answerDisplay = false;
     this.questionNum = 0;
+    this.difficulty = 0;
     this.score = 0;
     this.timer = 2;
   }
@@ -141,6 +148,7 @@ export class TriviaComponent implements OnInit{
     this.answerDisplay = false;
     this.questionNum = 0;
     this.score = 0;
+    this.difficulty = 0;
     this.StopQuestionTimer();
     this.timer = 2;
     

@@ -18,8 +18,9 @@
 }
 
 #blurb{
+    box-sizing: content-box;
     margin-top: 33.09vh;
-    margin-left: 0;
+    height: 30vh;
 }
 
 #activity{
@@ -45,6 +46,7 @@
     width: 39.5vw;
     height: 100vh;
     cursor: pointer;
+    z-index: 3000;
 }
 
 #reaction-about{
@@ -54,6 +56,7 @@
     bottom: 0;
     left: 26.8vw;
     cursor: pointer;
+    z-index: 3000;
 }
 
 #activity-about{
@@ -63,6 +66,7 @@
     width: 35.65vw;
     height: 100vh;
     cursor: pointer;
+    z-index: 3000;
 }
 
 @media all and (min-width: 1512px) {

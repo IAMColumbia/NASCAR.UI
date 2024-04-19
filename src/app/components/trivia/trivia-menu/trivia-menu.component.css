@@ -1,0 +1,25 @@
+#menu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
+    width: 80%;
+}
+.button{
+    cursor: pointer;
+}
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+
+    #menu{
+        width: 400px;
+    }
+  } /* closes 769px+ */
+  
+  /* Minimum width for desktop screens. */
+  @media all and (min-width: 1024px) {
+  
+  } /* closes 1024px+ */

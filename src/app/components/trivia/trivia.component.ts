@@ -42,9 +42,12 @@ export class TriviaComponent implements OnInit{
 
   constructor(private triviaSerivce: TriviaService){}
 
-  StartGame():void {
-    this.levelSelect = true;
+  StartGame($event: boolean) {
+    console.log('game started');
+    this.levelSelect = $event;
     this.menu = false;
+    console.log(this.levelSelect);
+    console.log(this.menu);
   }
 
   LevelSelect(): void{

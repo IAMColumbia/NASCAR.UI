@@ -1,119 +1,119 @@
 {
     "questions": [{
-        "questionText": "How many colors are in the Chicago NASCAR logo?",
+        "questionText": "Which female driver is competing in this year's NASCAR Xfinity Series race?",
         "options": [{
-                "text": "1",
+                "text": "Danica Patrick",
                 "chosen": false
             },
             {
-                "text": "2",
+                "text": "Sara Christian",
                 "chosen": false
             },
             {
-                "text": "3",
-                "chosen": false,
-                "correct": true
+                "text": "Janet Guthrie",
+                "chosen": false
                 
             },
             {
-                "text": "4",
-                "chosen": false
-            }
-        ],
-        "correct": false,
-        "explanation": "Question1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. TODO"
-        },
-        {
-            "questionText": "What type of pizza is Chicago known for?",
-            "options": [{
-                "text": "Deep Dish",
-                "chosen": false,
-                "correct": true
-            },
-            {
-                "text": "Tavern",
-                "chosen": false
-            },
-            {
-                "text": "Thin",
-                "chosen": false
-            },
-            {
-                "text": "Pan",
-                "chosen": false
-            }
-        ],
-        "correct": false,
-        "explanation": "Question 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
-        },
-        {
-            "questionText": "How many stars are in the Chicago flag?",
-            "options": [{
-                "text": "1",
-                "chosen": false
-            },
-            {
-                "text": "2",
-                "chosen": false
-            },
-            {
-                "text": "3",
-                "chosen": false
-            },
-            {
-                "text": "4",
+                "text": "Hailie Deegan",
                 "chosen": false,
                 "correct": true
             }
         ],
         "correct": false,
-        "explanation": "Question 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
+        "explanation": "At 22 years old, Hailie Deegan made history as the first female driver to win a race in the NASCAR K&N Pro Series West. Deegan will be driving the No.15 Ford Mustang in this year race."
         },
         {
-            "questionText": "What is the nickname often used to refer to Chicago?",
+            "questionText": "In what year was NASCAR founded?",
             "options": [{
-                "text": "The Windy City",
+                "text": "1950",
+                "chosen": false
+            },
+            {
+                "text": "1948",
                 "chosen": false,
                 "correct": true
             },
             {
-                "text": "2",
+                "text": "1994",
                 "chosen": false
             },
             {
-                "text": "3",
-                "chosen": false
-            },
-            {
-                "text": "4",
+                "text": "1946",
                 "chosen": false
             }
         ],
         "correct": false,
-        "explanation": "Question 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
+        "explanation": "The first ever race event for NASCAR was held on February 15, 1948, at the beach-road course in Daytona."
         },
         {
-            "questionText": "What do you NOT put on a Chicago hotdog?",
+            "questionText": "What is NASCAR’s top racing series called?",
             "options": [{
-                "text": "Peppers",
+                "text": "NASCAR World Championship Series",
                 "chosen": false
             },
             {
-                "text": "Relish",
+                "text": "NASCAR Cup series",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "NASCAR Craftsman Truck series",
                 "chosen": false
             },
             {
-                "text": "Mustard",
+                "text": "NASCAR XFINITY series",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "NASCAR Cup Series is known as the most elite of all of their series and is what helped6 put them on the map."
+        },
+        {
+            "questionText": "Which NASCAR driver is known as the “The Intimidator”?",
+            "options": [{
+                "text": "Kyle Busch",
                 "chosen": false
             },
             {
-                "text": "Kethchup",
+                "text": "Ross Chastain",
+                "chosen": false
+            },
+            {
+                "text": "Richard Petty",
+                "chosen": false
+            },
+            {
+                "text": "Dale Earnhardt Sr.",
                 "chosen": false,
                 "correct": true
             }
         ],
         "correct": false,
-        "explanation": "Question 5: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
+        "explanation": "Famously known for his skills behind the wheel and aggressive driving style, Earnhardt earned the nickname when he was pushed towards the infield; despite driving on the grass, he still came out in the lead."
+        },
+        {
+            "questionText": "Which car manufacturer is NOT involved with NASCAR?",
+            "options": [{
+                "text": "Mercedes",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "Chevrolet",
+                "chosen": false
+            },
+            {
+                "text": "Ford",
+                "chosen": false
+            },
+            {
+                "text": "Toyota",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "The current cars used in the Xfinity race are Chevrolet Camaro, Ford Mustang, and Toyota Supra."
         }
     ]
 }

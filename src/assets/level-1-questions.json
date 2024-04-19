@@ -1,119 +1,119 @@
 {
     "questions": [{
-        "questionText": "How many colors are in the Chicago NASCAR logo?",
+        "questionText": "How many stars are in the Chicago flag?",
         "options": [{
-                "text": "1",
-                "chosen": false
-            },
-            {
-                "text": "2",
-                "chosen": false
-            },
-            {
                 "text": "3",
+                "chosen": false
+            },
+            {
+                "text": "5",
+                "chosen": false
+            },
+            {
+                "text": "4",
                 "chosen": false,
                 "correct": true
                 
             },
             {
-                "text": "4",
+                "text": "1",
                 "chosen": false
             }
         ],
         "correct": false,
-        "explanation": "Question1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. TODO"
+        "explanation": "The four stars represent: Fort Dearborn, Chicago Fire, World's Fair: Columbia Exposition and last but not least, the Century of Progress Exposition."
         },
         {
             "questionText": "What type of pizza is Chicago known for?",
             "options": [{
+                "text": "Thin Crust",
+                "chosen": false
+            },
+            {
                 "text": "Deep Dish",
                 "chosen": false,
                 "correct": true
             },
             {
-                "text": "Tavern",
+                "text": "Stuff Crust",
                 "chosen": false
             },
             {
-                "text": "Thin",
-                "chosen": false
-            },
-            {
-                "text": "Pan",
+                "text": "Hawaiian",
                 "chosen": false
             }
         ],
         "correct": false,
-        "explanation": "Question 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
+        "explanation": "The classic Chicago Deep Dish pizza was created in Pizzeria Uno in 1943."
         },
         {
-            "questionText": "How many stars are in the Chicago flag?",
+            "questionText": "What is Chicago's most popular nickname?",
             "options": [{
-                "text": "1",
+                "text": "Empire City",
                 "chosen": false
             },
             {
-                "text": "2",
-                "chosen": false
-            },
-            {
-                "text": "3",
-                "chosen": false
-            },
-            {
-                "text": "4",
-                "chosen": false,
-                "correct": true
-            }
-        ],
-        "correct": false,
-        "explanation": "Question 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
-        },
-        {
-            "questionText": "What is the nickname often used to refer to Chicago?",
-            "options": [{
-                "text": "The Windy City",
+                "text": "Windy City",
                 "chosen": false,
                 "correct": true
             },
             {
-                "text": "2",
+                "text": "City of Wind",
                 "chosen": false
             },
             {
-                "text": "3",
-                "chosen": false
-            },
-            {
-                "text": "4",
+                "text": "The Chi",
                 "chosen": false
             }
         ],
         "correct": false,
-        "explanation": "Question 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
+        "explanation": "Due to the City's unique location conditions and urban structure, it allows the perfect combination for strong winds to be felt."
         },
         {
-            "questionText": "What do you NOT put on a Chicago hotdog?",
+            "questionText": "What does the checkered flag signify in races?",
             "options": [{
-                "text": "Peppers",
-                "chosen": false
-            },
-            {
-                "text": "Relish",
-                "chosen": false
-            },
-            {
-                "text": "Mustard",
-                "chosen": false
-            },
-            {
-                "text": "Kethchup",
+                "text": "End of Race",
                 "chosen": false,
                 "correct": true
+            },
+            {
+                "text": "One lap remaing",
+                "chosen": false
+            },
+            {
+                "text": "Race stage has ended",
+                "chosen": false
+            },
+            {
+                "text": "Practice has ended",
+                "chosen": false
             }
         ],
         "correct": false,
-        "explanation": "Question 5: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
+        "explanation": "Once this flag flies, all drivers must past under the flag in order to have their finishing position scored."
+        },
+        {
+            "questionText": "What does NASCAR stand for?",
+            "options": [{
+                "text": "New Automobiles Speeding Competitively Around Racetracks",
+                "chosen": false
+            },
+            {
+                "text": "National Association for Speeding Car Auto Racing",
+                "chosen": false
+            },
+            {
+                "text": "National Association for Stock Car Auto Racing",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "National Auto Stock Car Association Race",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "In 1947, William H.G. France organized a meeting with racing enthusiasts in Daytona Beach, Florida, leading to the creation of NASCAR. The first official NASCAR race took place in 1948 on Daytona Beach. Since then, the sport has grown significantly, with millions of fans tuning in to watch races every year."
         }
     ]
 }

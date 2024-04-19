@@ -1,119 +1,120 @@
 {
     "questions": [{
-        "questionText": "How many colors are in the Chicago NASCAR logo?",
+        "questionText": "Who has the most wins in NASCAR Cup Series history? ",
         "options": [{
-                "text": "1",
+                "text": "Kyle Busch",
                 "chosen": false
             },
             {
-                "text": "2",
+                "text": "Ricky Rudd",
                 "chosen": false
             },
             {
-                "text": "3",
+                "text": "Richard Petty",
                 "chosen": false,
                 "correct": true
                 
             },
             {
-                "text": "4",
+                "text": "Kyle Petty",
                 "chosen": false
             }
         ],
         "correct": false,
-        "explanation": "Question1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. TODO"
+        "explanation": "Nickname “The King,” Richard Petty holds an impressive 200 wins under his belt during his active years."
         },
         {
-            "questionText": "What type of pizza is Chicago known for?",
+            "questionText": "What is the oldest active NASCAR Cup Series team?",
             "options": [{
-                "text": "Deep Dish",
+                "text": "Wood Brother Racing",
                 "chosen": false,
                 "correct": true
             },
             {
-                "text": "Tavern",
+                "text": "Front Row Motorsports",
                 "chosen": false
             },
             {
-                "text": "Thin",
+                "text": "Rick Ware Racing",
                 "chosen": false
             },
             {
-                "text": "Pan",
+                "text": "RFK Racing",
                 "chosen": false
             }
         ],
         "correct": false,
-        "explanation": "Question 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
+        "explanation": "Founded in 1950 by Glen Wood, they have participated in over 1600 races, with 99 wins within their organization."
         },
         {
-            "questionText": "How many stars are in the Chicago flag?",
+            "questionText": "Who won the inaugural NASCAR Cup Series race in Chicago?",
             "options": [{
-                "text": "1",
+                "text": "Corey LaJoie",
                 "chosen": false
             },
             {
-                "text": "2",
+                "text": "Shane van Gisbergen",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "Chase Elliot",
                 "chosen": false
             },
             {
-                "text": "3",
+                "text": "Ryan Blaney",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "Gisbergen made history when he won his first NASCAR Cup Series race in his debut, making him the first one to do so in 60 years since Johnny Rutherford."
+        },
+        {
+            "questionText": "Who has won the most consecutive NASCAR Cup Series championships?",
+            "options": [{
+                "text": "William Byron",
                 "chosen": false
             },
             {
-                "text": "4",
+                "text": "Jimmie Johnson",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "Richard Petty",
+                "chosen": false
+            },
+            {
+                "text": "Kyle Busch",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "Johnson is still an active driver, with consecutive wins in 2006, 2007, 2008, 2009, and 2010."
+        },
+        {
+            "questionText": "Which driver won the inaugural NASCAR Xfinity Series race in Chicago?",
+            "options": [
+            {
+                "text": "Justin Allgaier",
+                "chosen": false
+            },
+            {
+                "text": "Sammy Smith",
+                "chosen": false
+            },
+            {
+                "text": "Austin Hill",
+                "chosen": false
+            },
+            {
+                "text": "Cole Custer",
                 "chosen": false,
                 "correct": true
             }
         ],
         "correct": false,
-        "explanation": "Question 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
-        },
-        {
-            "questionText": "What is the nickname often used to refer to Chicago?",
-            "options": [{
-                "text": "The Windy City",
-                "chosen": false,
-                "correct": true
-            },
-            {
-                "text": "2",
-                "chosen": false
-            },
-            {
-                "text": "3",
-                "chosen": false
-            },
-            {
-                "text": "4",
-                "chosen": false
-            }
-        ],
-        "correct": false,
-        "explanation": "Question 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
-        },
-        {
-            "questionText": "What do you NOT put on a Chicago hotdog?",
-            "options": [{
-                "text": "Peppers",
-                "chosen": false
-            },
-            {
-                "text": "Relish",
-                "chosen": false
-            },
-            {
-                "text": "Mustard",
-                "chosen": false
-            },
-            {
-                "text": "Kethchup",
-                "chosen": false,
-                "correct": true
-            }
-        ],
-        "correct": false,
-        "explanation": "Question 5: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam posuere dui, nec interdum risus egestas at. Etiam magna dolor, fringilla vel leo nec, ultrices aliquam velit. Aliquam erat tellus, faucibus at metus in, lacinia lacinia mauris. Integer sed bibendum neque. Donec et justo odio. Mauris ornare rutrum leo, quis mattis est venenatis vitae. Duis lobortis, massa et lacinia vestibulum, tellus erat pretium nulla, vitae luctus nulla nisl vitae risus. Nunc ex nulla, vestibulum vel lorem nec, luctus dictum ante. Nullam scelerisque congue cursus. Morbi vestibulum, massa vitae ultrices rutrum, nunc urna mattis tortor, vel ullamcorper quam sem rutrum purus. Morbi placerat, metus viverra placerat ullamcorper, est erat porttitor dui, vitae mattis nisi enim vel nisl. "
+        "explanation": "Cole Custer won the Xfinity Series race in 2023 which was his return season, he currently holds 13 wins in the Xfinity level."
         }
     ]
 }

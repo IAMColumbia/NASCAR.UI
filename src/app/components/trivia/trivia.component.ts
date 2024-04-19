@@ -13,6 +13,7 @@ import { NgOptimizedImage } from '@angular/common'
 export class TriviaComponent implements OnInit{
 
   started: boolean = false;
+  menu: boolean = true;
   levelSelect: boolean = false;
   triviaCompleted: Boolean = false;
   questionDisplay: Boolean = false;
@@ -43,6 +44,7 @@ export class TriviaComponent implements OnInit{
 
   StartGame():void {
     this.levelSelect = true;
+    this.menu = false;
   }
 
   LevelSelect(): void{
@@ -136,6 +138,7 @@ export class TriviaComponent implements OnInit{
     this.answerDisplay = false;
     this.questionNum = 0;
     this.difficulty = 0;
+    this.menu = true;
     this.score = 0;
     this.timer = 2;
   }

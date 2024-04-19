@@ -15,6 +15,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { TriviaComponent } from './components/trivia/trivia.component';
 import { HomeMobileComponent } from './components/home-mobile/home-mobile.component';
 import { HomeDesktopComponent } from './components/home-desktop/home-desktop.component';
+import { TriviaMenuComponent } from './components/trivia/trivia-menu/trivia-menu.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HomeDesktopComponent } from './components/home-desktop/home-desktop.com
     LogoutComponent,
     TriviaComponent,
     HomeMobileComponent,
-    HomeDesktopComponent
+    HomeDesktopComponent,
+    TriviaMenuComponent
   ],
   imports: [
     BrowserModule,

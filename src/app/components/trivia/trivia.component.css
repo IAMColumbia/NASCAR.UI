@@ -12,6 +12,16 @@
     height: 100vh;
 }
 
+#menu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
+    width: 80%;
+}
+
 #container{
     display: flex;
     flex-direction: column;
@@ -28,7 +38,7 @@
     transform: translate(-50%, -50%);
 }
 
-#menu, #trivia{
+#trivia{
     width: 100%;
     height: 100%;
     background: rgb(10, 27, 55) url(./assets/dark-pattern.png);
@@ -48,24 +58,7 @@
     z-index: 1;
 }
 
-#start-button{
-    color: white;
-    width:70%;
-    transform: skewX(-15deg);
-    background: #00294A;
-    border: 5px solid #FFFFFF;
-    border-radius: 10px;
-    box-shadow: -4px 7px #4E4E4E;
-}
-
-#start-button-text{
-    transform: skewX(15deg);
-    padding: 10px;
-    font-size: 32px;
-}
-
 #level-select{
-
     width: 100%;
     height: 100%;
     margin: 0;
@@ -165,6 +158,10 @@ li{
         margin: auto;
         background-color: rgba(0,0,0,0.5);
         z-index: 100;
+    }
+
+    #menu{
+        width: 400px;
     }
 
     #logos{

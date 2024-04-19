@@ -12,6 +12,8 @@ export class TriviaPlayComponent {
   @Input() difficulty: number = 0;
   @Input() questions: any = [];
 
+  style: number = 0;
+
   started: boolean = false;
   questionDisplay: Boolean = false;
   answerDisplay: Boolean = false;
@@ -24,6 +26,8 @@ export class TriviaPlayComponent {
 
   ngOnInit(){
     this.DisplayQuestion();
+    console.log(this.difficulty)
+    this.style = this.difficulty;
   }
 
   DisplayQuestion(){

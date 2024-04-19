@@ -8,8 +8,8 @@
 }
 
 #game{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 #container{
@@ -153,16 +153,15 @@ li{
         width: 400px;
     }
 
-    #logos{
-        
-        width: 22%;
+    #logos{   
+        width: 430px;
         height: auto;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     #logos img{
-        
-        width: 100%;
-        height: 100%;
+        width: 40%;
     }
   } /* closes 769px+ */
   

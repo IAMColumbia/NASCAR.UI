@@ -1,21 +1,41 @@
-<div id="container">
-  <div id="trivia-content">
-    <div id="stats">
-      <div id="progress">{{ questionNum + 1 }}/5</div>
-      <div id="timer">{{ timer }}</div>
-      <div id="score">{{ score }} pts</div>
-    </div>
-
-    <div id="question" *ngIf="questionDisplay">
-      {{ questions[questionNum]?.questionText }}
-    </div>
-
-    <div id="answers" *ngIf="answerDisplay">
-      <ol *ngFor="let option of questions[questionNum]?.options">
-        <li (click)="Answer(questionNum + 1, option)">
-          <div class="answer-choice">{{ option.text }}</div>
-        </li>
-      </ol>
+<div
+  class="trivia"
+  [ngClass]="{
+    'trivia-round-1': difficulty === 1,
+    'trivia-round-2': difficulty === 2,
+    'trivia-round-3': difficulty === 3
+  }"
+>
+  <div
+    id="score"
+    [ngClass]="{
+      'content-bg-r1': difficulty === 1,
+      'content-bg-r2': difficulty === 2,
+      'content-bg-r3': difficulty === 3
+    }"
+  >
+    {{ score }} pts
+  </div>
+  <div id="timer">
+    <p>{{ timer }}</p>
+  </div>
+  <div
+    id="content"
+    [ngClass]="{
+      'content-bg-r1': difficulty === 1,
+      'content-bg-r2': difficulty === 2,
+      'content-bg-r3': difficulty === 3
+    }"
+  >
+    <p id="question-text">{{ questions[questionNum]?.questionText }}</p>
+    <div id="answer-box">
+      <div
+        class="answer-choice-long button"
+        *ngFor="let option of questions[questionNum]?.options"
+        (click)="Answer(questionNum + 1, option)"
+      >
+        {{ option.text }}
+      </div>
     </div>
   </div>
 </div>

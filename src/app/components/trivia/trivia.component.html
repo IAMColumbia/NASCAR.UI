@@ -8936,30 +8936,6 @@
       </svg>
     </div>
 
-    <!-- <div id="trivia" *ngIf="started && !triviaCompleted">
-      <div id="container">
-        <div id="trivia-content">
-          <div id="stats">
-            <div id="progress">{{ questionNum + 1 }}/5</div>
-            <div id="timer">{{ timer }}</div>
-            <div id="score">{{ score }} pts</div>
-          </div>
-
-          <div id="question" *ngIf="questionDisplay">
-            {{ questions[questionNum]?.questionText }}
-          </div>
-
-          <div id="answers" *ngIf="answerDisplay">
-            <ol *ngFor="let option of questions[questionNum]?.options">
-              <li (click)="Answer(questionNum + 1, option)">
-                <div class="answer-choice">{{ option.text }}</div>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <app-trivia-play
       *ngIf="started && !triviaCompleted"
       [difficulty]="difficulty"

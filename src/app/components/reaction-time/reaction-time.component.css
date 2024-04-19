@@ -4,7 +4,111 @@
     margin: 0;
 }
 
+.AvatarPic img {
+    position: fixed;
+    left:125px;
+    top: 125px;
+}
 
+.NascarPic img {
+    position: fixed;
+    left:150px;
+    top: 130px;
+}
+
+.CardBox {
+    display: flex;
+    align-items: center;
+    width: 345px;
+    height: 585px;
+    background-color: #DAF0F8;
+    border: 6px solid #FFFFFF;
+    border-radius: 25px;
+    flex-direction: column;
+    margin-top: 60px;
+    gap: 10px;
+}
+
+.AvatarBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 290px;
+    width: 345px;
+   
+}
+
+#FlipArrow {
+    position: fixed;
+    left: 290px;
+    top: 80px;
+
+}
+
+
+.ScoreBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.GraphicBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+
+.CardBox #Flag{
+    position: fixed;
+    top: 10px;
+    width: 200px;
+    height: 100px;
+}
+
+.CardBox img {
+    
+}
+
+.NavBar {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px;
+    
+}
+
+.NavBar img {
+    margin: 12px;
+}
+
+.showScore {
+    width: 101px;
+    height: 36px;
+    background-color: #091D38;
+    border-radius: 15px;
+    color: #FFFFFF;
+    padding-top: 6px;
+    padding-left: 28px;
+}
+
+.AvatarPic {
+    width: 92px;
+    height: 92px;
+    background-color: #5C5C5C;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.NascarPic {
+    width: 92px;
+    height: 92px;
+    background-color: #5C5C5C;
+    border-radius: 100px;
+    text-align: center;
+}
 
 .menu {
     display: flex;

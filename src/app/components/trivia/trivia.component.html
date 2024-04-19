@@ -8936,7 +8936,7 @@
       </svg>
     </div>
 
-    <div id="trivia" *ngIf="started && !triviaCompleted">
+    <!-- <div id="trivia" *ngIf="started && !triviaCompleted">
       <div id="container">
         <div id="trivia-content">
           <div id="stats">
@@ -8958,7 +8958,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
+    <app-trivia-play
+      *ngIf="started && !triviaCompleted"
+      [difficulty]="difficulty"
+      [questions]="questions"
+      (results)="UpdateProgress($event)"
+    ></app-trivia-play>
 
     <div id="end-screen" *ngIf="triviaCompleted && started">
       <div id="container">

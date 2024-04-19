@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TriviaRecord } from '../../models/trivia-game';
-import { Question } from '../../models/question';
 import { TriviaService } from '../../services/trivia.service';
 import { interval } from 'rxjs';
-import { NgOptimizedImage } from '@angular/common'
 
 @Component({
   selector: 'app-trivia',
@@ -72,7 +69,9 @@ export class TriviaComponent implements OnInit{
           });
     }
 
-    this.DisplayQuestion();
+    //this.DisplayQuestion();
+    this.started = true;
+
   }
 
   DisplayLevelSelectPopUp(level: number){
@@ -83,55 +82,77 @@ export class TriviaComponent implements OnInit{
     this.difficulty = 0;
   }
 
-  DisplayQuestion(){
-    this.questionDisplay = true;
-    setTimeout(()=>{
-      this.StartTimer();
-    }, 500);
+  UpdateProgress($event: {questions: any[], score: number}){
+    if(this.difficulty === 1){
+      this.completedRound1 = true;
+      this.scoreRound1 = $event.score;
+      this.questions = $event.questions;
+    }
+    else if(this.difficulty === 2){
+      this.completedRound2 = true;
+      this.scoreRound2 = $event.score;
+      this.questions = $event.questions;
+    }
+    else if(this.difficulty === 3){
+      this.completedRound3 = true;
+      this.scoreRound3 = $event.score;
+      this.questions = $event.questions;
+    }
+    this.score = $event.score;
+    this.triviaCompleted = true;
+  }
+
+  // DisplayQuestion(){
+  //   this.questionDisplay = true;
+  //   setTimeout(()=>{
+  //     this.StartTimer();
+  //   }, 500);
     
 
-  }
+  // }
 
-  Answer(questionNumber: number, option: any){
-    this.StopQuestionTimer();
+  // Answer(questionNumber: number, option: any){
+  //   this.StopQuestionTimer();
 
-    option.chosen = true;
+  //   option.chosen = true;
 
-    //if correct
-    if(option.correct){
-      this.score += (this.difficulty * 100);
-      this.questions[this.questionNum].correct = true;
-    }
+  //   //if correct
+  //   if(option.correct){
+  //     this.score += (this.difficulty * 100);
+  //     this.questions[this.questionNum].correct = true;
+  //   }
 
-    //if last question go to end screen
-    if(questionNumber === this.questions.length){
-      setTimeout(() => {
-        this.triviaCompleted = true;
-        if(this.difficulty === 1){
-          this.completedRound1 = true;
-          this.scoreRound1 = this.score;
-        }
-        else if(this.difficulty === 2){
-          this.completedRound2 = true;
-          this.scoreRound2 = this.score;
-        }
-        else if(this.difficulty === 3){
-          this.completedRound3 = true;
-          this.scoreRound3 = this.score;
-        }
+  //   //if last question go to end screen
+  //   if(questionNumber === this.questions.length){
+  //     setTimeout(() => {
+  //       this.triviaCompleted = true;
+  //       if(this.difficulty === 1){
+  //         this.completedRound1 = true;
+  //         this.scoreRound1 = this.score;
+  //       }
+  //       else if(this.difficulty === 2){
+  //         this.completedRound2 = true;
+  //         this.scoreRound2 = this.score;
+  //       }
+  //       else if(this.difficulty === 3){
+  //         this.completedRound3 = true;
+  //         this.scoreRound3 = this.score;
+  //       }
 
-        console.log(this.questions);
-      },500);
-    }
-    else{
-      setTimeout(() => {
-        this.questionNum++;
-        this.answerDisplay = false;
-        this.timer = 2;
-        this.DisplayQuestion();
-      },500);
-    }
-  }
+  //       console.log(this.questions);
+  //     },500);
+  //   }
+  //   else{
+  //     setTimeout(() => {
+  //       this.questionNum++;
+  //       this.answerDisplay = false;
+  //       this.timer = 2;
+  //       this.DisplayQuestion();
+  //     },500);
+  //   }
+  // }
+
+
 
   ResetQuiz(){
     this.triviaCompleted = false;
@@ -155,46 +176,44 @@ export class TriviaComponent implements OnInit{
     this.questionNum = 0;
     this.score = 0;
     this.difficulty = 0;
-    this.StopQuestionTimer();
     this.timer = 2;
-    
   }
 
-  StartQuestionTimer(){
-    this.interval$ = interval(1000)
-        .subscribe(val => {
-          this.timer--;
-          if(this.timer === 0){
-            let option = {text: ""}
-            this.Answer(this.questionNum+1, option);
-          }
-        });
-    setTimeout(()=>{
-      this.interval$.unsubscribe();
-    },800000);
-  }
+  // StartQuestionTimer(){
+  //   this.interval$ = interval(1000)
+  //       .subscribe(val => {
+  //         this.timer--;
+  //         if(this.timer === 0){
+  //           let option = {text: ""}
+  //           this.Answer(this.questionNum+1, option);
+  //         }
+  //       });
+  //   setTimeout(()=>{
+  //     this.interval$.unsubscribe();
+  //   },800000);
+  // }
 
-  StopQuestionTimer(){
-    this.interval$.unsubscribe();
-  }
+  // StopQuestionTimer(){
+  //   this.interval$.unsubscribe();
+  // }
 
-  ResetQuestionTimer(){
-    this.StopQuestionTimer();
-    this.timer = 30;
-  }
+  // ResetQuestionTimer(){
+  //   this.StopQuestionTimer();
+  //   this.timer = 30;
+  // }
   
-  StartTimer(){
-    this.interval$ = interval(1000)
-        .subscribe(val => {
-          this.timer--;
-          if(this.timer === 0){
-            this.answerDisplay = true;
-            this.ResetQuestionTimer();
-            this.StartQuestionTimer();
-          }
-        });
-    setTimeout(()=>{
-      this.interval$.unsubscribe();
-    },800000);
-  }
+  // StartTimer(){
+  //   this.interval$ = interval(1000)
+  //       .subscribe(val => {
+  //         this.timer--;
+  //         if(this.timer === 0){
+  //           this.answerDisplay = true;
+  //           this.ResetQuestionTimer();
+  //           this.StartQuestionTimer();
+  //         }
+  //       });
+  //   setTimeout(()=>{
+  //     this.interval$.unsubscribe();
+  //   },800000);
+  // }
 }

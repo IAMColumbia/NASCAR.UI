@@ -5,11 +5,13 @@ import { ReactionTimeComponent } from './components/reaction-time/reaction-time.
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { TriviaComponent } from './components/trivia/trivia.component';
+import { TeamComponent } from './components/team/team.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'trivia', component: TriviaComponent},
   {path: 'reaction-game', component:ReactionTimeComponent},
+  {path: 'team', component:TeamComponent},
   {path: 'login', component: LoginComponent},
   {path: 'logout', component: LogoutComponent}
   

@@ -11,8 +11,7 @@
     <button
       id="pop-up-btn-try-again"
       class="pop-up-button"
-      (click)="resetGame()"
-    >
+      (click)="resetGame()">
       Try Again
     </button>
   </div>
@@ -32,7 +31,7 @@
 
   <div class="overlay"></div>
 
-  <div class="menu" *ngIf="!started && !showLeaderBoard && !finishedGood && !finishedBad && !finishedGoodNas && !DriverCard">
+  <div class="menu" *ngIf=" Menu && !started && !showLeaderBoard && !finishedGood && !finishedBad && !finishedGoodNas && !DriverCard && !AvatarSelect">
     <div class="container">
       <div class="menu-content">
         <img
@@ -51,7 +50,7 @@
           class="btn"
           id="play-btn"
           type="button"
-          (click)="displayInstructions()"
+          (click)="displayAvatarSelect()"
         ></button>
         <button
           class="btn"
@@ -83,6 +82,46 @@
     <div class="start" *ngIf="started && !showMid && !showClick"></div>
     <div class="mid" *ngIf="showMid"></div>
     <div class="click" *ngIf="showClick && !showMid"></div>
+  </div>
+
+  <div class="menu" *ngIf="AvatarSelect && !showLeaderBoard">
+    <div class="container">
+      <div class="menu-content">
+        <div id="Avatar" class="CardBox">
+          <img src="../../../assets/img/FinishFlag.svg" alt="" id="Flag">
+          <div class = "PlayerAvatarBox">
+            <h1 id="AvatarHeader">Personalize your Driver</h1>
+            <img id="ActiveHelmet" src="../../../assets/img/WhiteHelmet.svg" alt="">
+            <div class="PlayerNameBox">
+            <div id="PlayerName">HappyDriver123</div>
+            <div id="ChangePlayerNameIcon"><img src="../../../assets/img/ChangeNameIcon.svg" alt="">
+            </div>
+          </div>
+          </div>
+          <hr id="CardBoxHR">
+          <div class="HelmetGridBox">
+          <div class="HelmetGrid">
+            <img src="../../../assets/img/BlackHelmet.svg" alt="">
+            <img src="../../../assets/img/BlueHelmet.svg" alt="">
+            <img src="../../../assets/img/DarkBlueHelmet.svg" alt="">
+            <img src="../../../assets/img/GrayHelmet.svg" alt="">
+            <img src="../../../assets/img/GreenHelmet.svg" alt="">
+            <img src="../../../assets/img/LightBlueHelmet.svg" alt="">
+            <img src="../../../assets/img/LimeHelmet.svg" alt="">
+            <img src="../../../assets/img/OrangeHelmet.svg" alt="">
+            <img src="../../../assets/img/PinkHelmet.svg" alt="">
+            <img src="../../../assets/img/PurpleHelmet.svg" alt="">
+            <img src="../../../assets/img/RedHelmet.svg" alt="">
+            <img src="../../../assets/img/TealHelmet.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div id="Avatar" class="NavBar">
+          <img  class="btn" (click)="displayMenu()" src="../../../assets/img/Back.svg" alt="">
+          <img class="btn" (click)="displayInstructions()" src="../../../assets/img/DoneButton.svg" alt="">
+        </div>
+    </div>
+  </div>
   </div>
 
   <div class="menu" *ngIf="finishedGoodNas && !showLeaderBoard">

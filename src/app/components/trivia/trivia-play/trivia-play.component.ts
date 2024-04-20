@@ -12,22 +12,19 @@ export class TriviaPlayComponent {
   @Input() difficulty: number = 0;
   @Input() questions: any = [];
 
-  style: number = 0;
-
   started: boolean = false;
-  questionDisplay: Boolean = false;
-  answerDisplay: Boolean = false;
+  questionDisplay: boolean = false;
+  answerDisplay: boolean = false;
 
   questionNum: number = 0;
   score: number = 0;
 
   timer = 2;
   interval$: any;
+  timeout: any;
 
   ngOnInit(){
     this.DisplayQuestion();
-    console.log(this.difficulty)
-    this.style = this.difficulty;
   }
 
   DisplayQuestion(){
@@ -35,7 +32,6 @@ export class TriviaPlayComponent {
     setTimeout(()=>{
       this.StartTimer();
     }, 500);
-    
 
   }
 

@@ -1,6 +1,7 @@
 {
     "questions": [{
         "questionText": "Which female driver is competing in this year's NASCAR Xfinity Series race?",
+        "short": false,
         "options": [{
                 "text": "Danica Patrick",
                 "chosen": false
@@ -25,6 +26,7 @@
         },
         {
             "questionText": "In what year was NASCAR founded?",
+            "short": true,
             "options": [{
                 "text": "1950",
                 "chosen": false
@@ -48,6 +50,7 @@
         },
         {
             "questionText": "What is NASCAR’s top racing series called?",
+            "short": false,
             "options": [{
                 "text": "NASCAR World Championship Series",
                 "chosen": false
@@ -71,6 +74,7 @@
         },
         {
             "questionText": "Which NASCAR driver is known as the “The Intimidator”?",
+            "short": false,
             "options": [{
                 "text": "Kyle Busch",
                 "chosen": false
@@ -94,6 +98,7 @@
         },
         {
             "questionText": "Which car manufacturer is NOT involved with NASCAR?",
+            "short": true,
             "options": [{
                 "text": "Mercedes",
                 "chosen": false,

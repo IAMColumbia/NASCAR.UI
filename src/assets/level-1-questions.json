@@ -1,6 +1,7 @@
 {
     "questions": [{
         "questionText": "How many stars are in the Chicago flag?",
+        "short": true,
         "options": [{
                 "text": "3",
                 "chosen": false
@@ -25,6 +26,7 @@
         },
         {
             "questionText": "What type of pizza is Chicago known for?",
+            "short": false,
             "options": [{
                 "text": "Thin Crust",
                 "chosen": false
@@ -48,6 +50,7 @@
         },
         {
             "questionText": "What is Chicago's most popular nickname?",
+            "short": false,
             "options": [{
                 "text": "Empire City",
                 "chosen": false
@@ -71,6 +74,7 @@
         },
         {
             "questionText": "What does the checkered flag signify in races?",
+            "short": false,
             "options": [{
                 "text": "End of Race",
                 "chosen": false,
@@ -94,6 +98,7 @@
         },
         {
             "questionText": "What does NASCAR stand for?",
+            "short": false,
             "options": [{
                 "text": "New Automobiles Speeding Competitively Around Racetracks",
                 "chosen": false

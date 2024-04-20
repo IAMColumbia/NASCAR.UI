@@ -5,6 +5,7 @@
     height: 100vh;
     overflow: hidden;
     background: #00294A;
+    overflow: none;
 }
 
 #game{

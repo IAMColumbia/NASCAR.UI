@@ -32,7 +32,7 @@
 
   <div class="overlay"></div>
 
-  <div class="menu" *ngIf="!started && !showLeaderBoard">
+  <div class="menu" *ngIf="!started && !showLeaderBoard && !finishedGood && !finishedBad && !finishedGoodNas && !DriverCard">
     <div class="container">
       <div class="menu-content">
         <img
@@ -85,15 +85,123 @@
     <div class="click" *ngIf="showClick && !showMid"></div>
   </div>
 
-  <div class="menu" *ngIf="finished && !showLeaderBoard">
+  <div class="menu" *ngIf="finishedGoodNas && !showLeaderBoard">
     <div class="container">
       <div class="menu-content">
-        <h1>SCORE: {{ reactionTime }}ms</h1>
+        <div class="CardBox">
+            <img src="../../../assets/img/FinishFlag.svg" alt="" id="Flag">
+            <div class="AvatarBox">
+              <img (click)="DisplayDriver()" id="FlipArrow" src="../../../assets/img/FlipArrow.svg" alt="">
+              <div class="AvatarPic">
+                <img src="../../../assets/img/SmallTrophySticker.svg" alt="">
+              </div>
+            </div>
+            <div class="ScoreBox">
+              <div class="ScoreTitle">Score</div>
+              <div class="showScore">{{ reactionTime }}ms</div>
+            </div>
+            <div class="GraphicBox">
+            <div class="ImgMessage"><img src="../../../assets/img/FasterThanADriver.svg" alt=""></div>
+            <div class="BottomImg"><img src="../../../assets/img/MainTrophySticker.svg" alt=""></div>
+          </div>
+        </div>
+          <div class="NavBar">
+          <a href="#" routerLink="/"
+            ><img  src="../../../assets/img/HomeIcon.svg" alt="">
+          </a>
+            <img class="btn" (click)="displayLeaderBoard()" src="../../../assets/img/LeaderboardIcon.svg" alt="">
+            <img class="btn" (click)="resetGame()" src="../../../assets/img/PlayIcon.svg" alt="">
+          </div>
+  
       </div>
-      <div id="btn-box">
-        <button class="btn" (click)="resetGame()">Play Again</button>
-        <br />
-        <button class="btn" (click)="displayLeaderBoard()">Leaderboard</button>
+    </div>
+  </div>
+
+  <div class="menu" *ngIf="DriverCard && !showLeaderBoard">
+    <div class="container">
+      <div class="menu-content">
+        <div class="CardBox">
+            <img src="../../../assets/img/FinishFlag.svg" alt="" id="Flag">
+            <div class="AvatarBox">
+              <img (click)="DisplayPlayer()" id="FlipArrow" src="../../../assets/img/FlipArrow.svg" alt="">
+              <div class="NascarPic">
+                <img src="../../../assets/img/NascarLabel.svg" alt="">
+              </div>
+            </div>
+            <div class="ScoreBox">
+              <div class="ScoreTitle">Richard Petty</div>
+              <div class="showScore">{{ reactionTime }}ms</div>
+            </div>
+            <div class="GraphicBox">
+            <div class="ImgMessage"><img src="../../../assets/img/FasterThanADriver.svg" alt=""></div>
+            <div class="BottomImg"><img src="../../../assets/img/MainTrophySticker.svg" alt=""></div>
+          </div>
+        </div>
+          <div class="NavBar">
+          <a href="#" routerLink="/"
+            ><img  src="../../../assets/img/HomeIcon.svg" alt="">
+          </a>
+            <img class="btn" (click)="displayLeaderBoard()" src="../../../assets/img/LeaderboardIcon.svg" alt="">
+            <img class="btn" (click)="resetGame()" src="../../../assets/img/PlayIcon.svg" alt="">
+          </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="menu" *ngIf="finishedGood && !showLeaderBoard">
+    <div class="container">
+      <div class="menu-content">
+        <div class="CardBox">
+            <img src="../../../assets/img/FinishFlag.svg" alt="" id="Flag">
+            <div class="AvatarBox">
+              <div class="AvatarPic"></div>
+            </div>
+            <div class="ScoreBox">
+              <div class="ScoreTitle">Score</div>
+              <div class="showScore">{{ reactionTime }}ms</div>
+            </div>
+            <div class="GraphicBox">
+            <div class="ImgMessage"><img src="../../../assets/img/FantasticJob.svg" alt=""></div>
+            <div class="BottomImg"><img src="../../../assets/img/FirstPlaceRibbon.svg" alt=""></div>
+          </div>
+        </div>
+          <div class="NavBar">
+          <a href="#" routerLink="/"
+            ><img  src="../../../assets/img/HomeIcon.svg" alt="">
+          </a>
+            <img class="btn" (click)="displayLeaderBoard()" src="../../../assets/img/LeaderboardIcon.svg" alt="">
+            <img class="btn" (click)="resetGame()" src="../../../assets/img/PlayIcon.svg" alt="">
+          </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="menu" *ngIf="finishedBad && !showLeaderBoard">
+    <div class="container">
+      <div class="menu-content">
+        <div class="CardBox">
+          <img src="../../../assets/img/FinishFlag.svg" alt="" id="Flag">
+          <div class="AvatarBox">
+            <div class="AvatarPic"></div>
+          </div>
+          <div class="ScoreBox">
+            <div class="ScoreTitle">Score</div>
+            <div class="showScore">{{ reactionTime }}ms</div>
+          </div>
+          <div class="GraphicBox">
+          <div class="ImgMessage"><img src="../../../assets/img/BetterLuckNext.svg" alt=""></div>
+          <div class="BottomImg"><img src="../../../assets/img/OldCar.svg" alt=""></div>
+        </div>
+        </div>
+        <div class="NavBar">
+        <a href="#" routerLink="/"
+          ><img  src="../../../assets/img/HomeIcon.svg" alt="">
+        </a>
+          <img class="btn" (click)="displayLeaderBoard()" src="../../../assets/img/LeaderboardIcon.svg" alt="">
+          <img class="btn" (click)="resetGame()" src="../../../assets/img/PlayIcon.svg" alt="">
+        </div>
       </div>
     </div>
   </div>

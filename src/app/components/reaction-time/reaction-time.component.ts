@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ReactionTimeComponent implements OnInit{
 started:boolean = false;
 finished:boolean = false;
+finishedGood:boolean = false;
+finishedGoodNas:boolean = false;
+finishedBad:boolean = false;
+DriverCard:boolean = false;
 showMid:boolean = false;
 showClick:boolean = false;
 showLeaderBoard:boolean = false;
@@ -26,6 +30,23 @@ ngOnInit(): void {
 displayInstructions(): void{
   this.instructions = true;
   this.started = true;
+}
+
+DisplayDriver(): void{
+  if(this.finishedGoodNas = true)
+    {
+      this.finishedGoodNas = false;
+      this.DriverCard = true;
+    }
+  
+}
+
+DisplayPlayer(): void{
+   
+      this.finishedGoodNas = true;
+      this.DriverCard = false;
+    
+  
 }
 
 startGame(): void{
@@ -53,9 +74,24 @@ realClick(){
   console.log(this.showClick)
   if(this.showClick === true){
     console.log('end game');
+    //this.finished = true;
     this.endTime = new Date().getTime();
     this.reactionTime = this.endTime - this.startTime;
-    this.finished = true;
+    if (this.reactionTime <= 1000 && this.reactionTime > 500)
+      {
+        this.finishedGood = true;
+        this.started = false;
+      }
+    else if (this.reactionTime <= 500)
+        {
+          this.finishedGoodNas = true;
+          this.started = false;
+        }
+    else if (this.reactionTime > 1000)
+      {
+        this.finishedBad = true;
+        this.started = false;
+      }
   }
   else{
     console.log('Too Soon')
@@ -68,6 +104,10 @@ resetGame(){
   clearTimeout(this.timeout);
   this.started = true;
   this.finished = false;
+  this.finishedBad = false;
+  this.finishedGood = false;
+  this.finishedGoodNas = false;
+  this.DriverCard = false;
   this.showMid = false;
   this.showClick = false;
   this.tooSoon = false;

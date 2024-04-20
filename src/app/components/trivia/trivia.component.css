@@ -5,11 +5,12 @@
     height: 100vh;
     overflow: hidden;
     background: #00294A;
+    overflow: none;
 }
 
 #game{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 #container{
@@ -31,7 +32,6 @@
 #trivia{
     width: 100%;
     height: 100%;
-    background: rgb(10, 27, 55) url(./assets/dark-pattern.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -40,7 +40,7 @@
     color:white;
 }
 
-#menu-content, #trivia-content, #end-screen-content{
+#end-screen-content{
     background: #DAF0F8;
     width: 100%;
     height: 50%;
@@ -98,31 +98,6 @@
     cursor: pointer;
 }
 
-#trivia{
-    padding: 5em;
-}
-
-li{
-    list-style-type: none;
-    cursor: pointer;
-    margin: 10px 0;
-}
-
-.answer-choice{
-    color: white;
-    width:70%;
-    transform: skewX(-15deg);
-    background: #00294A;
-    border: 5px solid #FFFFFF;
-    border-radius: 10px;
-    box-shadow: -4px 7px #4E4E4E;
-    text-align: center;
-}
-
-#question{
-    color: black;
-}
-
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
     #game{
@@ -154,16 +129,15 @@ li{
         width: 400px;
     }
 
-    #logos{
-        
-        width: 22%;
+    #logos{   
+        width: 430px;
         height: auto;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     #logos img{
-        
-        width: 100%;
-        height: 100%;
+        width: 40%;
     }
   } /* closes 769px+ */
   

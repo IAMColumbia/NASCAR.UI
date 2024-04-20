@@ -1,0 +1,35 @@
+#container {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#title{
+    margin: 0;
+}
+
+/* Styling for the team member sections */
+.team-member {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.team-member div {
+    display: flex;
+    flex-direction: column;
+}
+a {
+    color: #00bfff; /* Link color */
+    text-decoration: none;
+}

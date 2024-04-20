@@ -3,7 +3,7 @@
     <div id="title">SCORES</div>
     <div id="scores">
       <div id="score" *ngFor="let score of scores">
-        <div id="avatar" *ngIf="score.nascar">
+        <div id="avatar" *ngIf="score.type === 'driver'">
           <div id="driver-indicator">
             <img
               id="nascar-logo"
@@ -11,8 +11,8 @@
             />
           </div>
         </div>
-        <div id="avatar" *ngIf="!score.nascar"></div>
-        <div id="username">{{ score.name }}</div>
+        <div id="avatar" *ngIf="score.type === 'player'"></div>
+        <div id="username">{{ score.username }}</div>
         <div id="time">
           <p>{{ score.score }} ms</p>
         </div>
@@ -26,6 +26,7 @@
         viewBox="0 0 12 15"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        (click)="previousPage()"
       >
         <path
           d="M10.3678 2L2 7.5L10.3678 13"
@@ -36,7 +37,7 @@
         />
       </svg>
       <div class="v-line"></div>
-      <p id="page-num">1</p>
+      <p id="page-num">{{ index + 1 }}</p>
       <div class="v-line"></div>
       <svg
         id="next-arrow"
@@ -45,6 +46,7 @@
         viewBox="0 0 12 15"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        (click)="nextPage()"
       >
         <path
           d="M1.68965 2L10.0575 7.5L1.68965 13"

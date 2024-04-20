@@ -13,8 +13,7 @@ export class LeaderboardService {
 
   constructor(private http: HttpClient) { }
 
-  public getLeaderBoardRecords() /* :Observable<LeaderBoardRecord[]> */ {
-    //return this.http.get<LeaderBoardRecord[]>(`${environment.apiUrl}/${this.url}`);
-    return this.http.get<any>("assets/leaderboard-fake.json");
+  public getLeaderBoardRecords(index: number) {
+    return this.http.get<any>(`${environment.apiUrl}/api/leaderboard/${index}`);
   }
 }

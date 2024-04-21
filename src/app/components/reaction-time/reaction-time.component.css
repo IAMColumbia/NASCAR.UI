@@ -4,6 +4,109 @@
     margin: 0;
 }
 
+.CardBox#Avatar {
+    gap:0;
+}
+
+.NavBar#Avatar {
+    gap:125px;
+    padding-top: 20px;
+}
+
+.PlayerAvatarBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+#AvatarHeader {
+    display: flex;
+    padding-top: 15px;
+    font-size: 24px;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    align-self: center;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+#ActiveHelmet {
+    display: flex;
+    width: 40%;
+    height: 45%;
+    background-color: #BBDEEB;
+    border-radius: 20px;
+}
+
+.PlayerNameBox {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    font-size: 20px;
+    flex-wrap: nowrap;
+}
+
+#PlayerName {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    background-color: #BBDEEB;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #FFFFFF;
+    border-width: 4px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 5px;
+    width: 100%;
+   
+}
+
+#ChangePlayerNameIcon {
+    position: fixed;
+    height: 40px;
+    right: 70px;
+}
+
+#CardBoxHR {
+    border: none;
+    width: 100%;
+    height: 10px;
+    background-color: #FFFFFF;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+}
+
+.HelmetGridBox {
+    display: flex;
+    background-color: #BBDEEB;
+    height:inherit;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.HelmetGrid {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-self: stretch;
+    align-content: space-evenly;
+}
+
+.HelmetGrid img {
+    height: 25%;
+}
+
+.HelmetGrid img:hover {
+    background-color: #83b4ca;
+    border-radius: 20px;
+    height: 25%;
+}
+
 .AvatarPic img {
     position: fixed;
     left:125px;
@@ -27,6 +130,7 @@
     flex-direction: column;
     margin-top: 60px;
     gap: 10px;
+    z-index: 1000;
 }
 
 .AvatarBox {
@@ -64,9 +168,9 @@
 
 .CardBox #Flag{
     position: fixed;
-    top: 10px;
-    width: 200px;
-    height: 100px;
+    top: 15px;
+    width: 138px;
+    height: 72px;
 }
 
 .CardBox img {

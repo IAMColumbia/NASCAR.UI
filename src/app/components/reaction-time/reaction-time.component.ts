@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './reaction-time.component.css'
 })
 export class ReactionTimeComponent implements OnInit{
+AvatarSelect:boolean = false;
 started:boolean = false;
 finished:boolean = false;
 finishedGood:boolean = false;
@@ -17,6 +18,7 @@ showClick:boolean = false;
 showLeaderBoard:boolean = false;
 tooSoon:boolean = false;
 instructions:boolean = false;
+Menu:boolean = true;
 
 timeout: any;
 
@@ -28,8 +30,18 @@ ngOnInit(): void {
 }
 
 displayInstructions(): void{
+  this.AvatarSelect = false;
   this.instructions = true;
   this.started = true;
+}
+
+displayAvatarSelect(): void{
+  this.AvatarSelect = true;
+}
+
+displayMenu(): void{
+  this.AvatarSelect = false;
+  this.Menu = true;
 }
 
 DisplayDriver(): void{
@@ -40,17 +52,15 @@ DisplayDriver(): void{
     }
   
 }
-
 DisplayPlayer(): void{
    
       this.finishedGoodNas = true;
       this.DriverCard = false;
-    
-  
 }
 
 startGame(): void{
   this.instructions = false;
+  this.AvatarSelect = false;
   this.timeout = setTimeout(()=>{
     if(!this.tooSoon){
       this.midTimer();
@@ -103,6 +113,7 @@ realClick(){
 resetGame(){
   clearTimeout(this.timeout);
   this.started = true;
+  this.AvatarSelect = false;
   this.finished = false;
   this.finishedBad = false;
   this.finishedGood = false;

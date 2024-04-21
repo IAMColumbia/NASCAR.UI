@@ -1,6 +1,6 @@
 
 #leaderboard{
-  background: #091D38 url(./assests/leaderboard-background.png)no-repeat center center fixed;
+  background: #091D38 url('./assests/leaderboard-background.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

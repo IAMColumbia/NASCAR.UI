@@ -1,0 +1,42 @@
+@keyframes bouncing {
+    0% {
+      top: 50%;
+    }
+    100% {
+      top: 40%;
+    }
+  }
+  
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .page-overlay-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1009;
+    background: rgba(0, 41, 74, 0.5);
+    
+  }
+
+  .spinner {
+    width: 80%;
+    height: 20%;
+    position: fixed;
+    top: 50%;
+    left: calc(50% - 35%);
+    z-index: 100;
+    background-image: url(../../../assets/img/black-flag.png);
+    background-repeat: no-repeat;
+    background-size: 97%;
+    animation: bouncing 0.4s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite
+      alternate both;
+  }

@@ -90,7 +90,7 @@
   <div
     class="clickable-area"
     (click)="realClick()"
-    *ngIf="started && !finished"
+    *ngIf="started && !finished && !showLeaderBoard"
   >
     <div class="start" *ngIf="started && !showMid && !showClick"></div>
     <div class="mid" *ngIf="showMid"></div>

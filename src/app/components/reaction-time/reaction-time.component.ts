@@ -72,7 +72,14 @@ displayAvatarSelect(){
     this.user = JSON.parse(user!);
     this.intToAvatar(this.user.Avatar);
     this.username = this.user.Username;
-    this.displayInstructions();
+    if(this.user.ID === 0){
+      this.username = this.generateRandomUsername();
+      this.AvatarSelect = true; 
+    }
+    else{
+      this.displayInstructions();
+    }
+    
   }
   catch{
       this.username = this.generateRandomUsername();
@@ -137,7 +144,13 @@ realClick(){
     let record: LeaderBoardRequest = new LeaderBoardRequest();
     record.Score = this.reactionTime;
     record.UserID = test.ID;
-    this.leaderboardService.insertLearboard(record)
+    try{
+      this.leaderboardService.insertLearboard(record);
+    }
+    catch{
+      console.log('Api called failed');
+    }
+    
     if (this.reactionTime <= 1000 && this.reactionTime > 500)
       {
         this.finishedGood = true;
@@ -265,8 +278,14 @@ generateRandomUsername(){
   let second = middleTerms[Math.floor(Math.random() * (39-0)+0)];
 
   name = first + second + number;
+  try{
+    this.leaderboardService.getUserByUsername(name).subscribe(res => {console.log(res.data)});
+  }
 
-  this.leaderboardService.getUserByUsername(name).subscribe(res => {console.log(res.data)});
+  catch{
+    console.log('api call failed');
+  }
+  
   
   return name.toString();
 }
@@ -281,17 +300,23 @@ changeAvatar(nextAvatar: string){
 
 registerUser(){
   this.user = new User(this.userID, this.username, 'player', this.avatarToInt());
-
-  this.leaderboardService.insertUser(this.user).subscribe(res => {
-    console.log(res);
-    let temp:string = JSON.stringify(res);
-
-    let response: any = JSON.parse(temp);
-
-    this.user = new User(response.data, this.username, 'player', this.avatarToInt());
-    
-    localStorage.setItem('user', JSON.stringify(this.user));
-  });
+  localStorage.setItem('user', JSON.stringify(this.user));
+  try{
+    this.leaderboardService.insertUser(this.user).subscribe(res => {
+      console.log(res);
+      let temp:string = JSON.stringify(res);
+  
+      let response: any = JSON.parse(temp);
+  
+      this.user = new User(response.data, this.username, 'player', this.avatarToInt());
+      
+      localStorage.setItem('user', JSON.stringify(this.user));
+    });
+  }
+  catch{
+    console.log('Api call failed');
+  }
+  
   
   this.displayInstructions();
 }

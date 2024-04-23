@@ -287,22 +287,15 @@ generateRandomUsername(){
 
   this.tempUsername = first + second + number;
   
-  try{
-    this.leaderboardService.getUserByUsername(this.tempUsername).subscribe(res => {
-      console.log(res);
-      if(res.data != null){
-        this.tempUsername = this.generateRandomUsername();
-      }
-      else{
-        this.username = this.tempUsername;
-        this.AvatarSelect = true;
-      }
+  this.leaderboardService.getUserByUsername(this.tempUsername).subscribe(res => {
+    if(res.data != null){
+      this.tempUsername = this.generateRandomUsername();
+    }
+    else{
+      this.username = this.tempUsername;
+      this.AvatarSelect = true;
+    }
     });
-  }
-
-  catch{
-    ('api call failed');
-  }
   return this.tempUsername;
 }
 
@@ -319,14 +312,24 @@ registerUser(){
   localStorage.setItem('user', JSON.stringify(this.user));
   try{
     this.leaderboardService.insertUser(this.user).subscribe(res => {
-      (res);
+      
       let temp:string = JSON.stringify(res);
   
       let response: any = JSON.parse(temp);
-  
-      this.user = new User(response.data, this.username, 'player', this.avatarToInt());
+      console.log(response.data);
+      if(response.data == undefined){
+        console.log('YIPPEE');
+        this.user = new User(0, this.username, 'player', this.avatarToInt());
       
-      localStorage.setItem('user', JSON.stringify(this.user));
+        localStorage.setItem('user', JSON.stringify(this.user));
+      }
+      else{
+        console.log('FUCK');
+        this.user = new User(response.data, this.username, 'player', this.avatarToInt());
+      
+        localStorage.setItem('user', JSON.stringify(this.user));
+      }
+      
     });
   }
   catch{

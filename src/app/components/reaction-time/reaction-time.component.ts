@@ -157,7 +157,7 @@ realClick(){
       this.leaderboardService.insertLearboard(record);
     }
     catch{
-      console.log('Api called failed');
+      ('Api called failed');
     }
     
     if (this.reactionTime <= 1000 && this.reactionTime > 500)
@@ -177,7 +177,7 @@ realClick(){
       }
   }
   else{
-    console.log('Too Soon')
+    ('Too Soon')
     this.tooSoon = true;
   }
 
@@ -289,7 +289,7 @@ generateRandomUsername(){
   
   try{
     this.leaderboardService.getUserByUsername(this.tempUsername).subscribe(res => {
-      console.log(res.data);
+      console.log(res);
       if(res.data != null){
         this.tempUsername = this.generateRandomUsername();
       }
@@ -301,7 +301,7 @@ generateRandomUsername(){
   }
 
   catch{
-    console.log('api call failed');
+    ('api call failed');
   }
   return this.tempUsername;
 }
@@ -319,7 +319,7 @@ registerUser(){
   localStorage.setItem('user', JSON.stringify(this.user));
   try{
     this.leaderboardService.insertUser(this.user).subscribe(res => {
-      console.log(res);
+      (res);
       let temp:string = JSON.stringify(res);
   
       let response: any = JSON.parse(temp);
@@ -330,7 +330,7 @@ registerUser(){
     });
   }
   catch{
-    console.log('Api call failed');
+    ('Api call failed');
   }
   
   

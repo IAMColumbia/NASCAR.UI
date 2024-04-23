@@ -353,7 +353,7 @@
 }
 
 .start {
-    background: url(./assets/img/start.png) no-repeat center;
+    background: #00294A url(./assets/img/start.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -366,10 +366,11 @@
     place-items: center;
     font-size: 2em;
     position: relative;
+    z-index: 2;
 }
 
 .mid {
-    background: white url(./assets/img/mid.png) no-repeat center;
+    background: #00294A url(./assets/img/mid.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -382,10 +383,11 @@
     place-items: center;
     font-size: 2em;
     position: relative;
+    z-index: 2;
 }
 
 .click {
-    background: white url(./assets/img/click.png) no-repeat center;
+    background: #00294A url(./assets/img/click.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -398,6 +400,7 @@
     place-items: center;
     font-size: 2em;
     position: relative;
+    z-index: 2;
 }
 
 #overlay{
@@ -471,6 +474,13 @@
     text-align: center;
     color: #000000;
     line-height: calc(1.2 * 2.57vh);
+}
+
+.hidden{
+    z-index: -1;
+    position: absolute;
+    width: 1;
+    height: 1;
 }
 
 .pop-up-button{

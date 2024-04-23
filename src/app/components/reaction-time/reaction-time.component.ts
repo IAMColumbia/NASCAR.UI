@@ -24,6 +24,7 @@ showLeaderBoard:boolean = false;
 tooSoon:boolean = false;
 instructions:boolean = false;
 Menu:boolean = true;
+showLoading:boolean = true;
 
 timeout: any;
 apiCallComplete: boolean = false;
@@ -36,6 +37,7 @@ user: User = new User(0,"","",0);
 
 userID: number = 0;
 username: string = "";
+tempUsername: string ="";
 selectedAvatar: string = "../../../assets/img/WhiteHelmet.svg";
 avatarList: string[] = [
   "../../../assets/img/BlackHelmet.svg",
@@ -51,6 +53,14 @@ avatarList: string[] = [
   "../../../assets/img/RedHelmet.svg",
   "../../../assets/img/TealHelmet.svg"
 ];
+
+images: string [] = [
+  "./assets/img/start.png",
+  "./assets/img/mid.png",
+  "./assets/img/click.png"
+];
+
+loaded: number = 0;
 
 ngOnInit(): void {
   
@@ -73,8 +83,8 @@ displayAvatarSelect(){
     this.intToAvatar(this.user.Avatar);
     this.username = this.user.Username;
     if(this.user.ID === 0){
-      this.username = this.generateRandomUsername();
-      this.AvatarSelect = true; 
+      this.generateRandomUsername();
+      //this.AvatarSelect = true; 
     }
     else{
       this.displayInstructions();
@@ -82,8 +92,7 @@ displayAvatarSelect(){
     
   }
   catch{
-      this.username = this.generateRandomUsername();
-      this.AvatarSelect = true; 
+      this.generateRandomUsername();
     
   }
 
@@ -269,25 +278,32 @@ generateRandomUsername(){
     "True",
     "Wise"
   ]
-  
-  let name = "";
+
 
   let number = Math.floor(Math.random() * (9999 - 1000) + 1000);
 
   let first = firstTerms[Math.floor(Math.random() * (26-0)+0)];
   let second = middleTerms[Math.floor(Math.random() * (39-0)+0)];
 
-  name = first + second + number;
+  this.tempUsername = first + second + number;
+  
   try{
-    this.leaderboardService.getUserByUsername(name).subscribe(res => {console.log(res.data)});
+    this.leaderboardService.getUserByUsername(this.tempUsername).subscribe(res => {
+      console.log(res.data);
+      if(res.data != null){
+        this.tempUsername = this.generateRandomUsername();
+      }
+      else{
+        this.username = this.tempUsername;
+        this.AvatarSelect = true;
+      }
+    });
   }
 
   catch{
     console.log('api call failed');
   }
-  
-  
-  return name.toString();
+  return this.tempUsername;
 }
 
 newUsername(){
@@ -420,6 +436,23 @@ intToAvatar(avatar: number){
       this.selectedAvatar = "../../../assets/img/TealHelmet.svg";
       break;
     }
+  }
+}
+
+loadImages(){
+  for(let i = 0; i < this.images.length; i++){
+    let img = new Image();
+    img.onload = () => {
+      this.loadedImg();
+    }
+    img.src = this.images[i];
+  }
+}
+
+loadedImg(){
+  this.loaded++;
+  if(this.images.length == this.loaded){
+    //all images loaded
   }
 }
 

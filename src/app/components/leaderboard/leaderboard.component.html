@@ -11,7 +11,11 @@
             />
           </div>
         </div>
-        <div id="avatar" *ngIf="score.type === 'player'"></div>
+        <img
+          id="avatar"
+          *ngIf="score.type === 'player'"
+          src="{{ intToAvatar(score.avatar) }}"
+        />
         <div id="username">{{ score.username }}</div>
         <div id="time">
           <p>{{ score.score }} ms</p>

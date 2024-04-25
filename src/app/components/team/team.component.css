@@ -38,42 +38,33 @@ body {
        .team-section {
         text-align: left;
       }
+
+      .trivia-team {
+        position: absolute;
+        top: 50;
+        right: 0;
+      }
       
-      .team-description {
-        background-color: green;
-        color: black;
+
+      .reflex-game-team {
+        position: absolute;
+        top: 50;
+        right: 0;
+        background-color: rgb(0, 0, 0);
+        color: white;
         padding: 20px;
         border-radius: 8px;
-        text-align: left; /* Align to the left */
       }
 
-        .trivia-team {
-            background-color: yellow;
-            color: black;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .reflex-game-team {
-            background-color: red;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-        }
 
         .activity-book-team {
-            background-color: rgb(0, 110, 255);
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .mentorship-section {
-          background-color: rgb(71, 158, 71); /* Add a light green box */
+          position: absolute;
+          top: 50;
+          right: 0;
+          background-color: rgb(0, 0, 0);
           color: white;
           padding: 20px;
           border-radius: 8px;
-          text-align: center;
         }
 
         .team-member {

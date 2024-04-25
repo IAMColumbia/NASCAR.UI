@@ -64,7 +64,7 @@
 }
 
 #ChangePlayerNameIcon {
-    position: fixed;
+    position: absolute;
     height: 40px;
     right: 70px;
 }
@@ -108,13 +108,13 @@
 }
 
 .avatar-sparkles {
-    position: fixed;
+    position: absolute;
     left:121px;
     top: 129px;
 }
 
 .NascarPic img {
-    position: fixed;
+    position: absolute;
     left:150px;
     top: 130px;
 }
@@ -144,7 +144,7 @@
 }
 
 #FlipArrow {
-    position: fixed;
+    position: absolute;
     left: 290px;
     top: 80px;
 
@@ -167,7 +167,7 @@
 }
 
 .CardBox #Flag{
-    position: fixed;
+    position: absolute;
     top: 15px;
     width: 138px;
     height: 72px;
@@ -202,7 +202,7 @@
 }
 
 .Avatar {
-    position: fixed;
+    position: absolute;
     left:148px;
     top: 145px;
     width: 92px;
@@ -246,7 +246,7 @@
     mix-blend-mode: multiply;
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: absolute;
     top:0;
     right:0;
     z-index: 0;
@@ -404,7 +404,7 @@
 }
 
 #overlay{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
@@ -518,7 +518,7 @@
 @media all and (min-width: 769px) {
     #reaction-game{
         width: 430px;
-        height: 932px;
+        height: 100dvh;
         margin: auto;
     }
 

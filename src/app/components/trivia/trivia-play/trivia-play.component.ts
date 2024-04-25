@@ -23,6 +23,8 @@ export class TriviaPlayComponent {
   interval$: any;
   timeout: any;
 
+  streak: number = 0;
+
   ngOnInit(){
     this.DisplayQuestion();
   }
@@ -44,6 +46,10 @@ export class TriviaPlayComponent {
     if(option.correct){
       this.score += (this.difficulty * 100);
       this.questions[this.questionNum].correct = true;
+      this.streak++;
+    }
+    else{
+      this.streak = 0;
     }
 
     //if last question go to end screen
@@ -74,6 +80,7 @@ export class TriviaPlayComponent {
     this.difficulty = 0;
     this.score = 0;
     this.timer = 2;
+    this.streak = 0;
   }
 
   StartQuestionTimer(){

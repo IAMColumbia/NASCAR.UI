@@ -1,33 +1,30 @@
-<div
-  class="trivia"
-  [ngClass]="{
-    'trivia-round-1': difficulty === 1,
-    'trivia-round-2': difficulty === 2,
-    'trivia-round-3': difficulty === 3
-  }"
->
+<div id="trivia">
   <div id="score-container">
-    <div
-      id="score"
-      [ngClass]="{
-        'content-bg-r1': difficulty === 1,
-        'content-bg-r2': difficulty === 2,
-        'content-bg-r3': difficulty === 3
-      }"
-    >
-      {{ score }} pts
-    </div>
+    <div id="score">{{ score }} pts</div>
   </div>
 
+  <div id="streak" *ngIf="streak > 0"></div>
+  <img
+    id="flame"
+    src="../../../../assets/img/streak-1.svg"
+    *ngIf="streak == 1"
+  />
+  <img
+    id="flame"
+    src="../../../../assets/img/streak-2.svg"
+    *ngIf="streak == 2"
+  />
+  <img
+    id="flame"
+    src="../../../../assets/img/streak-3.svg"
+    *ngIf="streak >= 3"
+  />
   <div id="timer">
     <p *ngIf="answerDisplay">{{ timer }}</p>
   </div>
   <div
     id="content"
     [ngClass]="{
-      'content-bg-r1': difficulty === 1,
-      'content-bg-r2': difficulty === 2,
-      'content-bg-r3': difficulty === 3,
       'content-q': !answerDisplay
     }"
   >

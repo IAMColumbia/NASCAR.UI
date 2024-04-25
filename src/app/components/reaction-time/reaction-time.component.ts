@@ -318,13 +318,11 @@ registerUser(){
       let response: any = JSON.parse(temp);
       console.log(response.data);
       if(response.data == undefined){
-        console.log('YIPPEE');
         this.user = new User(0, this.username, 'player', this.avatarToInt());
       
         localStorage.setItem('user', JSON.stringify(this.user));
       }
       else{
-        console.log('FUCK');
         this.user = new User(response.data, this.username, 'player', this.avatarToInt());
       
         localStorage.setItem('user', JSON.stringify(this.user));

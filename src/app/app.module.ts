@@ -15,6 +15,8 @@ import { TriviaMenuComponent } from './components/trivia/trivia-menu/trivia-menu
 import { TriviaPlayComponent } from './components/trivia/trivia-play/trivia-play.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { httpInterceptProviders } from './interceptors';
+import { AvatarSelectComponent } from './components/reaction-time/avatar-select/avatar-select.component';
+import { ReactionMenuComponent } from './components/reaction-time/reaction-menu/reaction-menu.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { httpInterceptProviders } from './interceptors';
     HomeDesktopComponent,
     TriviaMenuComponent,
     TriviaPlayComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    AvatarSelectComponent,
+    ReactionMenuComponent
   ],
   imports: [
     BrowserModule,

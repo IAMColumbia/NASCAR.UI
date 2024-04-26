@@ -69,13 +69,19 @@ ngOnInit(): void {
 constructor(private leaderboardService: LeaderboardService){
 }
 
+setUser(user:User){
+  this.user = user;
+  console.log(this.user);
+  this.displayInstructions();
+}
+
 displayInstructions(): void{
   this.AvatarSelect = false;
   this.instructions = true;
   this.started = true;
 }
 
-displayAvatarSelect(){
+displayAvatarSelect(event: boolean){
   try{
     let user = localStorage.getItem('user');
 
@@ -83,8 +89,7 @@ displayAvatarSelect(){
     this.intToAvatar(this.user.Avatar);
     this.username = this.user.Username;
     if(this.user.ID === 0){
-      this.generateRandomUsername();
-      //this.AvatarSelect = true; 
+      this.AvatarSelect = event;
     }
     else{
       this.displayInstructions();
@@ -92,16 +97,16 @@ displayAvatarSelect(){
     
   }
   catch{
-      this.generateRandomUsername();
+      this.AvatarSelect = event;
     
   }
 
   
 }
 
-displayMenu(): void{
-  this.AvatarSelect = false;
-  this.Menu = true;
+displayMenu(output: boolean): void{
+  this.AvatarSelect = !output;
+  this.Menu = output;
 }
 
 DisplayDriver(): void{
@@ -201,141 +206,9 @@ resetGame(){
   this.startGame();
 }
 
-displayLeaderBoard(){
-  this.finished = false;
-  this.showLeaderBoard = true;
-}
-
-generateRandomUsername(){
-  const middleTerms = [
-    "Boost",
-    "Brake",
-    "Burn",
-    "Chase",
-    "Check",
-    "Crew",
-    "Curve",
-    "Dash",
-    "Drive",
-    "Draft",
-    "Finish",
-    "Flag",
-    "Fuel",
-    "Gear",
-    "Glide",
-    "Grid",
-    "Grit",
-    "Lane",
-    "Lap",
-    "Lead",
-    "Loop",
-    "Pace",
-    "Pit",
-    "Pitcrew",
-    "Pitstop",
-    "Pole",
-    "Race",
-    "Rev",
-    "Shift",
-    "Spinner",
-    "Spin",
-    "Speed",
-    "Start",
-    "Tire",
-    "Track",
-    "Turn",
-    "Victory",
-    "Win",
-    "Wheel"
-  ]
-
-  const firstTerms = [
-    "Bold",
-    "Bright",
-    "Brave",
-    "Calm",
-    "Cheery",
-    "Clear",
-    "Clever",
-    "Cool",
-    "Clever",
-    "Fair",
-    "Fresh",
-    "Fun",
-    "Good",
-    "Joyful",
-    "Kind",
-    "Lively",
-    "Lucky",
-    "Merry",
-    "Rich",
-    "Safe",
-    "Sharp",
-    "Smart",
-    "Sweet",
-    "Swift",
-    "Sunny",
-    "True",
-    "Wise"
-  ]
-
-
-  let number = Math.floor(Math.random() * (9999 - 1000) + 1000);
-
-  let first = firstTerms[Math.floor(Math.random() * (26-0)+0)];
-  let second = middleTerms[Math.floor(Math.random() * (39-0)+0)];
-
-  this.tempUsername = first + second + number;
-  
-  this.leaderboardService.getUserByUsername(this.tempUsername).subscribe(res => {
-    if(res.data != null){
-      this.tempUsername = this.generateRandomUsername();
-    }
-    else{
-      this.username = this.tempUsername;
-      this.AvatarSelect = true;
-    }
-    });
-  return this.tempUsername;
-}
-
-newUsername(){
-  this.username = this.generateRandomUsername();
-}
-
-changeAvatar(nextAvatar: string){
-  this.selectedAvatar = nextAvatar;
-}
-
-registerUser(){
-  this.user = new User(this.userID, this.username, 'player', this.avatarToInt());
-  localStorage.setItem('user', JSON.stringify(this.user));
-  try{
-    this.leaderboardService.insertUser(this.user).subscribe(res => {
-      
-      let temp:string = JSON.stringify(res);
-  
-      let response: any = JSON.parse(temp);
-      console.log(response.data);
-      if(response.data == undefined){
-        this.user = new User(0, this.username, 'player', this.avatarToInt());
-      
-        localStorage.setItem('user', JSON.stringify(this.user));
-      }
-      else{
-        this.user = new User(response.data, this.username, 'player', this.avatarToInt());
-      
-        localStorage.setItem('user', JSON.stringify(this.user));
-      }
-      
-    });
-  }
-  catch{
-    ('Api call failed');
-  }
-  
-  
-  this.displayInstructions();
+displayLeaderBoard(event: boolean){
+  this.finished = !event;
+  this.showLeaderBoard = event;
 }
 
 avatarToInt(){
@@ -437,23 +310,6 @@ intToAvatar(avatar: number){
       this.selectedAvatar = "../../../assets/img/TealHelmet.svg";
       break;
     }
-  }
-}
-
-loadImages(){
-  for(let i = 0; i < this.images.length; i++){
-    let img = new Image();
-    img.onload = () => {
-      this.loadedImg();
-    }
-    img.src = this.images[i];
-  }
-}
-
-loadedImg(){
-  this.loaded++;
-  if(this.images.length == this.loaded){
-    //all images loaded
   }
 }
 

@@ -30,10 +30,7 @@
     </button>
   </div>
 
-  <div class="overlay"></div>
-
-  <div
-    class="menu"
+  <app-reaction-menu
     *ngIf="
       Menu &&
       !started &&
@@ -44,48 +41,9 @@
       !DriverCard &&
       !AvatarSelect
     "
-  >
-    <div class="container">
-      <div class="menu-content">
-        <img
-          id="Check-Img"
-          src="../../../assets/img/CheckerFlags.svg"
-          alt="Crossed Checkerd Flags"
-        />
-        <img
-          id="Title-Img"
-          src="../../../assets/img/Title.svg"
-          alt="Are you faster than a Nascar driver?"
-        />
-      </div>
-      <div id="btn-box">
-        <button
-          class="btn"
-          id="play-btn"
-          type="button"
-          (click)="displayAvatarSelect()"
-        ></button>
-        <button
-          class="btn"
-          id="leader-board-btn"
-          (click)="displayLeaderBoard()"
-        ></button>
-        <a href="#" routerLink="/"
-          ><button class="btn" id="home-btn"></button>
-        </a>
-      </div>
-    </div>
-    <div class="footer">
-      <img
-        src="../../../assets/img/ColumbiaLogo.png"
-        alt="Columbia College Chicago Logo"
-      />
-      <img
-        src="../../../assets/img/NascarChicagoLogo.png"
-        alt="Chicago Nascar Logo"
-      />
-    </div>
-  </div>
+    (displayAvatarMenu)="displayAvatarSelect($event)"
+    (leaderboard)="displayLeaderBoard($event)"
+  ></app-reaction-menu>
 
   <div
     class="clickable-area"
@@ -97,53 +55,11 @@
     <div class="click" *ngIf="showClick && !showMid"></div>
   </div>
 
-  <div class="menu" *ngIf="AvatarSelect && !showLeaderBoard">
-    <div class="container">
-      <div class="menu-content">
-        <div id="Avatar" class="CardBox">
-          <img src="../../../assets/img/FinishFlag.svg" alt="" id="Flag" />
-          <div class="PlayerAvatarBox">
-            <h1 id="AvatarHeader">Personalize your Driver</h1>
-            <img id="ActiveHelmet" src="{{ selectedAvatar }}" alt="" />
-            <div class="PlayerNameBox">
-              <div id="PlayerName">{{ username }}</div>
-              <div id="ChangePlayerNameIcon">
-                <img
-                  src="../../../assets/img/ChangeNameIcon.svg"
-                  alt=""
-                  (click)="newUsername()"
-                />
-              </div>
-            </div>
-          </div>
-          <hr id="CardBoxHR" />
-          <div class="HelmetGridBox">
-            <div class="HelmetGrid">
-              <img
-                src="{{ avatar }}"
-                (click)="changeAvatar(avatar)"
-                *ngFor="let avatar of avatarList"
-              />
-            </div>
-          </div>
-        </div>
-        <div id="Avatar" class="NavBar">
-          <img
-            class="btn"
-            (click)="displayMenu()"
-            src="../../../assets/img/Back.svg"
-            alt=""
-          />
-          <img
-            class="btn"
-            (click)="registerUser()"
-            src="../../../assets/img/DoneButton.svg"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-avatar-select
+    *ngIf="AvatarSelect && !showLeaderBoard"
+    (menu)="displayMenu($event)"
+    (play)="setUser($event)"
+  ></app-avatar-select>
 
   <div class="menu" *ngIf="DriverCard && !showLeaderBoard">
     <div class="container">
@@ -180,7 +96,7 @@
           </a>
           <img
             class="btn"
-            (click)="displayLeaderBoard()"
+            (click)="displayLeaderBoard(true)"
             src="../../../assets/img/LeaderboardIcon.svg"
             alt=""
           />
@@ -219,7 +135,7 @@
             </div>
           </div>
           <div class="ScoreBox">
-            <div class="ScoreTitle">{{ username }}</div>
+            <div class="ScoreTitle">{{ user.Username }}</div>
             <div class="showScore">{{ reactionTime }}ms</div>
           </div>
           <div class="GraphicBox">
@@ -246,7 +162,7 @@
           </a>
           <img
             class="btn"
-            (click)="displayLeaderBoard()"
+            (click)="displayLeaderBoard(true)"
             src="../../../assets/img/LeaderboardIcon.svg"
             alt=""
           />

@@ -6,6 +6,8 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    padding: 34.87% 7.69% 
 }
 
 #content{
@@ -27,6 +29,10 @@
     background: #DAF0F8;
 
     padding-top: 12%;
+
+    padding-left: 6.4%;
+    padding-right: 6.4%; 
+    padding-top: 21.28%;
 }
 
 .content-q{
@@ -89,8 +95,8 @@
 #timer{
 
     position: absolute;
-    width: 96px;
-    height: 96px;
+    width: 11.8vh;
+    height: 11.8vh;
 
     border-radius: 50%;
     background: #FFF361;
@@ -252,7 +258,7 @@
   } /* closes 769px+ */
   
 @media all and (max-height: 667px) {
-    #content{
+    /* #content{
         width: 84.61%;
         height: 70.26%;
         border-radius: 25px;
@@ -286,5 +292,5 @@
     
     #flame{
         top: 4%;
-    }
+    } */
   } 

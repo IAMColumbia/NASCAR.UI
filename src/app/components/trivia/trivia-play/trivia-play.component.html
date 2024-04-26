@@ -1,25 +1,24 @@
 <div id="trivia">
-  <div id="score-container">
-    <div id="score">{{ score }} pts</div>
-  </div>
+  <div id="score">{{ score }} pts</div>
 
-  <div id="streak" *ngIf="streak > 0"></div>
-  <img
-    id="flame"
-    src="../../../../assets/img/streak-1.svg"
-    *ngIf="streak == 1"
-  />
-  <img
-    id="flame"
-    src="../../../../assets/img/streak-2.svg"
-    *ngIf="streak == 2"
-  />
-  <img
-    id="flame"
-    src="../../../../assets/img/streak-3.svg"
-    *ngIf="streak >= 3"
-  />
   <div id="timer">
+    <div id="streak" *ngIf="streak > 0">
+      <img
+        id="flame-1"
+        src="../../../../assets/img/streak-1.svg"
+        *ngIf="streak == 1"
+      />
+      <img
+        id="flame-2"
+        src="../../../../assets/img/streak-2.svg"
+        *ngIf="streak == 2"
+      />
+      <img
+        id="flame-3"
+        src="../../../../assets/img/streak-3.svg"
+        *ngIf="streak >= 3"
+      />
+    </div>
     <p *ngIf="answerDisplay">{{ timer }}</p>
   </div>
   <div

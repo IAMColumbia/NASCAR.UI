@@ -24,15 +24,11 @@
 
     display: flex;
     flex-direction: column;
-    gap:10%;
+    gap:5%;
     align-items: center;
     background: #DAF0F8;
 
-    padding-top: 12%;
-
-    padding-left: 6.4%;
-    padding-right: 6.4%; 
-    padding-top: 21.28%;
+    padding-top: 14%;
 }
 
 .content-q{
@@ -43,53 +39,63 @@
 #question-text{
     color: #000;
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal; 
     text-wrap:wrap;
-    width: 281px;
+    width: 89.39%;
     min-height: 108px;
     margin: 0 auto;
 }
 
-#score-container{
-    position: absolute;
-    top:9.59%;
-    right:8.97%;
-
-    width: 100%;
-    height: 36px;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items:flex-start;
-}
-
 #streak{
-    width: 48px;
-    height: 48px;
+    width: 12.3vw;
+    height: 12.3vw;
     border-radius: 50%;
     background: #DAF0F8;
 
     position: absolute;
     z-index: 101;
     left: 50%;
-    top: 7%;
+    top: -30%;
     -ms-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
-#flame{
+#flame-1{
+    top: -10%;
+    left: 50%;
     margin: auto;
     position: absolute;
-    z-index: 102;
-    left: 50%;
-    top: 6%;
     -ms-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+    z-index: 102;
+    
+}
+
+#flame-2{
+    top: -20%;
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 102;
+}
+
+#flame-3{
+    top: -30%;
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 102;
 }
 
 #timer{
@@ -119,6 +125,9 @@
 }
 
 #score{
+    position: absolute;
+    top:9.59%;
+    right:8.97%;
     width: 101px;
     height: 36px;
     border-radius: 15px;
@@ -132,19 +141,18 @@
 
     font-size: 20px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal; 
 }
 
 #progress-bar{
-    width: 330px;
+    width: 81.53%;
     position: absolute;
     bottom: 0;
     left: 50%;
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    margin-bottom: 5vh;
-
+    margin-bottom: 3vh;
 }
 
 .correct-star{
@@ -154,14 +162,15 @@
 .answer-box-long{
     display: flex;
     flex-direction: column;
-
+    width:82.42%;
+    height: 53.33%;
     justify-content: space-evenly;
-    gap: 20px;
+    gap: 7.35%;
 }
 
 .answer-choice-long{
-    width:272px;
-    height: 53px;
+    width:100%;
+    height: 19.48%;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -174,20 +183,28 @@
     width: 80%;
     margin: auto;
     text-align: center;
+
+    font-style: normal;
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 20px;
+
+    color: #000000;
 }
 
 .answer-box-short{
     display: flex;
     flex-direction: row;
-
+    width: 90.9%;
+    height: 55.8%;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px 20px;
 }
 
 .answer-choice-short{
-    width:136px;
-    height: 126px;
+    width:45.3%;
+    height: 41.31%;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -256,41 +273,3 @@
     
     }
   } /* closes 769px+ */
-  
-@media all and (max-height: 667px) {
-    /* #content{
-        width: 84.61%;
-        height: 70.26%;
-        border-radius: 25px;
-    
-        position: absolute;
-        left: 50%;
-        top:16.7%;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        padding-top:9%;
-        gap: 2%;
-    }
-    #timer{
-        top:8%;
-    }
-
-    .content-q{
-        max-height: 26%;
-    
-    }
-    #question-text{
-        font-size: 24px;
-        height: 112px;
-        font-weight: 400;
-    }
-
-    #streak{
-        top: 5%;
-    }
-    
-    #flame{
-        top: 4%;
-    } */
-  } 

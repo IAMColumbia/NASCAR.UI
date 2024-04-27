@@ -22,7 +22,7 @@
             }
         ],
         "correct": false,
-        "explanation": "The four stars represent: Fort Dearborn, Chicago Fire, World's Fair: Columbia Exposition and last but not least, the Century of Progress Exposition."
+        "explanation": "../../../../assets/img/chicago-flag.png"
         },
         {
             "questionText": "What type of pizza is Chicago known for?",
@@ -37,7 +37,7 @@
                 "correct": true
             },
             {
-                "text": "Stuff Crust",
+                "text": "Stuffed Crust",
                 "chosen": false
             },
             {
@@ -70,10 +70,10 @@
             }
         ],
         "correct": false,
-        "explanation": "Due to the City's unique location conditions and urban structure, it allows the perfect combination for strong winds to be felt."
+        "explanation": "The city's unique location conditions and urban structure create the perfect combination for strong winds to be felt."
         },
         {
-            "questionText": "What does the checkered flag signify in races?",
+            "questionText": "What does the black and white checkered flag signify in a NASCAR race?",
             "short": false,
             "options": [{
                 "text": "End of Race",
@@ -89,36 +89,36 @@
                 "chosen": false
             },
             {
-                "text": "Practice has ended",
+                "text": "Caution",
                 "chosen": false
             }
         ],
         "correct": false,
-        "explanation": "Once this flag flies, all drivers must past under the flag in order to have their finishing position scored."
+        "explanation": "Each car remaining on the track must cross the start-finish line and pass under the checkered flag to have its finishing position officially scored."
         },
         {
-            "questionText": "What does NASCAR stand for?",
-            "short": false,
+            "questionText": "What does the first A in NASCAR stand for?",
+            "short": true,
             "options": [{
-                "text": "New Automobiles Speeding Competitively Around Racetracks",
+                "text": "Auto",
                 "chosen": false
             },
             {
-                "text": "National Association for Speeding Car Auto Racing",
+                "text": "Assembly",
                 "chosen": false
             },
             {
-                "text": "National Association for Stock Car Auto Racing",
+                "text": "Association",
                 "chosen": false,
                 "correct": true
             },
             {
-                "text": "National Auto Stock Car Association Race",
+                "text": "Associating",
                 "chosen": false
             }
         ],
         "correct": false,
-        "explanation": "In 1947, William H.G. France organized a meeting with racing enthusiasts in Daytona Beach, Florida, leading to the creation of NASCAR. The first official NASCAR race took place in 1948 on Daytona Beach. Since then, the sport has grown significantly, with millions of fans tuning in to watch races every year."
+        "explanation": "NASCAR fully stands for National Association for Stock Car Auto Racing"
         }
     ]
 }

@@ -2,119 +2,21 @@
     width: 100vw;
     height: 100vh;
     margin: 0;
+    background: #00294A url('./assets/img/reaction-background.svg') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.CardBox#Avatar {
-    gap:0;
-}
-
-.NavBar#Avatar {
-    gap:125px;
-    padding-top: 20px;
-}
-
-.PlayerAvatarBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
-    align-items: center;
-}
-
-#AvatarHeader {
-    display: flex;
-    padding-top: 15px;
-    font-size: 24px;
-    flex-wrap: nowrap;
-    text-wrap: nowrap;
-    align-self: center;
-    font-family: "neue-haas-grotesk-display", sans-serif;
-}
-
-#ActiveHelmet {
-    display: flex;
-    width: 40%;
-    height: 45%;
-    background-color: #BBDEEB;
-    border-radius: 20px;
-}
-
-.PlayerNameBox {
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
-    font-size: 20px;
-    flex-wrap: nowrap;
-}
-
-#PlayerName {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    background-color: #BBDEEB;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: #FFFFFF;
-    border-width: 4px;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: 5px;
-    width: 100%;
-   
-}
-
-#ChangePlayerNameIcon {
-    position: fixed;
-    height: 40px;
-    right: 70px;
-}
-
-#CardBoxHR {
-    border: none;
-    width: 100%;
-    height: 10px;
-    background-color: #FFFFFF;
-    z-index: 100;
-    padding: 0;
-    margin: 0;
-}
-
-.HelmetGridBox {
-    display: flex;
-    background-color: #BBDEEB;
-    height:inherit;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.HelmetGrid {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-wrap: wrap;
-    justify-content:space-evenly;
-    align-self: stretch;
-    align-content: space-evenly;
-}
-
-.HelmetGrid img {
-    height: 25%;
-}
-
-.HelmetGrid img:hover {
-    background-color: #83b4ca;
-    border-radius: 20px;
-    height: 25%;
-}
-
-.AvatarPic img {
-    position: fixed;
-    left:125px;
-    top: 125px;
+.avatar-sparkles {
+    position: absolute;
+    left:121px;
+    top: 129px;
 }
 
 .NascarPic img {
-    position: fixed;
+    position: absolute;
     left:150px;
     top: 130px;
 }
@@ -144,7 +46,7 @@
 }
 
 #FlipArrow {
-    position: fixed;
+    position: absolute;
     left: 290px;
     top: 80px;
 
@@ -167,14 +69,10 @@
 }
 
 .CardBox #Flag{
-    position: fixed;
+    position: absolute;
     top: 15px;
     width: 138px;
     height: 72px;
-}
-
-.CardBox img {
-    
 }
 
 .NavBar {
@@ -201,9 +99,15 @@
 .AvatarPic {
     width: 92px;
     height: 92px;
-    background-color: #5C5C5C;
     border-radius: 100px;
     text-align: center;
+}
+
+.Avatar {
+    position: absolute;
+    left:148px;
+    top: 145px;
+    width: 92px;
 }
 
 .NascarPic {
@@ -219,36 +123,9 @@
     flex-direction: column;
     justify-content: end;
     align-content: flex-end;
-    background-image: url(./assets/img/ReactionBackground.svg);
-    background-repeat: repeat;
-    background-size: cover;
     width: 100%;
     height: 100%;
     flex-wrap: nowrap;
-}
-
-
-
-#Check-Img {
-    width: 200px;
-    height: 100px;
-}
-
-#Title-Img {
-    width: 300px;
-}
-
-.overlay {
-    
-    background-color: #00294A;
-    mix-blend-mode: multiply;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top:0;
-    right:0;
-    z-index: 0;
-    
 }
 
 .menu .btn {
@@ -276,55 +153,6 @@
     height: 100%;
 }
 
-#play-btn {
-    background-image: url(./assets/img/YellowButton.svg);
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0);
-    background-size: cover;
-    border: none;
-    height: 60px;
-    width: 255px;
-    margin: 5px;
-}
-
-#leader-board-btn {
-    background-image: url(./assets/img/RedButton.svg);
-    background-repeat: no-repeat;
-    background-color: none;
-    background-color: rgba(255, 255, 255, 0);
-    background-size: cover;
-    border: none;
-    height: 60px;
-    width: 235px;
-    margin: 5px;
-}
-
-#home-btn {
-    background-image: url(./assets/img/BlueButton.svg);
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0);
-    background-size: cover;
-    border: none;
-    height: 55px;
-    width: 205px;
-    margin: 5px;
-}
-
-.footer {
-    position: relative;
-    display: flex;
-    flex-wrap: nowrap;
-    float: right;
-    align-items: center;
-    width:39.69%;
-    margin-right: 0;
-    margin-left: 60%;
-}
-
-.footer img{
-    width: 50%;
-    padding-left: 20px;
-}
 
 .container, #too-soon-content{
     display: flex;
@@ -351,7 +179,7 @@
 }
 
 .start {
-    background: url(./assets/img/start.png) no-repeat center;
+    background: #00294A url(./assets/img/start.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -364,10 +192,11 @@
     place-items: center;
     font-size: 2em;
     position: relative;
+    z-index: 2;
 }
 
 .mid {
-    background: white url(./assets/img/mid.png) no-repeat center;
+    background: #00294A url(./assets/img/mid.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -380,10 +209,11 @@
     place-items: center;
     font-size: 2em;
     position: relative;
+    z-index: 2;
 }
 
 .click {
-    background: white url(./assets/img/click.png) no-repeat center;
+    background: #00294A url(./assets/img/click.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -396,10 +226,11 @@
     place-items: center;
     font-size: 2em;
     position: relative;
+    z-index: 2;
 }
 
 #overlay{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
@@ -506,7 +337,7 @@
 @media all and (min-width: 769px) {
     #reaction-game{
         width: 430px;
-        height: 932px;
+        height: 100dvh;
         margin: auto;
     }
 

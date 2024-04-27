@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TriviaService } from '../../services/trivia.service';
-import { interval } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trivia',
@@ -37,7 +37,7 @@ export class TriviaComponent implements OnInit{
     this.levelSelect = false;
   } 
 
-  constructor(private triviaSerivce: TriviaService){}
+  constructor(private triviaSerivce: TriviaService, private router: Router){}
 
   StartGame($event: boolean) {
     console.log('game started');
@@ -68,8 +68,6 @@ export class TriviaComponent implements OnInit{
             this.questions = res.questions;
           });
     }
-
-    //this.DisplayQuestion();
     this.started = true;
 
   }
@@ -102,58 +100,6 @@ export class TriviaComponent implements OnInit{
     this.triviaCompleted = true;
   }
 
-  // DisplayQuestion(){
-  //   this.questionDisplay = true;
-  //   setTimeout(()=>{
-  //     this.StartTimer();
-  //   }, 500);
-    
-
-  // }
-
-  // Answer(questionNumber: number, option: any){
-  //   this.StopQuestionTimer();
-
-  //   option.chosen = true;
-
-  //   //if correct
-  //   if(option.correct){
-  //     this.score += (this.difficulty * 100);
-  //     this.questions[this.questionNum].correct = true;
-  //   }
-
-  //   //if last question go to end screen
-  //   if(questionNumber === this.questions.length){
-  //     setTimeout(() => {
-  //       this.triviaCompleted = true;
-  //       if(this.difficulty === 1){
-  //         this.completedRound1 = true;
-  //         this.scoreRound1 = this.score;
-  //       }
-  //       else if(this.difficulty === 2){
-  //         this.completedRound2 = true;
-  //         this.scoreRound2 = this.score;
-  //       }
-  //       else if(this.difficulty === 3){
-  //         this.completedRound3 = true;
-  //         this.scoreRound3 = this.score;
-  //       }
-
-  //       console.log(this.questions);
-  //     },500);
-  //   }
-  //   else{
-  //     setTimeout(() => {
-  //       this.questionNum++;
-  //       this.answerDisplay = false;
-  //       this.timer = 2;
-  //       this.DisplayQuestion();
-  //     },500);
-  //   }
-  // }
-
-
-
   ResetQuiz(){
     this.triviaCompleted = false;
     this.levelSelect = false;
@@ -167,53 +113,19 @@ export class TriviaComponent implements OnInit{
     this.timer = 2;
   }
 
-  NextLevel(){
-    this.triviaCompleted = false;
-    this.levelSelect = true;
-    this.started = false;
-    this.questionDisplay = false;
-    this.answerDisplay = false;
+  NextLevel(event: boolean){
+    this.triviaCompleted = !event;
+    this.levelSelect = event;
+    this.started = !event;
+    this.questionDisplay = !event;
+    this.answerDisplay = !event;
     this.questionNum = 0;
     this.score = 0;
     this.difficulty = 0;
     this.timer = 2;
   }
 
-  // StartQuestionTimer(){
-  //   this.interval$ = interval(1000)
-  //       .subscribe(val => {
-  //         this.timer--;
-  //         if(this.timer === 0){
-  //           let option = {text: ""}
-  //           this.Answer(this.questionNum+1, option);
-  //         }
-  //       });
-  //   setTimeout(()=>{
-  //     this.interval$.unsubscribe();
-  //   },800000);
-  // }
-
-  // StopQuestionTimer(){
-  //   this.interval$.unsubscribe();
-  // }
-
-  // ResetQuestionTimer(){
-  //   this.StopQuestionTimer();
-  //   this.timer = 30;
-  // }
-  
-  // StartTimer(){
-  //   this.interval$ = interval(1000)
-  //       .subscribe(val => {
-  //         this.timer--;
-  //         if(this.timer === 0){
-  //           this.answerDisplay = true;
-  //           this.ResetQuestionTimer();
-  //           this.StartQuestionTimer();
-  //         }
-  //       });
-  //   setTimeout(()=>{
-  //     this.interval$.unsubscribe();
-  //   },800000);
-  // }
+  Home(){
+    this.router.navigateByUrl('/');
+  }
 }

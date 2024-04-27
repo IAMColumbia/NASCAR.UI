@@ -7,13 +7,17 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReactionTimeComponent } from './components/reaction-time/reaction-time.component';
 import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-//import { Interceptor } from './services/interceptor';
+import { HttpClientModule } from '@angular/common/http';
 import { TriviaComponent } from './components/trivia/trivia.component';
 import { HomeMobileComponent } from './components/home-mobile/home-mobile.component';
 import { HomeDesktopComponent } from './components/home-desktop/home-desktop.component';
 import { TriviaMenuComponent } from './components/trivia/trivia-menu/trivia-menu.component';
 import { TriviaPlayComponent } from './components/trivia/trivia-play/trivia-play.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { httpInterceptProviders } from './interceptors';
+import { AvatarSelectComponent } from './components/reaction-time/avatar-select/avatar-select.component';
+import { ReactionMenuComponent } from './components/reaction-time/reaction-menu/reaction-menu.component';
+import { EndScreenComponent } from './components/trivia/end-screen/end-screen.component';
 
 import { ActivityComponent } from './components/activity/activity.component';
 
@@ -30,15 +34,18 @@ import { ActivityComponent } from './components/activity/activity.component';
     HomeDesktopComponent,
     TriviaMenuComponent,
     TriviaPlayComponent,
-    ActivityComponent
+    ActivityComponent,
+    SpinnerComponent,
+    AvatarSelectComponent,
+    ReactionMenuComponent,
+    EndScreenComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [
-  ],
+  providers: [httpInterceptProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

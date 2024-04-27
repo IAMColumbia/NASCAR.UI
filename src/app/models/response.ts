@@ -1,7 +1,7 @@
 import { LeaderBoardRecord } from "./leaderboard-record";
 
 export class ResponseDto{
-    Data?: LeaderBoardRecord[];
+    Data?: any;
     Errors?: string[];
 
 }

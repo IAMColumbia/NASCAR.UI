@@ -1,0 +1,47 @@
+<div class="menu">
+  <div class="container">
+    <div class="menu-content">
+      <div id="Avatar" class="CardBox">
+        <img src="../../../../assets/img/FinishFlag.svg" alt="" id="Flag" />
+        <div class="PlayerAvatarBox">
+          <h1 id="AvatarHeader">Personalize your Driver</h1>
+          <img id="ActiveHelmet" src="{{ selectedAvatar }}" alt="" />
+          <div class="PlayerNameBox">
+            <div id="PlayerName">{{ username }}</div>
+            <div id="ChangePlayerNameIcon">
+              <img
+                src="../../../../assets/img/ChangeNameIcon.svg"
+                alt=""
+                (click)="newUsername()"
+              />
+            </div>
+          </div>
+        </div>
+        <hr id="CardBoxHR" />
+        <div class="HelmetGridBox">
+          <div class="HelmetGrid">
+            <img
+              src="{{ avatar }}"
+              (click)="changeAvatar(avatar)"
+              *ngFor="let avatar of avatarList"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="Avatar" class="NavBar">
+        <img
+          class="btn"
+          (click)="displayMenu()"
+          src="../../../../assets/img/Back.svg"
+          alt=""
+        />
+        <img
+          class="btn"
+          (click)="registerUser()"
+          src="../../../../assets/img/DoneButton.svg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>

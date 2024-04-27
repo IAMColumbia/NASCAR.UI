@@ -1,0 +1,199 @@
+.CardBox#Avatar {
+    gap:0;
+}
+
+.PlayerAvatarBox {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+#AvatarHeader {
+    display: flex;
+    padding-top: 15px;
+    font-size: 24px;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    align-self: center;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+#ActiveHelmet {
+    display: flex;
+    width: 40%;
+    height: 45%;
+    background-color: #BBDEEB;
+    border-radius: 20px;
+}
+
+.PlayerNameBox {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    font-size: 20px;
+    flex-wrap: nowrap;
+    gap: 5%;
+}
+
+#PlayerName {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    background-color: #BBDEEB;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #FFFFFF;
+    border-width: 4px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 5px;
+    width: 100%;
+   
+}
+
+#ChangePlayerNameIcon {
+    height: 40px;
+    right: 70px;
+}
+
+#CardBoxHR {
+    border: none;
+    width: 100%;
+    height: 10px;
+    background-color: #FFFFFF;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+}
+
+.HelmetGridBox {
+    width: 100%;
+    height: 43.73%;
+    background-color: #BBDEEB;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.HelmetGrid {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-content: space-evenly;
+}
+
+.HelmetGrid img:hover {
+    background-color: #83b4ca;
+    border-radius: 20px;
+}
+
+.CardBox {
+    display: flex;
+    align-items: center;
+    width: 345px;
+    height: 585px;
+    background-color: #DAF0F8;
+    border: 6px solid #FFFFFF;
+    border-radius: 25px;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    justify-content: center;
+}
+
+.AvatarBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 290px;
+    width: 345px;
+   
+}
+
+#Flag{
+    position: absolute;
+    top: -6%;
+    width: 138px;
+    height: 72px;
+}
+
+.NavBar {
+    display: flex;
+    flex-wrap: nowrap;  
+    width: 84.7%;  
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.NavBar img{
+    width: 30%;
+}
+
+.Avatar {
+    position: absolute;
+    left:148px;
+    top: 145px;
+    width: 92px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-content: flex-end;
+    width: 100%;
+    height: 100%;
+    flex-wrap: nowrap;
+}
+
+.menu .btn {
+    cursor:pointer;
+    border:none;
+    margin-top: 5px;
+}
+
+.menu-content{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    gap: 3%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+    #reaction-game{
+        width: 430px;
+        height: 100dvh;
+        margin: auto;
+    }
+
+    #pop-up{
+        width: 370px;
+    }
+} /* closes 769px+ */
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+} /* closes 1024px+ */

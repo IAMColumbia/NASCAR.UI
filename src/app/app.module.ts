@@ -19,6 +19,9 @@ import { AvatarSelectComponent } from './components/reaction-time/avatar-select/
 import { ReactionMenuComponent } from './components/reaction-time/reaction-menu/reaction-menu.component';
 import { EndScreenComponent } from './components/trivia/end-screen/end-screen.component';
 
+import { ActivityComponent } from './components/activity/activity.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +34,7 @@ import { EndScreenComponent } from './components/trivia/end-screen/end-screen.co
     HomeDesktopComponent,
     TriviaMenuComponent,
     TriviaPlayComponent,
+    ActivityComponent,
     SpinnerComponent,
     AvatarSelectComponent,
     ReactionMenuComponent,

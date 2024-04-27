@@ -15,6 +15,9 @@ import { HomeDesktopComponent } from './components/home-desktop/home-desktop.com
 import { TriviaMenuComponent } from './components/trivia/trivia-menu/trivia-menu.component';
 import { TriviaPlayComponent } from './components/trivia/trivia-play/trivia-play.component';
 
+import { ActivityComponent } from './components/activity/activity.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,8 @@ import { TriviaPlayComponent } from './components/trivia/trivia-play/trivia-play
     HomeMobileComponent,
     HomeDesktopComponent,
     TriviaMenuComponent,
-    TriviaPlayComponent
+    TriviaPlayComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,241 @@
+* {
+    
+}
+
+html {
+   background-color: black;
+}
+
+header {
+    width: 100%;
+    z-index: 1;
+    top: 0px;
+    color: #D4D4D4;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    background-color: black;
+    }
+
+nav a {
+    color: #D4D4D4;
+    cursor: pointer;
+    background: none;
+    border: medium;
+    text-decoration: none;
+    margin: 0;
+   
+}
+
+
+
+.SkewBox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    left:0;
+    width: 100%;  
+    justify-content: space-between;
+}
+
+#SolidBlue {
+    display: flex;
+    align-self: flex-start;
+    width: 35%;
+}
+
+#HollowBlue {
+    display: flex;
+    align-self: flex-end;
+    margin-right: 35px;
+   
+}
+
+#SquashActiHeader {
+    display:none;
+}
+
+.ImageContainer
+{
+    position: relative; /* Relative positioning for absolute positioning within */
+    width: 25%; /* Assuming each image takes 1/3 width */
+    margin: 0;
+    
+}
+
+.ImageContainer img {
+    width: 100%; /* Ensure the image fills its container */
+    display: block;
+}
+
+#icon {
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    width: 30px; /* Adjust the size of the icon as needed */
+    height: auto;
+}
+
+.PdfGrid {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 65px;
+
+}
+
+.container {
+    margin: 27.54px 28.89px;
+}
+
+nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+#ActiHeader {
+    position: absolute;
+    mix-blend-mode: lighten;
+    width:32%;
+    padding-bottom: 25px;
+    padding-left: 30px;
+}
+
+#nav-left{
+    display: flex;  
+    flex-direction: row;
+    row-gap: 10px;
+    
+}
+
+#nav-left a{
+    padding-left: 10px;
+
+}
+
+#team-link{
+    text-align: right;
+    padding-left: 1.5px;
+    margin-left: 8px;
+}
+
+#process-link{
+    text-align: center;
+    margin-right: 8px;
+}
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+  header{
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  .container {
+    margin: 43px 50px;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+#team-link{
+    margin-left: 40px;
+}
+
+#process-link{
+    margin-right: 40px;
+}
+
+
+} /* closes 769px+ */
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+  
+
+} /* closes 1024px+ */
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* For mobile: */
+
+    #ActiHeader {
+        position: absolute;
+        mix-blend-mode: lighten;
+        width:75%;
+        left:0;
+        padding:0;
+    }
+
+    nav {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        padding: 20px;
+    }
+
+
+
+    .SkewBox {
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+        left:0;
+    }
+
+    #ActiHeader {
+        display: none;
+    }
+
+    #SolidBlue {
+        display: none;
+        
+    }
+    
+    #HollowBlue {
+        display: flex;
+        align-self: flex-end;
+        width: 50%;
+        margin-left: 190px;
+    }
+
+    #SquashActiHeader {
+        display: flex;
+        align-self: flex-start;
+        width: 65%;
+    }
+
+    #icon {
+        position: absolute;
+        top: -15px;
+        right: 15px;
+        width: 31px; /* Adjust the size of the icon as needed */
+        height: auto;
+    }
+
+    .ImageContainer
+{
+    position: relative; /* Relative positioning for absolute positioning within */
+    width: 80%; /* Assuming each image takes 1/3 width */
+    margin: 0;
+    
+}
+
+
+  }

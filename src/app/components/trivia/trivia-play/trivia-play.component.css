@@ -33,7 +33,6 @@
 
 .content-q{
     max-height: 28.31%;
-
 }
 
 #question-text{
@@ -233,43 +232,92 @@
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
-    #score-container{
-        width: 430px;
-        height: auto;
-
-        position: absolute;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
+    #trivia{
+        padding: 136px 30px
     }
 
     #content{
         width: 330px;
         height: 593px;
 
-        position: absolute;
-        top:16.7%;
+        padding-top: 70px;
 
-        gap:5%;
-        align-items: center;
-        background: #DAF0F8;
-
-        padding-top: 3%;
+        gap: 60px;
     }
-
+    
     .content-q{
-        height: 239px;
-    
+        height: auto;
     }
-
+    
+    #question-text{
+        font-size: 28px;
+    }
+    #streak{
+        width: 48px;
+        height: 48px;
+    }
+    
+    #timer{
+        width: 97px;
+        height: 97px;
+    }
+    
     #score{
-        margin-right: 10%;
+        position: absolute;
+        top:9.59%;
+        left: 50.5%;
+        transform: translateX(50.5%);
+        width: 101px;
+        height: 36px;
     }
-    #progress-bar{
-        position: fixed;
-        margin-bottom: 5.75%;
     
+    #progress-bar{
+        width: 318px;
+    }
+    
+    .answer-box-long{
+        width:272px;
+        height: 272px;
+        gap: 20px;
+    }
+    
+    .answer-choice-long{
+        width:100%;
+        height: 53px;
+        display:flex;
+    }
+    
+    .answer-choice-long p{
+        font-size: 24px;
+    }
+    
+    .answer-box-short{
+        width:300px;
+        height: 305px;
+        gap: 19px 19px;
+    }
+    
+    .answer-choice-short{
+        width:136px;
+        height: 126px;
     }
   } /* closes 769px+ */
+
+  @media all and (max-height: 667px) {
+    .answer-choice-long p{
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    #question-text{
+        font-size: 22px;
+    }
+
+    #streak{
+        top: -40%;
+    }
+
+    #content{
+        padding-top: 12%;
+    }
+  }

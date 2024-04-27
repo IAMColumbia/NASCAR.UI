@@ -17,6 +17,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { httpInterceptProviders } from './interceptors';
 import { AvatarSelectComponent } from './components/reaction-time/avatar-select/avatar-select.component';
 import { ReactionMenuComponent } from './components/reaction-time/reaction-menu/reaction-menu.component';
+import { EndScreenComponent } from './components/trivia/end-screen/end-screen.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ReactionMenuComponent } from './components/reaction-time/reaction-menu/
     TriviaPlayComponent,
     SpinnerComponent,
     AvatarSelectComponent,
-    ReactionMenuComponent
+    ReactionMenuComponent,
+    EndScreenComponent
   ],
   imports: [
     BrowserModule,

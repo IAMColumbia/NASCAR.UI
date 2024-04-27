@@ -6,55 +6,58 @@
     ></app-trivia-menu>
 
     <div id="level-select" *ngIf="levelSelect || menu">
+      <svg id="home-button">
+        <g class="button" (click)="Home()">
+          <rect
+            x="-2"
+            y="2"
+            width="51"
+            height="51"
+            rx="11"
+            transform="matrix(-1 0 0 1 83 52)"
+            fill="#024F8E"
+            stroke="white"
+            stroke-width="4"
+            stroke-linejoin="round"
+          />
+          <rect
+            width="8.38854"
+            height="14.8033"
+            rx="3"
+            transform="matrix(-1 0 0 1 70.5273 82.0338)"
+            fill="white"
+          />
+          <rect
+            width="8.36709"
+            height="14.6424"
+            rx="3"
+            transform="matrix(-1 0 0 1 56.2148 82.0338)"
+            fill="white"
+          />
+          <rect
+            width="6.90821"
+            height="7.40166"
+            transform="matrix(-1 0 0 1 62.6328 82.0338)"
+            fill="white"
+          />
+          <path
+            d="M61.5537 68.2967C60.3595 66.9443 58.2503 66.9443 57.0561 68.2967L48.0074 78.5444C46.2971 80.4812 47.6723 83.5301 50.2562 83.5301H68.3536C70.9375 83.5301 72.3127 80.4812 70.6024 78.5444L61.5537 68.2967Z"
+            fill="white"
+          />
+        </g>
+      </svg>
       <svg
         id="level-select-bg"
         viewBox="0 0 390 844"
         fill="none"
-        display="block"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
+        preserveAspectRatio="xMidYMid slice"
       >
         <g clip-path="url(#clip0_2934_67013)">
           <rect width="390" height="844" fill="white" />
           <rect width="390" height="844" fill="url(#pattern0_3009_64766)" />
-          <g class="button" (click)="Home()">
-            <rect
-              x="-2"
-              y="2"
-              width="51"
-              height="51"
-              rx="11"
-              transform="matrix(-1 0 0 1 83 52)"
-              fill="#024F8E"
-              stroke="white"
-              stroke-width="4"
-              stroke-linejoin="round"
-            />
-            <rect
-              width="8.38854"
-              height="14.8033"
-              rx="3"
-              transform="matrix(-1 0 0 1 70.5273 82.0338)"
-              fill="white"
-            />
-            <rect
-              width="8.36709"
-              height="14.6424"
-              rx="3"
-              transform="matrix(-1 0 0 1 56.2148 82.0338)"
-              fill="white"
-            />
-            <rect
-              width="6.90821"
-              height="7.40166"
-              transform="matrix(-1 0 0 1 62.6328 82.0338)"
-              fill="white"
-            />
-            <path
-              d="M61.5537 68.2967C60.3595 66.9443 58.2503 66.9443 57.0561 68.2967L48.0074 78.5444C46.2971 80.4812 47.6723 83.5301 50.2562 83.5301H68.3536C70.9375 83.5301 72.3127 80.4812 70.6024 78.5444L61.5537 68.2967Z"
-              fill="white"
-            />
-          </g>
+
           <g *ngIf="!completedRound1">
             <circle
               cx="117.5"
@@ -858,6 +861,8 @@
           />
         </g>
       </svg>
+
+      <img id="logos" src="../../../assets/img/logos.svg" />
     </div>
 
     <app-trivia-play
@@ -867,210 +872,12 @@
       (results)="UpdateProgress($event)"
     ></app-trivia-play>
 
-    <div id="end-screen" *ngIf="triviaCompleted">
-      <div
-        id="card-1"
-        class="end-card-position"
-        [ngClass]="{
-        'card-1-color': card1 === 1,
-        'card-2-color': card1 === 2,
-        'card-3-color': card1 === 3,
-        'card-4-color': card1 === 4,
-        'card-5-color': card1 === 5,
-        'card-6-color': card1 === 6,
-      }"
-        (click)="NextCard()"
-      >
-        <img id="flag-icon" src="../../../assets/img/level-1-flag.svg" />
-        <div id="end-round" *ngIf="card1 === 1">
-          <div>
-            <h1>LEVEL {{ difficulty }}</h1>
-            <h3>COMPLETED</h3>
-          </div>
-
-          <div id="points">
-            <p *ngIf="difficulty === 1">{{ scoreRound1 }} pts</p>
-            <p *ngIf="difficulty === 2">{{ scoreRound2 }} pts</p>
-            <p *ngIf="difficulty === 3">{{ scoreRound3 }} pts</p>
-          </div>
-
-          <img
-            *ngIf="score <= difficulty * 100"
-            src="../../../assets/img/Better Luck Next Time!.svg"
-          />
-          <img
-            *ngIf="score == difficulty * 500"
-            src="../../../assets/img/good-job.png"
-          />
-          <img
-            *ngIf="score > difficulty * 100 && score < difficulty * 500"
-            src="../../../assets/img/keep-it-up.png"
-          />
-        </div>
-        <div id="explanation" *ngIf="card1 != 1">
-          <h2>Question {{ card1 - 1 }}</h2>
-          <p class="end-copy">{{ questions[endRoundIndex].questionText }}</p>
-          <div id="answer" class="correct-answer">
-            <p>{{ GetCorrectAnswer() }}</p>
-          </div>
-          <p
-            *ngIf="
-              questions[endRoundIndex].explanation !=
-              '../../../assets/img/chicago-flag.png'
-            "
-            class="end-copy"
-          >
-            {{ questions[endRoundIndex].explanation }}
-          </p>
-          <img
-            *ngIf="
-              questions[endRoundIndex].explanation ==
-              '../../../assets/img/chicago-flag.png'
-            "
-            class="end-copy-flag"
-            src="{{ questions[endRoundIndex].explanation }}"
-          />
-          <div id="user-answer">
-            <p>You answered:</p>
-            <div
-              id="answer"
-              [ngClass]="{
-              'correct-answer': GetCorrectAnswer() === GetUserAnswer(),
-              'wrong-answer': GetCorrectAnswer() != GetUserAnswer(),
-            }"
-            >
-              <p>{{ GetUserAnswer() }}</p>
-            </div>
-          </div>
-        </div>
-        <img id="swipe-arrow" src="../../../assets/img/swipe-arrow.svg" />
-      </div>
-      <div
-        id="card-2"
-        class="end-card-content end-card-position"
-        [ngClass]="{
-        'card-1-color': card2 === 1,
-        'card-2-color': card2 === 2,
-        'card-3-color': card2 === 3,
-        'card-4-color': card2 === 4,
-        'card-5-color': card2 === 5,
-        'card-6-color': card2 === 6,
-      }"
-      >
-        <label *ngIf="card2 != 1">
-          Question {{ card2 - 1 }}
-          <img
-            *ngIf="!questions[card2 - 2].correct"
-            src="../../../assets/img/bx_x.svg"
-          />
-          <img
-            *ngIf="questions[card2 - 2].correct"
-            src="../../../assets/img/correct-icon.svg"
-          />
-        </label>
-      </div>
-      <div
-        id="card-3"
-        class="end-card-content end-card-position"
-        [ngClass]="{
-        'card-1-color': card3 === 1,
-        'card-2-color': card3 === 2,
-        'card-3-color': card3 === 3,
-        'card-4-color': card3 === 4,
-        'card-5-color': card3 === 5,
-        'card-6-color': card3 === 6,
-      }"
-      >
-        <label *ngIf="card3 != 1">
-          Question {{ card3 - 1 }}
-          <img
-            *ngIf="!questions[card3 - 2].correct"
-            src="../../../assets/img/bx_x.svg"
-          />
-          <img
-            *ngIf="questions[card3 - 2].correct"
-            src="../../../assets/img/correct-icon.svg"
-          />
-        </label>
-      </div>
-      <div
-        id="card-4"
-        class="end-card-content end-card-position"
-        [ngClass]="{
-        'card-1-color': card4 === 1,
-        'card-2-color': card4 === 2,
-        'card-3-color': card4 === 3,
-        'card-4-color': card4 === 4,
-        'card-5-color': card4 === 5,
-        'card-6-color': card4 === 6,
-      }"
-      >
-        <label *ngIf="card4 != 1">
-          Question {{ card4 - 1 }}
-          <img
-            *ngIf="!questions[card4 - 2].correct"
-            src="../../../assets/img/bx_x.svg"
-          />
-          <img
-            *ngIf="questions[card4 - 2].correct"
-            src="../../../assets/img/correct-icon.svg"
-          />
-        </label>
-      </div>
-      <div
-        id="card-5"
-        class="end-card-content end-card-position"
-        [ngClass]="{
-        'card-1-color': card5 === 1,
-        'card-2-color': card5 === 2,
-        'card-3-color': card5 === 3,
-        'card-4-color': card5 === 4,
-        'card-5-color': card5 === 5,
-        'card-6-color': card5 === 6,
-      }"
-      >
-        <label *ngIf="card5 != 1">
-          Question {{ card5 - 1 }}
-          <img
-            *ngIf="!questions[card5 - 2].correct"
-            src="../../../assets/img/bx_x.svg"
-          />
-          <img
-            *ngIf="questions[card5 - 2].correct"
-            src="../../../assets/img/correct-icon.svg"
-          />
-        </label>
-      </div>
-      <div
-        id="card-6"
-        class="end-card-content end-card-position"
-        [ngClass]="{
-        'card-1-color': card6 === 1,
-        'card-2-color': card6 === 2,
-        'card-3-color': card6 === 3,
-        'card-4-color': card6 === 4,
-        'card-5-color': card6 === 5,
-        'card-6-color': card6 === 6,
-      }"
-      >
-        <label *ngIf="card6 != 1">
-          Question {{ card6 - 1 }}
-          <img
-            *ngIf="!questions[card6 - 2].correct"
-            src="../../../assets/img/bx_x.svg"
-          />
-          <img
-            *ngIf="questions[card6 - 2].correct"
-            src="../../../assets/img/correct-icon.svg"
-          />
-        </label>
-        <img
-          id="continue-btn"
-          class="button"
-          src="../../../assets/img/Button R1.svg"
-          (click)="NextLevel()"
-        />
-      </div>
-    </div>
+    <app-end-screen
+      *ngIf="triviaCompleted"
+      [questions]="questions"
+      [difficulty]="difficulty"
+      [score]="score"
+      (nextLevel)="NextLevel($event)"
+    ></app-end-screen>
   </div>
 </div>

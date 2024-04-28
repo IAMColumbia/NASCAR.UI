@@ -1,8 +1,4 @@
 .menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-content: flex-end;
     width: 100%;
     height: 100%;
     flex-wrap: nowrap;
@@ -77,14 +73,14 @@
 }
 
 .footer {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-wrap: nowrap;
-    float: right;
     align-items: center;
     width:39.69%;
-    margin-right: 0;
-    margin-left: 60%;
+    bottom: 0;
+    right: 0;
+
 }
 
 .footer img{
@@ -108,6 +104,19 @@
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
+
+    .footer {
+        width:170.69px;
+        bottom: 0;
+        left: 55%;
+        transform: translateX(-55%);
+    
+    }
+    
+    .footer img{
+        width: 50%;
+        padding-left: 20px;
+    }
     
 } /* closes 769px+ */
 

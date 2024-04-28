@@ -31,4 +31,8 @@ export class LeaderboardService {
   public insertLearboard(user: LeaderBoardRequest){
     this.http.post(`${environment.apiUrl}/api/leaderboard/`, user).subscribe();
   }
+
+  public GetNascarDrivers(){
+    return this.http.get<any>("assets/nascar-drivers.json");
+  }
 }

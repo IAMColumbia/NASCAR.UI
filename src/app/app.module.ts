@@ -20,6 +20,7 @@ import { ReactionMenuComponent } from './components/reaction-time/reaction-menu/
 import { EndScreenComponent } from './components/trivia/end-screen/end-screen.component';
 
 import { ActivityComponent } from './components/activity/activity.component';
+import { ReactionEndComponent } from './components/reaction-time/reaction-end/reaction-end.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ActivityComponent } from './components/activity/activity.component';
     SpinnerComponent,
     AvatarSelectComponent,
     ReactionMenuComponent,
-    EndScreenComponent
+    EndScreenComponent,
+    ReactionEndComponent
   ],
   imports: [
     BrowserModule,

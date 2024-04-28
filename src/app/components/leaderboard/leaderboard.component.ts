@@ -13,18 +13,18 @@ export class LeaderboardComponent {
   index: number = 0;
 
   avatarList: string[] = [
-    "../../../assets/img/BlackHelmet.svg",
-    "../../../assets/img/BlueHelmet.svg",
-    "../../../assets/img/DarkBlueHelmet.svg",
-    "../../../assets/img/GrayHelmet.svg",
-    "../../../assets/img/GreenHelmet.svg",
-    "../../../assets/img/LightBlueHelmet.svg",
-    "../../../assets/img/LimeHelmet.svg",
-    "../../../assets/img/OrangeHelmet.svg",
-    "../../../assets/img/PinkHelmet.svg",
-    "../../../assets/img/PurpleHelmet.svg",
-    "../../../assets/img/RedHelmet.svg",
-    "../../../assets/img/TealHelmet.svg"
+    "../../../assets/img/player-avatars/BlackHelmet.svg",
+    "../../../assets/img/player-avatars/BlueHelmet.svg",
+    "../../../assets/img/player-avatars/DarkBlueHelmet.svg",
+    "../../../assets/img/player-avatars/GrayHelmet.svg",
+    "../../../assets/img/player-avatars/GreenHelmet.svg",
+    "../../../assets/img/player-avatars/LightBlueHelmet.svg",
+    "../../../assets/img/player-avatars/LimeHelmet.svg",
+    "../../../assets/img/player-avatars/OrangeHelmet.svg",
+    "../../../assets/img/player-avatars/PinkHelmet.svg",
+    "../../../assets/img/player-avatars/PurpleHelmet.svg",
+    "../../../assets/img/player-avatars/RedHelmet.svg",
+    "../../../assets/img/player-avatars/TealHelmet.svg"
   ];
 
   constructor(private leaderboardService: LeaderboardService, private router: Router){}
@@ -70,56 +70,79 @@ export class LeaderboardComponent {
     console.log(avatar)
     switch(avatar){
       case 1:{
-        return "../../../assets/img/WhiteHelmet.svg";
+        return "../../../assets/img/player-avatars/WhiteHelmet.svg";
         
       }
       case 2:{
-        return "../../../assets/img/BlackHelmet.svg";
+        return "../../../assets/img/player-avatars/BlackHelmet.svg";
         
       }
       case 3:{
-        return "../../../assets/img/BlueHelmet.svg";
+        return "../../../assets/img/player-avatars/BlueHelmet.svg";
         
       }
       case 4:{
-        return "../../../assets/img/DarkBlueHelmet.svg";
+        return "../../../assets/img/player-avatars/DarkBlueHelmet.svg";
         
       }
       case 5:{
-        return "../../../assets/img/GrayHelmet.svg";
+        return "../../../assets/img/player-avatars/GrayHelmet.svg";
         
       }
       case 6:{
-        return "../../../assets/img/GreenHelmet.svg";
+        return "../../../assets/img/player-avatars/GreenHelmet.svg";
         
       }
       case 7:{
-        return "../../../assets/img/LightBlueHelmet.svg";
+        return "../../../assets/img/player-avatars/LightBlueHelmet.svg";
         
       }
       case 8:{
-        return "../../../assets/img/LimeHelmet.svg";
+        return "../../../assets/img/player-avatars/LimeHelmet.svg";
         
       }
       case 9:{
-        return "../../../assets/img/OrangeHelmet.svg";
+        return "../../../assets/img/player-avatars/OrangeHelmet.svg";
         
       }
       case 10:{
-        return "../../../assets/img/PinkHelmet.svg";
+        return "../../../assets/img/player-avatars/PinkHelmet.svg";
         
       }
       case 11:{
-        return "../../../assets/img/PurpleHelmet.svg";
+        return "../../../assets/img/player-avatars/PurpleHelmet.svg";
         
       }
       case 12:{
-        return "../../../assets/img/RedHelmet.svg";
+        return "../../../assets/img/player-avatars/RedHelmet.svg";
       }
       case 13:{
-        return "../../../assets/img/TealHelmet.svg";
+        return "../../../assets/img/player-avatars/TealHelmet.svg";
+      }
+
+      case 20:{
+        return "../../../assets/img/nascar-avatars/suarez-avatar.png"
+        
+      }
+      case 21:{
+        return "../../../assets/img/nascar-avatars/wallace-avatar.png"
+        
+      }
+      case 22:{
+        return "../../../assets/img/nascar-avatars/blaney-avatar.png"
+        
+      }
+      case 23:{
+        return "../../../assets/img/nascar-avatars/lajoie-avatar.png"
+        
+      }
+      case 24:{
+        return "../../../assets/img/nascar-avatars/reddick-avatar.png"
+      }
+      case 25:{
+        return "../../../assets/img/nascar-avatars/cindric-avatar.png"
       }
     }
-    return "../../../assets/img/WhiteHelmet.svg";
+    return "../../../assets/img/player-avatars/WhiteHelmet.svg";
   }
 }

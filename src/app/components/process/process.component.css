@@ -1,0 +1,682 @@
+*{
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 55px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.ProcessNav {
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: center;
+        width: 100%;
+        height: 200px;
+}
+
+.ProcessNav:hover {
+    cursor:pointer;
+}
+
+.SkewBox:hover {
+    filter:brightness(0.5);
+}
+
+.SkewBox {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+
+.SkewBox img{
+    width: 130px;
+    
+}
+
+#tall {
+    width: 180px;
+}
+
+hr {
+    z-index: -1;
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+
+}
+
+.MainContent {
+  width: fit-content;
+}
+
+.YellowSkewContainer
+{
+    position: relative; /* Relative positioning for absolute positioning within */
+     /* Assuming each image takes 1/3 width */
+    margin: 0;
+    
+}
+
+
+.YellowSkewContainer img {
+    width: 100%; /* Ensure the image fills its container */
+    display: block;
+}
+
+.YellowSkewContainer #headText {
+    position: absolute;
+   /* Adjust the size of the icon as needed */
+    left: 65px;
+    top: 25px;
+    width: fit-content;
+    height: auto;
+    font-style: italic;
+    font-size: 2.5em;
+}
+
+.YellowSkewContainer #text {
+    font-size: 23px;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 55px;
+    width: fit-content;
+    padding-right: 100px;
+    left: 65px;
+    top: 85px;
+    position: absolute;
+   /* Adjust the size of the icon as needed */
+    
+    overflow: auto;
+}
+
+.RedSkewContainer
+{
+    padding-top: 70px;
+    position: relative; /* Relative positioning for absolute positioning within */
+     /* Assuming each image takes 1/3 width */
+    margin: 0;
+    color: white;
+}
+
+
+.RedSkewContainer img {
+    width: 92%; /* Ensure the image fills its container */
+    display: block;
+}
+
+.RedSkewContainer #headText {
+    position: absolute;
+   /* Adjust the size of the icon as needed */
+    left: 65px;
+    top: 95px;
+    width: fit-content;
+    height: auto;
+    font-style: italic;
+    font-size: 44px;
+}
+
+.RedSkewContainer #text {
+    font-size: 23px;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 55px;
+    width: fit-content;
+    left: 65px;
+    top: 165px;
+    position: absolute;
+    padding-right: 500px;
+   /* Adjust the size of the icon as needed */
+
+    overflow: auto;
+}
+
+.RedSkewContainer #headText2 {
+    position: absolute;
+   /* Adjust the size of the icon as needed */
+    left: 65px;
+    top: 245px;
+    width: fit-content;
+    height: auto;
+    font-style: italic;
+    font-size: 44px;
+}
+
+.RedSkewContainer #text2 {
+    font-size: 23px;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 85px;
+    width: fit-content;
+    left: 65px;
+    top: 315px;
+    position: absolute;
+    padding-right: 600px;
+   /* Adjust the size of the icon as needed */
+    overflow: auto;
+}
+
+.WhiteSkewContainer
+{
+    padding-top: 70px;
+    position: relative; /* Relative positioning for absolute positioning within */
+    width: 100%;
+    margin: 0;
+    
+}
+
+
+.WhiteSkewContainer img {
+    width: 50%; /* Ensure the image fills its container */
+    display: block;
+}
+
+
+.DivMainImage {
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
+   
+}
+
+.DivLargeImage {
+    display: flex;
+  justify-content: center; /* Center the image container horizontally */
+  padding: 50px 60px;
+    
+}
+
+
+#Enlarge {
+    padding: 50px 38px;
+}
+
+#NoStyle {
+    list-style: none;
+}
+
+.DivLargeImage img {
+    max-width: 100%;
+  height: auto; 
+  
+}
+
+#mainImg {
+    width: 95%;
+    
+}
+
+.BlueSkewContainer
+{
+    padding-top: 70px;
+    position: relative; /* Relative positioning for absolute positioning within */
+    width: 78%;
+    margin: 0;
+    
+}
+
+
+.BlueSkewContainer img {
+    width: 100%; /* Ensure the image fills its container */
+    display: block;
+}
+
+.BlueSkewContainer #headText {
+    position: absolute;
+   /* Adjust the size of the icon as needed */
+    left: 65px;
+    top: 100px;
+    height: auto;
+    font-style: italic;
+    font-size: 44px;
+    color:white;
+    width: fit-content;
+}
+
+.BlueSkewContainer #text {
+    font-size: 25px;
+    width: fit-content;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 55px;
+    color: white;
+    left: 65px;
+    top: 165px;
+    position: absolute;
+    padding-right: 135px;
+   /* Adjust the size of the icon as needed */
+    height: auto;
+    overflow: auto;
+}
+
+.HeadWhiteSkewContainer
+{
+    padding-top: 70px;
+    position: relative; /* Relative positioning for absolute positioning within */
+    margin: 0;
+    padding-bottom: 50px;
+    
+}
+
+
+.HeadWhiteSkewContainer img {
+     /* Ensure the image fills its container */
+    display: block;
+}
+
+.ResearchContent {
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.ResearchContent img{
+    width: 55%;
+    padding: 35px;
+    padding-left: 65px;
+    padding-bottom: 0;
+}
+
+.ResearchContent li{
+    font-size: 20px;
+    display: flex;
+    width: fit-content;
+    color: white;
+    padding: 25px;
+    list-style: none;
+    padding-bottom: 0;
+}
+
+ #SWOT
+{
+    padding-top: 70px;
+    position: relative; /* Relative positioning for absolute positioning within */
+    width: 40%;
+    margin: 0;
+    
+}
+
+.SwotSubContent {
+   display: flex;
+   align-content: flex-end;
+   padding-left: 60px;
+   color: white;
+
+}
+
+.SwotSubContent img {
+    display: flex;
+    width: 35%;
+    padding-right: 35px;
+}
+
+.SwotSubContent p {
+    font-size: 22px;
+    padding: 15px;
+    align-self: flex-end;
+  
+    width: 320px;
+}
+
+#Screen {
+    width: 30%;
+}
+
+.ScreenContent h3 {
+    display: flex;
+    align-self: flex-start;
+    color: white;
+    padding-left: 10px;
+    padding: 15px;
+    font-style: italic;
+    font-size: 35px;
+}
+
+.ScreenContent {
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    justify-content: flex-start;
+}
+
+.ScreenContent p {
+    font-size: 25px;
+    color: white;
+    text-align:left;
+    padding: 40px;
+    padding-left: 15px;
+}
+
+#NasText{
+    padding-top: 50px;
+    
+}
+
+.CompTextContent {
+    font-size: 25px;
+    color: white;
+    text-align:left;
+    padding: 40px;
+    padding-left: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.InterviewTextContent {
+    font-size: 40px;
+    color: white;
+    text-align:left;
+    padding: 40px;
+    padding-left: 60px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    
+}
+
+.ColumnContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
+.ColumnContainer ul{
+    color: white;
+    font-size: 25px;
+    margin: 65px;
+    margin-top: 25px;
+}
+
+#rightColumn {
+    padding-top: 0px;
+    padding: 60px;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#leftColumn {
+    padding: 60px;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: circle;
+}
+
+#leftProf {
+    width: 95%;
+}
+
+#rightProf {
+    width: 90%;
+}
+
+#leftQoute {
+    width: 50%;
+}
+
+#rightQoute {
+    width: 60%;
+}
+
+#leftImg {
+    margin-top: 50px;
+    width: 65%;
+}
+
+#rightImg {
+    margin-top: 135px;
+    width: 85%;
+}
+
+.BasicWhiteText {
+    font-size: 25px;
+    color: white;
+    align-self: flex-start;
+    padding-top:0px;
+    padding-bottom: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.SmallBasicWhiteText {
+    font-size: 25px;
+    color: white;
+    align-self: flex-start;
+    padding-top:0px;
+    padding-bottom: 50px;
+    padding-left: 70px;
+    padding-right: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.BookTextContent {
+    font-size: 25px;
+    color: white;
+    align-self: flex-start;
+    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    padding-left:60px ;
+    display: flex;
+    flex-wrap: nowrap;
+   
+  
+}
+
+.BookImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.BookImg img{
+
+    padding-left: 60px;
+    
+}
+
+#whiteHeadText {
+    font-size: 35px;
+    color: white;
+    font-style: italic;
+    padding: 40px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left:60px;
+}
+
+#subWhiteHeadText {
+    font-size: 35px;
+    color: white;
+    font-style: italic;
+    padding: 40px;
+    padding-bottom: 15px;
+    padding-left:60px;
+}
+
+.TriviaRow2 {
+    display: flex;
+    padding: 60px;
+}
+
+#img1
+{
+width: 60%;
+}
+
+#img2
+{
+ width: 35%;
+ padding-left: 25px;
+}
+
+#ShortText {
+    width: 50%;
+    padding-bottom: 0;
+}
+
+.ImgGrid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    padding-left: 60px;
+}
+
+#GridItem {
+    flex: 0 0 33.33%; 
+    max-width: 33.33%; 
+    padding: 5px; 
+    box-sizing: border-box; 
+}
+
+#GridItem img {
+    width: 100%; /* Make images fill the entire grid item */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+.GridRow {
+    display: flex;
+    width: 95%;
+    padding-left: 40px;
+}
+
+#GridRowItem {
+    flex: 0 0 20%; 
+    max-width: 20%; 
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: space-between; 
+}
+
+#GridRowItem img {
+    width: 100%; /* Make images fill the entire grid item */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+.TestGridRow {
+    display: flex;
+    padding-left: 40px;
+}
+
+#TestGridRowItem {
+    color: white;
+    flex: 0 0 30%; 
+    max-width: 30%; 
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+
+#TestGridRowItem img {
+    width: 100%; /* Make images fill the entire grid item */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.WebTextHeading {
+    color: white;
+}
+
+.BookUlContent {
+    font-size: 25px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 160px;
+    padding-top: 15px;
+}
+
+.Tab {
+    position: relative; /* Relative positioning for absolute positioning within */
+    width: 100%;
+    margin: 0;
+}
+
+.MobileText {
+    color: white;
+    padding: 25px;
+    padding-top: 15px;
+    padding-right: 100px;
+}
+
+.CenterImg {
+    display: flex;
+  justify-content: center; /* Center the image container horizontally */
+  padding: 25px;
+  padding-top: 15px;
+}
+
+.CenterImg img{
+    max-width: 100%;
+  height: auto; 
+}
+
+.CenterRowImg {
+    display: flex;
+  justify-content: center; /* Center the image container horizontally */
+}
+
+.CenterRowImg img{
+    padding: 25px;
+    padding-top: 10px;
+    max-width: 50%;
+  height: auto; 
+}
+
+.MobileHead {
+    font-style: italic;
+    font-size: 25px;
+    color: white;
+    padding: 25px;
+    padding-top: 15px;
+}
+
+#Header {
+    font-size: 16px;
+}
+
+#Link {
+    padding:0px;
+}
+
+#LeftRowImg {
+    padding-right:10px;
+
+}
+#RightRowImg {
+    padding-left:10px;
+    
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .DesktopContent {
+        display: none;
+    }
+
+    
+
+
+  }
+
+  @media only screen and (min-width: 1024px) {
+    /* Your CSS rules to hide content at desktop views here */
+    .MobileContent {
+        display: none;
+    }
+  }

@@ -1,64 +1,66 @@
-<div id="reaction-game">
-  <div id="overlay" *ngIf="tooSoon || instructions"></div>
-  <div id="pop-up" *ngIf="tooSoon">
-    <div id="pop-up-title">FALSE START!</div>
-    <img id="pop-up-flag" src="../../../assets/img/reaction/black-flag.png" />
-    <div id="pop-up-message">
-      Tap the screen when
-      <br />
-      the flag is waved!
+<div id="base">
+  <div id="reaction-game">
+    <div id="overlay" *ngIf="tooSoon || instructions"></div>
+    <div id="pop-up" *ngIf="tooSoon">
+      <div id="pop-up-title">FALSE START!</div>
+      <img id="pop-up-flag" src="../../../assets/img/reaction/black-flag.png" />
+      <div id="pop-up-message">
+        Tap the screen when
+        <br />
+        the flag is waved!
+      </div>
+      <button
+        id="pop-up-btn-try-again"
+        class="pop-up-button"
+        (click)="resetGame()"
+      >
+        Try Again
+      </button>
     </div>
-    <button
-      id="pop-up-btn-try-again"
-      class="pop-up-button"
-      (click)="resetGame()"
+
+    <div id="pop-up" *ngIf="instructions">
+      <div id="pop-up-title">GET READY!</div>
+      <img id="pop-up-flag" src="../../../assets/img/reaction/green-flag.png" />
+      <div id="pop-up-message">Tap the screen when<br />the flag is waved!</div>
+      <button
+        id="pop-up-btn-instruction"
+        class="pop-up-button"
+        (click)="startGame()"
+      >
+        START
+      </button>
+    </div>
+
+    <app-reaction-menu
+      *ngIf="Menu && !started && !showLeaderBoard && !finished && !AvatarSelect"
+      (displayAvatarMenu)="displayAvatarSelect($event)"
+      (leaderboard)="displayLeaderBoard($event)"
+    ></app-reaction-menu>
+
+    <div
+      class="clickable-area"
+      (click)="realClick()"
+      *ngIf="started && !finished && !showLeaderBoard"
     >
-      Try Again
-    </button>
+      <div class="start" *ngIf="started && !showMid && !showClick"></div>
+      <div class="mid" *ngIf="showMid"></div>
+      <div class="click" *ngIf="showClick && !showMid"></div>
+    </div>
+
+    <app-avatar-select
+      *ngIf="AvatarSelect && !showLeaderBoard"
+      (menu)="displayMenu($event)"
+      (play)="setUser($event)"
+    ></app-avatar-select>
+
+    <app-reaction-end
+      *ngIf="finished"
+      [user]="user"
+      [reactionTime]="reactionTime"
+      (leaderboard)="displayLeaderBoard($event)"
+      (playAgain)="resetGame()"
+    ></app-reaction-end>
+
+    <app-leaderboard *ngIf="showLeaderBoard"></app-leaderboard>
   </div>
-
-  <div id="pop-up" *ngIf="instructions">
-    <div id="pop-up-title">GET READY!</div>
-    <img id="pop-up-flag" src="../../../assets/img/reaction/green-flag.png" />
-    <div id="pop-up-message">Tap the screen when<br />the flag is waved!</div>
-    <button
-      id="pop-up-btn-instruction"
-      class="pop-up-button"
-      (click)="startGame()"
-    >
-      START
-    </button>
-  </div>
-
-  <app-reaction-menu
-    *ngIf="Menu && !started && !showLeaderBoard && !finished && !AvatarSelect"
-    (displayAvatarMenu)="displayAvatarSelect($event)"
-    (leaderboard)="displayLeaderBoard($event)"
-  ></app-reaction-menu>
-
-  <div
-    class="clickable-area"
-    (click)="realClick()"
-    *ngIf="started && !finished && !showLeaderBoard"
-  >
-    <div class="start" *ngIf="started && !showMid && !showClick"></div>
-    <div class="mid" *ngIf="showMid"></div>
-    <div class="click" *ngIf="showClick && !showMid"></div>
-  </div>
-
-  <app-avatar-select
-    *ngIf="AvatarSelect && !showLeaderBoard"
-    (menu)="displayMenu($event)"
-    (play)="setUser($event)"
-  ></app-avatar-select>
-
-  <app-reaction-end
-    *ngIf="finished"
-    [user]="user"
-    [reactionTime]="reactionTime"
-    (leaderboard)="displayLeaderBoard($event)"
-    (playAgain)="resetGame()"
-  ></app-reaction-end>
-
-  <app-leaderboard *ngIf="showLeaderBoard"></app-leaderboard>
 </div>

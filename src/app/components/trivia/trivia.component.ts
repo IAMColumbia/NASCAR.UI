@@ -54,21 +54,24 @@ export class TriviaComponent implements OnInit{
       this.triviaSerivce.GetLevelOneQuestions()
           .subscribe(res => {
             this.questions = res.questions;
+            this.started = true;
           });
     }
     else if(this.difficulty === 2){
       this.triviaSerivce.GetLevelTwoQuestions()
           .subscribe(res => {
             this.questions = res.questions;
+            this.started = true;
           });
     }
     else if(this.difficulty === 3){
       this.triviaSerivce.GetLevelThreeQuestions()
           .subscribe(res => {
             this.questions = res.questions;
+            this.started = true;
           });
     }
-    this.started = true;
+    
 
   }
 

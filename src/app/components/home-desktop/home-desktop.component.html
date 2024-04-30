@@ -1,4 +1,4 @@
-<img id="background" src="../../../assets/img/home-background.gif" />
+<img id="background" src="../../../assets/img/home/home-background.gif" />
 
 <svg
   id="blurb"
@@ -82,17 +82,17 @@
   <img
     class="trivia"
     (mouseover)="showTriviaAbout()"
-    src="../../../assets/img/Group 96.png"
+    src="../../../assets/img/home/trivia-small.png"
   />
   <img
     id="reaction"
     (mouseover)="showReactionAbout()"
-    src="../../../assets/img/Group 97.png"
+    src="../../../assets/img/home/reaction-small.png"
   />
   <img
     id="activity"
     (mouseover)="showActivityAbout()"
-    src="../../../assets/img/Group 74.png"
+    src="../../../assets/img/home/activity-small.png"
   />
 </div>
 
@@ -101,7 +101,7 @@
   (mouseleave)="hideTriviaAbout()"
   (click)="redirect('trivia')"
   *ngIf="triviaAbout"
-  src="../../../assets/img/Group 98.png"
+  src="../../../assets/img/home/trivia-large.png"
 />
 
 <img
@@ -109,7 +109,7 @@
   (mouseleave)="hideReactionAbout()"
   (click)="redirect('reaction-game')"
   *ngIf="reactionAbout"
-  src="../../../assets/img/Group 99.png"
+  src="../../../assets/img/home/reaction-large.png"
 />
 
 <img
@@ -117,5 +117,5 @@
   (mouseleave)="hideActivityAbout()"
   (click)="redirect('activity')"
   *ngIf="activityAbout"
-  src="../../../assets/img/Group 100.png"
+  src="../../../assets/img/home/activity-large.png"
 />

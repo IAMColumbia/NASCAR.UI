@@ -12,7 +12,7 @@
         }"
     (click)="NextCard()"
   >
-    <img id="flag-icon" src="../../../../assets/img/level-1-flag.svg" />
+    <img id="flag-icon" src="../../../../assets/img/trivia/level-1-flag.svg" />
     <div id="end-round" *ngIf="card1 === 1">
       <div>
         <h1>LEVEL {{ difficulty }}</h1>
@@ -25,15 +25,15 @@
 
       <img
         *ngIf="score <= difficulty * 100"
-        src="../../../../assets/img/Better Luck Next Time!.svg"
+        src="../../../../assets/img/reaction/better-luck-next.svg"
       />
       <img
         *ngIf="score == difficulty * 500"
-        src="../../../../assets/img/good-job.png"
+        src="../../../../assets/img/trivia/good-job.png"
       />
       <img
         *ngIf="score > difficulty * 100 && score < difficulty * 500"
-        src="../../../../assets/img/keep-it-up.png"
+        src="../../../../assets/img/trivia/keep-it-up.png"
       />
     </div>
     <div id="explanation" *ngIf="card1 != 1">
@@ -45,7 +45,7 @@
       <p
         *ngIf="
           questions[endRoundIndex].explanation !=
-          '../../../../assets/img/chicago-flag.png'
+          '../../../../assets/img/trivia/chicago-flag.png'
         "
         class="end-copy"
       >
@@ -54,7 +54,7 @@
       <img
         *ngIf="
           questions[endRoundIndex].explanation ==
-          '../../../../assets/img/chicago-flag.png'
+          '../../../../assets/img/trivia/chicago-flag.png'
         "
         class="end-copy-flag"
         src="{{ questions[endRoundIndex].explanation }}"
@@ -72,7 +72,7 @@
         </div>
       </div>
     </div>
-    <img id="swipe-arrow" src="../../../../assets/img/swipe-arrow.svg" />
+    <img id="swipe-arrow" src="../../../../assets/img/trivia/swipe-arrow.svg" />
   </div>
   <div
     id="card-2"
@@ -90,11 +90,11 @@
       Question {{ card2 - 1 }}
       <img
         *ngIf="!questions[card2 - 2].correct"
-        src="../../../../assets/img/bx_x.svg"
+        src="../../../../assets/img/trivia/incorrect-icon.svg"
       />
       <img
         *ngIf="questions[card2 - 2].correct"
-        src="../../../../assets/img/correct-icon.svg"
+        src="../../../../assets/img/trivia/correct-icon.svg"
       />
     </label>
   </div>
@@ -114,11 +114,11 @@
       Question {{ card3 - 1 }}
       <img
         *ngIf="!questions[card3 - 2].correct"
-        src="../../../../assets/img/bx_x.svg"
+        src="../../../../assets/img/trivia/incorrect-icon.svg"
       />
       <img
         *ngIf="questions[card3 - 2].correct"
-        src="../../../../assets/img/correct-icon.svg"
+        src="../../../../assets/img/trivia/correct-icon.svg"
       />
     </label>
   </div>
@@ -138,11 +138,11 @@
       Question {{ card4 - 1 }}
       <img
         *ngIf="!questions[card4 - 2].correct"
-        src="../../../../assets/img/bx_x.svg"
+        src="../../../../assets/img/trivia/incorrect-icon.svg"
       />
       <img
         *ngIf="questions[card4 - 2].correct"
-        src="../../../../assets/img/correct-icon.svg"
+        src="../../../../assets/img/trivia/correct-icon.svg"
       />
     </label>
   </div>
@@ -162,11 +162,11 @@
       Question {{ card5 - 1 }}
       <img
         *ngIf="!questions[card5 - 2].correct"
-        src="../../../../assets/img/bx_x.svg"
+        src="../../../../assets/img/trivia/incorrect-icon.svg"
       />
       <img
         *ngIf="questions[card5 - 2].correct"
-        src="../../../../assets/img/correct-icon.svg"
+        src="../../../../assets/img/trivia/correct-icon.svg"
       />
     </label>
   </div>
@@ -186,17 +186,17 @@
       Question {{ card6 - 1 }}
       <img
         *ngIf="!questions[card6 - 2].correct"
-        src="../../../../assets/img/bx_x.svg"
+        src="../../../../assets/img/trivia/incorrect-icon.svg"
       />
       <img
         *ngIf="questions[card6 - 2].correct"
-        src="../../../../assets/img/correct-icon.svg"
+        src="../../../../assets/img/trivia/correct-icon.svg"
       />
     </label>
     <img
       id="continue-btn"
       class="button"
-      src="../../../../assets/img/Button R1.svg"
+      src="../../../../assets/img/trivia/continue-btn.svg"
       (click)="NextLevel()"
     />
   </div>

@@ -2,13 +2,17 @@
   <div class="menu">
     <div class="container">
       <div class="CardBox">
-        <img src="../../../assets/img/FinishFlag.svg" alt="" id="Flag" />
+        <img
+          src="../../../assets/img/reaction/finish-flag.svg"
+          alt=""
+          id="Flag"
+        />
         <div class="AvatarBox">
           <img
             *ngIf="finishedGoodNas"
             (click)="DisplayDriver()"
             id="FlipArrow"
-            src="../../../assets/img/FlipArrow.svg"
+            src="../../../assets/img/reaction/flip-arrow.svg"
             alt=""
           />
           <div class="AvatarPic">
@@ -19,7 +23,7 @@
             />
             <img
               class="avatar-sparkles"
-              src="../../../assets/img/SmallTrophySticker.svg"
+              src="../../../assets/img/reaction/small-trophy-sticker.svg"
               alt=""
               *ngIf="finishedGoodNas && !DriverCard"
             />
@@ -31,7 +35,7 @@
             />
             <img
               id="nascar-label"
-              src="../../../assets/img/NascarLabel.svg"
+              src="../../../assets/img/reaction/nascar-label.svg"
               alt=""
               *ngIf="DriverCard"
             />
@@ -53,35 +57,35 @@
           <img
             class="ImgMessage"
             *ngIf="finishedGood"
-            src="../../../assets/img/FantasticJob.svg"
+            src="../../../assets/img/reaction/fantastic-job.svg"
             alt=""
           />
 
           <img
             class="ImgMessage"
             *ngIf="finishedBad"
-            src="../../../assets/img/BetterLuckNext.svg"
+            src="../../../assets/img/reaction/better-luck-next.svg"
             alt=""
           />
 
           <img
             class="BottomImg"
             *ngIf="finishedBad"
-            src="../../../assets/img/OldCar.svg"
+            src="../../../assets/img/reaction/old-car.svg"
             alt=""
           />
 
           <img
             class="ImgMessage"
             *ngIf="finishedGoodNas"
-            src="../../../assets/img/FasterThanADriver.svg"
+            src="../../../assets/img/reaction/faster-than-a-driver.svg"
             alt=""
           />
 
           <img
             class="BottomImg"
             *ngIf="finishedGoodNas"
-            src="../../../assets/img/MainTrophySticker.svg"
+            src="../../../assets/img/reaction/main-trophy-sticker.svg"
             alt=""
           />
         </div>
@@ -89,20 +93,20 @@
       <div class="NavBar">
         <img
           class="btn"
-          src="../../../assets/img/HomeIcon.svg"
+          src="../../../assets/img/reaction/home-icon.svg"
           alt=""
           (click)="redirect('')"
         />
         <img
           class="btn"
           (click)="displayLeaderBoard()"
-          src="../../../assets/img/LeaderboardIcon.svg"
+          src="../../../assets/img/reaction/leaderboard-icon.svg"
           alt=""
         />
         <img
           class="btn"
           (click)="resetGame()"
-          src="../../../assets/img/PlayIcon.svg"
+          src="../../../assets/img/reaction/play-icon.svg"
           alt=""
         />
       </div>

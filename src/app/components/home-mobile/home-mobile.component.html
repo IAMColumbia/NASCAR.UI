@@ -20,7 +20,7 @@
     </p>
   </div>
   <div id="m-link-box">
-    <div id="trivia-box">
+    <div id="trivia-box" (click)="redirect('trivia')">
       <div id="trivia-content">
         <h1>Trivia</h1>
         <p id="trivia-copy">
@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <div id="reaction-box">
+    <div id="reaction-box" (click)="redirect('reaction-game')">
       <div id="reaction-content">
         <h1>Are you faster than a NASCAR driver?</h1>
         <p id="reaction-copy">
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div id="activity-box">
+    <div id="activity-box" (click)="redirect('activity')">
       <div id="activity-content">
         <h1>Activity Book & Pages</h1>
         <p id="activity-copy">

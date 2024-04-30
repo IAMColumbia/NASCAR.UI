@@ -73,7 +73,7 @@
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -108,8 +108,8 @@
     .footer {
         width:170.69px;
         bottom: 0;
-        left: 55%;
-        transform: translateX(-55%);
+        left: 57%;
+        transform: translateX(-57%);
     
     }
     

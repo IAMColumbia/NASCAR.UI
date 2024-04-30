@@ -12,6 +12,7 @@ import { TriviaComponent } from './components/trivia/trivia.component';
 import { HomeMobileComponent } from './components/home-mobile/home-mobile.component';
 import { HomeDesktopComponent } from './components/home-desktop/home-desktop.component';
 import { TriviaMenuComponent } from './components/trivia/trivia-menu/trivia-menu.component';
+import { TeamComponent } from './components/team/team.component';
 import { TriviaPlayComponent } from './components/trivia/trivia-play/trivia-play.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { httpInterceptProviders } from './interceptors';
@@ -21,8 +22,6 @@ import { EndScreenComponent } from './components/trivia/end-screen/end-screen.co
 import { ActivityComponent } from './components/activity/activity.component';
 import { ProcessComponent } from './components/process/process.component';
 import { ReactionEndComponent } from './components/reaction-time/reaction-end/reaction-end.component';
-
-
 
 @NgModule({
   declarations: [
@@ -35,6 +34,7 @@ import { ReactionEndComponent } from './components/reaction-time/reaction-end/re
     HomeMobileComponent,
     HomeDesktopComponent,
     TriviaMenuComponent,
+    TeamComponent,
     TriviaPlayComponent,
     ActivityComponent,
     SpinnerComponent,
@@ -43,7 +43,6 @@ import { ReactionEndComponent } from './components/reaction-time/reaction-end/re
     EndScreenComponent,
     ProcessComponent,
     ReactionEndComponent
-
   ],
   imports: [
     BrowserModule,

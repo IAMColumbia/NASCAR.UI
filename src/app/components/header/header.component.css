@@ -1,6 +1,7 @@
 header {
+    position: relative;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
     color: #D4D4D4;
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-size: 24px;
@@ -8,6 +9,8 @@ header {
     font-weight: 500;
     line-height: normal; 
     }
+
+
 
 a {
     color: #D4D4D4;

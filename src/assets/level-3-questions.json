@@ -28,7 +28,7 @@
             "questionText": "What is the oldest active NASCAR Cup Series team?",
             "short": false,
             "options": [{
-                "text": "Wood Brother Racing",
+                "text": "Wood Brothers Racing",
                 "chosen": false,
                 "correct": true
             },
@@ -94,7 +94,7 @@
             }
         ],
         "correct": false,
-        "explanation": "Johnson, a NASCAR Hall of Famer, who still races part time for his Legacy Motor Club team, won a record five consecutive NASCAR Cup Series championships 2006-2010."
+        "explanation": "Johnson, a NASCAR Hall of Famer, who still races part time for his Legacy Motor Club team, won a record five consecutive NASCAR Cup Series championships from 2006-2010."
         },
         {
             "questionText": "Which driver won the inaugural NASCAR Xfinity Series race in Chicago?",

@@ -16,6 +16,7 @@
     width: 79.1%;
     right:0;
     top:0;
+    z-index: -1;
 }
 
 #blurb{

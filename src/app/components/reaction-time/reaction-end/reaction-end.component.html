@@ -1,0 +1,111 @@
+<div id="end-screen">
+  <div class="menu" *ngIf="finished">
+    <div class="container">
+      <div class="CardBox">
+        <img src="../../../assets/img/FinishFlag.svg" alt="" id="Flag" />
+        <div class="AvatarBox">
+          <img
+            *ngIf="finishedGoodNas"
+            (click)="DisplayDriver()"
+            id="FlipArrow"
+            src="../../../assets/img/FlipArrow.svg"
+            alt=""
+          />
+          <div class="AvatarPic">
+            <img
+              class="Avatar"
+              src="{{ intToAvatar(user.Avatar) }}"
+              *ngIf="!DriverCard"
+            />
+            <img
+              class="avatar-sparkles"
+              src="../../../assets/img/SmallTrophySticker.svg"
+              alt=""
+              *ngIf="finishedGoodNas && !DriverCard"
+            />
+
+            <img
+              class="Avatar"
+              src="{{ drivers[driverIndex].avatar }}"
+              *ngIf="DriverCard"
+            />
+            <img
+              id="nascar-label"
+              src="../../../assets/img/NascarLabel.svg"
+              alt=""
+              *ngIf="DriverCard"
+            />
+          </div>
+        </div>
+        <div class="ScoreBox">
+          <div class="ScoreTitle" *ngIf="!DriverCard">{{ user.Username }}</div>
+          <div class="showScore" *ngIf="!DriverCard">
+            <p>{{ reactionTime }} ms</p>
+          </div>
+          <div class="ScoreTitle" *ngIf="DriverCard">
+            {{ drivers[driverIndex].name }}
+          </div>
+          <div class="showScore" *ngIf="DriverCard">
+            <p>{{ drivers[driverIndex].score }} ms</p>
+          </div>
+        </div>
+        <div class="GraphicBox">
+          <img
+            class="ImgMessage"
+            *ngIf="finishedGood"
+            src="../../../assets/img/FantasticJob.svg"
+            alt=""
+          />
+
+          <img
+            class="ImgMessage"
+            *ngIf="finishedBad"
+            src="../../../assets/img/BetterLuckNext.svg"
+            alt=""
+          />
+
+          <img
+            class="BottomImg"
+            *ngIf="finishedBad"
+            src="../../../assets/img/OldCar.svg"
+            alt=""
+          />
+
+          <img
+            class="ImgMessage"
+            *ngIf="finishedGoodNas"
+            src="../../../assets/img/FasterThanADriver.svg"
+            alt=""
+          />
+
+          <img
+            class="BottomImg"
+            *ngIf="finishedGoodNas"
+            src="../../../assets/img/MainTrophySticker.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="NavBar">
+        <img
+          class="btn"
+          src="../../../assets/img/HomeIcon.svg"
+          alt=""
+          (click)="redirect('')"
+        />
+        <img
+          class="btn"
+          (click)="displayLeaderBoard()"
+          src="../../../assets/img/LeaderboardIcon.svg"
+          alt=""
+        />
+        <img
+          class="btn"
+          (click)="resetGame()"
+          src="../../../assets/img/PlayIcon.svg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>

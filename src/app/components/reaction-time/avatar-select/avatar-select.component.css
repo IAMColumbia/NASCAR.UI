@@ -87,6 +87,11 @@
     align-content: space-evenly;
 }
 
+#helmet{
+    width: 22.11%;
+    height: 30.34%;
+}
+
 .HelmetGrid img:hover {
     background-color: #83b4ca;
     border-radius: 20px;
@@ -95,8 +100,8 @@
 .CardBox {
     display: flex;
     align-items: center;
-    width: 345px;
-    height: 585px;
+    width: 100%;
+    height: 80.93%;
     background-color: #DAF0F8;
     border: 6px solid #FFFFFF;
     border-radius: 25px;
@@ -119,8 +124,8 @@
 #Flag{
     position: absolute;
     top: -6%;
-    width: 138px;
-    height: 72px;
+    width: 42.99%;
+    height: 10.89%;
 }
 
 .NavBar {
@@ -143,13 +148,8 @@
 }
 
 .menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-content: flex-end;
     width: 100%;
     height: 100%;
-    flex-wrap: nowrap;
 }
 
 .menu .btn {
@@ -158,17 +158,9 @@
     margin-top: 5px;
 }
 
-.menu-content{
-    width: 100%;
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
-    gap: 3%;
-}
-
 .container{
+    width: 84.73%;
+    height: 77.58%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,6 +171,7 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    gap: 3%;
 }
 
 /* Minimum width for laptops. */
@@ -187,10 +180,6 @@
         width: 430px;
         height: 100dvh;
         margin: auto;
-    }
-
-    #pop-up{
-        width: 370px;
     }
 } /* closes 769px+ */
 

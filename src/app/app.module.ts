@@ -18,9 +18,10 @@ import { httpInterceptProviders } from './interceptors';
 import { AvatarSelectComponent } from './components/reaction-time/avatar-select/avatar-select.component';
 import { ReactionMenuComponent } from './components/reaction-time/reaction-menu/reaction-menu.component';
 import { EndScreenComponent } from './components/trivia/end-screen/end-screen.component';
-
 import { ActivityComponent } from './components/activity/activity.component';
 import { ProcessComponent } from './components/process/process.component';
+import { ReactionEndComponent } from './components/reaction-time/reaction-end/reaction-end.component';
+
 
 
 @NgModule({
@@ -40,7 +41,9 @@ import { ProcessComponent } from './components/process/process.component';
     AvatarSelectComponent,
     ReactionMenuComponent,
     EndScreenComponent,
-    ProcessComponent
+    ProcessComponent,
+    ReactionEndComponent
+
   ],
   imports: [
     BrowserModule,

@@ -26,20 +26,20 @@ export class AvatarSelectComponent {
   userID: number = 0;
   username: string = "";
   tempUsername: string ="";
-  selectedAvatar: string = "../../../../assets/img/WhiteHelmet.svg";
+  selectedAvatar: string = "../../../../assets/img/player-avatars/WhiteHelmet.svg";
   avatarList: string[] = [
-    "../../../../assets/img/BlackHelmet.svg",
-    "../../../../assets/img/BlueHelmet.svg",
-    "../../../../assets/img/DarkBlueHelmet.svg",
-    "../../../../assets/img/GrayHelmet.svg",
-    "../../../../assets/img/GreenHelmet.svg",
-    "../../../../assets/img/LightBlueHelmet.svg",
-    "../../../../assets/img/LimeHelmet.svg",
-    "../../../../assets/img/OrangeHelmet.svg",
-    "../../../../assets/img/PinkHelmet.svg",
-    "../../../../assets/img/PurpleHelmet.svg",
-    "../../../../assets/img/RedHelmet.svg",
-    "../../../../assets/img/TealHelmet.svg"
+    "../../../../assets/img/player-avatars/BlackHelmet.svg",
+    "../../../../assets/img/player-avatars/BlueHelmet.svg",
+    "../../../../assets/img/player-avatars/DarkBlueHelmet.svg",
+    "../../../../assets/img/player-avatars/GrayHelmet.svg",
+    "../../../../assets/img/player-avatars/GreenHelmet.svg",
+    "../../../../assets/img/player-avatars/LightBlueHelmet.svg",
+    "../../../../assets/img/player-avatars/LimeHelmet.svg",
+    "../../../../assets/img/player-avatars/OrangeHelmet.svg",
+    "../../../../assets/img/player-avatars/PinkHelmet.svg",
+    "../../../../assets/img/player-avatars/PurpleHelmet.svg",
+    "../../../../assets/img/player-avatars/RedHelmet.svg",
+    "../../../../assets/img/player-avatars/TealHelmet.svg"
   ];
   
   ngOnInit(): void {
@@ -211,43 +211,43 @@ export class AvatarSelectComponent {
   
   avatarToInt(){
     switch(this.selectedAvatar){
-      case "../../../../assets/img/WhiteHelmet.svg":{
+      case "../../../../assets/img/player-avatars/WhiteHelmet.svg":{
         return 1;
       }
-      case "../../../../assets/img/BlackHelmet.svg":{
+      case "../../../../assets/img/player-avatars/BlackHelmet.svg":{
         return 2;
       }
-      case "../../../../assets/img/BlueHelmet.svg":{
+      case "../../../../assets/img/player-avatars/BlueHelmet.svg":{
         return 3;
       }
-      case "../../../../assets/img/DarkBlueHelmet.svg":{
+      case "../../../../assets/img/player-avatars/DarkBlueHelmet.svg":{
         return 4;
       }
-      case "../../../../assets/img/GrayHelmet.svg":{
+      case "../../../../assets/img/player-avatars/GrayHelmet.svg":{
         return 5;
       }
-      case "../../../../assets/img/GreenHelmet.svg":{
+      case "../../../../assets/img/player-avatars/GreenHelmet.svg":{
         return 6;
       }
-      case "../../../../assets/img/LightBlueHelmet.svg":{
+      case "../../../../assets/img/player-avatars/LightBlueHelmet.svg":{
         return 7;
       }
-      case "../../../../assets/img/LimeHelmet.svg":{
+      case "../../../../assets/img/player-avatars/LimeHelmet.svg":{
         return 8;
       }
-      case "../../../../assets/img/OrangeHelmet.svg":{
+      case "../../../../assets/img/player-avatars/OrangeHelmet.svg":{
         return 9;
       }
-      case "../../../../assets/img/PinkHelmet.svg":{
+      case "../../../../assets/img/player-avatars/PinkHelmet.svg":{
         return 10;
       }
-      case "../../../../assets/img/PurpleHelmet.svg":{
+      case "../../../../assets/img/player-avatars/PurpleHelmet.svg":{
         return 11;
       }
-      case "../../../../assets/img/RedHelmet.svg":{
+      case "../../../../assets/img/player-avatars/RedHelmet.svg":{
         return 12;
       }
-      case "../../../../assets/img/TealHelmet.svg":{
+      case "../../../../assets/img/player-avatars/TealHelmet.svg":{
         return 13;
       }
     }
@@ -257,55 +257,55 @@ export class AvatarSelectComponent {
   intToAvatar(avatar: number){
     switch(avatar){
       case 1:{
-        this.selectedAvatar = "../../../assets/img/WhiteHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/WhiteHelmet.svg";
         break;
       }
       case 2:{
-        this.selectedAvatar = "../../../assets/img/BlackHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/BlackHelmet.svg";
         break;
       }
       case 3:{
-        this.selectedAvatar = "../../../assets/img/BlueHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/BlueHelmet.svg";
         break;
       }
       case 4:{
-        this.selectedAvatar = "../../../assets/img/DarkBlueHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/DarkBlueHelmet.svg";
         break;
       }
       case 5:{
-        this.selectedAvatar = "../../../assets/img/GrayHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/GrayHelmet.svg";
         break;
       }
       case 6:{
-        this.selectedAvatar = "../../../assets/img/GreenHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/GreenHelmet.svg";
         break;
       }
       case 7:{
-        this.selectedAvatar = "../../../assets/img/LightBlueHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/LightBlueHelmet.svg";
         break;
       }
       case 8:{
-        this.selectedAvatar = "../../../assets/img/LimeHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/LimeHelmet.svg";
         break;
       }
       case 9:{
-        this.selectedAvatar = "../../../assets/img/OrangeHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/OrangeHelmet.svg";
         break;
       }
       case 10:{
-        this.selectedAvatar = "../../../assets/img/PinkHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/PinkHelmet.svg";
         break;
       }
       case 11:{
-        this.selectedAvatar = "../../../assets/img/PurpleHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/PurpleHelmet.svg";
         break;
       }
       case 12:{
-        this.selectedAvatar = "../../../assets/img/RedHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/RedHelmet.svg";
         break;
       }
       case 13:{
-        this.selectedAvatar = "../../../assets/img/TealHelmet.svg";
+        this.selectedAvatar = "../../../../assets/img/player-avatars/TealHelmet.svg";
         break;
       }
     }

@@ -1,0 +1,34 @@
+{
+    "drivers": [
+        {
+            "name": "Daniel Suarez",
+            "score": 310,
+            "avatar": "../../../../assets/img/nascar-avatars/suarez-avatar.png"
+        },
+        {
+            "name": "Bubba Wallace",
+            "score": 300,
+            "avatar": "../../../../assets/img/nascar-avatars/wallace-avatar.png"
+        },
+        {
+            "name": "Ryan Blaney",
+            "score": 290,
+            "avatar": "../../../../assets/img/nascar-avatars/blaney-avatar.png"
+        },
+        {
+            "name": "Corey LaJoie",
+            "score": 280,
+            "avatar": "../../../../assets/img/nascar-avatars/lajoie-avatar.png"
+        },
+        {
+            "name": "Tyler Reddick",
+            "score": 240,
+            "avatar": "../../../../assets/img/nascar-avatars/reddick-avatar.png"
+        },
+        {
+            "name": "Austin Cindric",
+            "score": 200,
+            "avatar": "../../../../assets/img/nascar-avatars/cindric-avatar.png"
+        }
+    ]
+}

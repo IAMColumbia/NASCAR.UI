@@ -7,15 +7,26 @@
 
 #mobile{
     display: block;
+    height: 90%;
 }
 
 #desktop{
     display: none;
 }
 
+@media all and (min-height: 667px){
+    #mobile{
+        height: 100%;
+    }
+}
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
+    
+  } /* closes 769px+ */
+  
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
     #desktop{
         display: block;
         overflow: hidden;
@@ -27,9 +38,4 @@
     #mobile{
         display: none;
     }
-  } /* closes 769px+ */
-  
-/* Minimum width for desktop screens. */
-@media all and (min-width: 1024px) {
-    
   } /* closes 1024px+ */

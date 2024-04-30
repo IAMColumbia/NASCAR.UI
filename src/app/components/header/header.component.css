@@ -1,14 +1,11 @@
 header {
     width: 100%;
-    position: fixed;
     z-index: 1;
-    top: 0px;
-
     color: #D4D4D4;
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-size: 24px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal; 
     }
 
@@ -22,7 +19,7 @@ a {
 }
 
 .container {
-    margin: 27.54px 28.89px;
+    margin: 7.44% 7.44%;
 }
 
 nav {
@@ -34,27 +31,23 @@ nav {
 #nav-left{
     display: flex;  
     flex-direction: row;
-    row-gap: 10px;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 #team-link{
-    text-align: right;
+    text-align: left;
     padding-left: 1.5px;
-    margin-left: 8px;
+    width: 100px;
 }
 
 #process-link{
-    text-align: center;
-    margin-right: 8px;
+    text-align: left;
+    width: 100px;
 }
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
-  header{
-    font-size: 40px;
-    font-weight: 500;
-  }
-
   .container {
     margin: 43px 50px;
 }
@@ -63,16 +56,24 @@ a:hover {
     font-style: italic;
 }
 
-#team-link{
-    margin-left: 40px;
+#home-link a:hover{
+    font-style: italic;
 }
 
-#process-link{
-    margin-right: 40px;
-}
+
 } /* closes 769px+ */
 
 /* Minimum width for desktop screens. */
 @media all and (min-width: 1024px) {
-
+    header{
+        font-size: 40px;
+        font-weight: 500;
+      }
+    #team-link{
+        width: 200px;
+    }
+    
+    #process-link{
+        width: 200px;
+    }
 } /* closes 1024px+ */

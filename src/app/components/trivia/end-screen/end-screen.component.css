@@ -1,0 +1,375 @@
+.button{
+    cursor: pointer;
+}
+
+#end-screen{
+    width: 100%;
+    height: 100%;
+    background: url('../trivia-play/assets/level-1-bg.svg');
+}
+
+.center{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.end-card-position{
+    position:absolute;
+    top: 9.47%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#card-6{
+    width: 84.35%;
+    height: 75.69%;
+    border-radius: 25px;
+
+    z-index: 1;
+}
+
+.card-6-color{
+    background: #013D6D;
+}
+
+#card-5{
+    width: 84.35%;
+    height: 71.07%;
+    border-radius: 25px;
+
+    z-index: 2;
+}
+
+.card-5-color{
+    background: #024F8E;
+}
+
+#card-4{
+    width: 84.35%;
+    height: 66.45%;
+    border-radius: 25px;
+
+    z-index: 3;
+}
+
+.card-4-color{
+    background: #02759F;
+}
+
+#card-3{
+    width: 84.35%;
+    height: 61.83%;
+    border-radius: 25px;
+
+    z-index: 4;
+}
+
+.card-3-color{
+    background: #64B8D7;
+}
+
+#card-2{
+    width: 84.35%;
+    height: 57.33%;
+    border-radius: 25px;
+
+    z-index: 5;
+}
+
+.card-2-color{
+    background: #97D3E9;
+}
+
+#card-1{
+    width: 84.35%;
+    height: 52.71%;
+    border-radius: 25px;
+    z-index: 6;
+}
+
+.card-1-color{
+    background: #DAF0F8;
+}
+
+.end-card-content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+
+    color: #000000;
+
+    padding-bottom: 5px;
+}
+
+#continue-btn{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    width: 73.84vw;
+    height: 5.91vh;
+    bottom: -12%; 
+}
+
+#end-round{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16.19%;
+
+    gap: 35px;
+}
+
+#end-round h1{
+    font-style: normal;
+    font-weight:600;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+
+    color: #000000;
+}
+
+#end-round h3{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 27px;
+    text-align: center;
+
+    color: #000000;
+}
+
+#explanation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6.04vh;
+
+    gap: 15px;
+}
+
+#explanation h2{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.end-copy{
+    width: 80%;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.end-copy-flag{
+    height: 25%;
+    width: 50%;
+}
+
+#answer{
+    min-width: 36.61%;
+    min-height: 30px;
+    max-width: 78.11%;
+    
+    border-radius: 7px;
+
+    transform: skew(-15deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#answer p {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #000000;
+}
+
+#user-answer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 120.46px
+}
+
+.correct-answer{
+    background: #19B253;
+    border: 6px solid #19B253;
+}
+
+.wrong-answer{
+    background: #E5002B;
+    border: 6px solid #E5002B;
+}
+
+#correct-answer p {
+    transform: skew(15deg);
+    text-align: center;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+
+    color: #000000;
+}
+
+#flag-icon{
+    width: 42.55%;
+    height: 16.8%;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: -8%;
+}
+
+#swipe-arrow{
+    position: absolute;
+    right: 10.46%;
+    bottom: 5%;
+}
+
+#points{
+    width: 102.24px;
+    height: 36.69px;
+    border-radius: 15px;
+    background: #00294A;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+
+    #end-screen{
+        width: 430px;
+        height: 100%;
+        margin: auto;
+    }
+
+    #card-1{
+        width: 329px;
+        height: 428px;
+    }
+
+    #card-2{
+        width: 329px;
+        height: 467px;
+    }
+
+    #card-3{
+        width: 329px;
+        height: 505px;
+    }
+
+    #card-4{
+        width: 329px;
+        height: 544px;
+    }
+
+    #card-5{
+        width: 329px;
+        height: 583px;
+    }
+
+    #card-6{
+        width: 329px;
+        height: 622px;
+    }
+  } /* closes 769px+ */
+  
+  /* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+  
+  } /* closes 1024px+ */
+
+@media all and (max-height: 667px) {
+    .end-copy{
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    #answer p {
+        font-size: 14px;
+        line-height: 14px;;
+    }
+
+    #flag-icon{
+        top: -11%;
+    }
+
+    .end-copy-flag{
+        height: 17.5%;
+        width: 35%;
+    }
+    #explanation h2{
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    #user-answer{
+        min-width: 36.61%
+    }
+    
+    #correct-answer p {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    #end-round{
+        padding-top: 14%;
+    
+        gap: 20px;
+    }
+    
+    #end-round h1{
+        font-size: 32px;
+        line-height: 42px;
+    }
+    
+    #end-round h3{
+        font-size: 20px;
+        line-height: 22px;
+    }
+}

@@ -1,5 +1,8 @@
 export class LeaderBoardRecord{
-    rank: number = 0;
-    user: string = "Bill";
-    score: number = 0;
+    ID?: number;
+    Score?: number;
+    Username?: string ="";
+    Type: string = "";
+    Avatar?: number;
+
 }

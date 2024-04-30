@@ -1,17 +1,58 @@
 <div id="container">
-  <app-header></app-header>
-  <img id="blurb" src="../../../assets/img/Group 105.png" />
+  <!-- <img id="blurb" src="../../../assets/img/Group 105.png" /> -->
+  <div id="blurb">
+    <figure id="logo-box">
+      <img
+        id="columbia-logo"
+        src="../../../assets/img/reaction/columbia-logo.svg"
+      />
+      <section id="x-copy">x</section>
+      <img
+        id="nascar-logo"
+        src="../../../assets/img/reaction/nascar-logo.svg"
+      />
+    </figure>
+
+    <p id="copy">
+      Students from Columbia College Chicago partnered with NASCAR Chicago to
+      research, design, and develop interactive activities for the street race
+      held in July 2024.
+    </p>
+    <p id="hook">
+      Interested in attending <br />
+      <a id="ticket-link" href="https://www.nascarchicago.com/"
+        >The NASCAR Chicago Street Race?</a
+      >
+    </p>
+  </div>
   <div id="m-link-box">
-    <img
-      id="m-trivia"
-      src="../../../assets/img/Group 102.png"
-      routerLink="/trivia"
-    />
-    <img
-      id="m-reaction"
-      src="../../../assets/img/Group 103.png"
-      routerLink="/reaction-game"
-    />
-    <img id="m-activity" src="../../../assets/img/Group 104.png" />
+    <div id="trivia-box" (click)="redirect('trivia')">
+      <div id="trivia-content">
+        <h1>Trivia</h1>
+        <p id="trivia-copy">
+          Play three rounds of NASCAR Chicago trivia to test your knowledge!
+        </p>
+      </div>
+    </div>
+
+    <div id="reaction-box" (click)="redirect('reaction-game')">
+      <div id="reaction-content">
+        <h1>Are you faster than a NASCAR driver?</h1>
+        <p id="reaction-copy">
+          Test your reaction time against some of the fastest drivers in the
+          world.
+        </p>
+      </div>
+    </div>
+
+    <div id="activity-box" (click)="redirect('activity')">
+      <div id="activity-content">
+        <h1>Activity Book & Pages</h1>
+        <p id="activity-copy">
+          Grab an activity book at the race or download family-friendly original
+          coloring and activity pages at home.
+        </p>
+      </div>
+    </div>
   </div>
 </div>

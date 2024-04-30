@@ -1,6 +1,7 @@
 {
     "questions": [{
-        "questionText": "Which female driver is competing in this year's NASCAR Xfinity Series race?",
+        "questionText": "What driver made history as the first female driver to win a race in the NASCAR K&N Pro Series West?",
+        "short": false,
         "options": [{
                 "text": "Danica Patrick",
                 "chosen": false
@@ -21,10 +22,11 @@
             }
         ],
         "correct": false,
-        "explanation": "At 22 years old, Hailie Deegan made history as the first female driver to win a race in the NASCAR K&N Pro Series West. Deegan will be driving the No.15 Ford Mustang in this year race."
+        "explanation": "Hailie Deegan is now racing full time in the NASCAR Xfinity Series, driving the No. 15 Ford Mustang for AM Racing."
         },
         {
-            "questionText": "In what year was NASCAR founded?",
+            "questionText": "In what year was the first NASCAR race?",
+            "short": true,
             "options": [{
                 "text": "1950",
                 "chosen": false
@@ -48,6 +50,7 @@
         },
         {
             "questionText": "What is NASCAR’s top racing series called?",
+            "short": false,
             "options": [{
                 "text": "NASCAR World Championship Series",
                 "chosen": false
@@ -67,10 +70,11 @@
             }
         ],
         "correct": false,
-        "explanation": "NASCAR Cup Series is known as the most elite of all of their series and is what helped6 put them on the map."
+        "explanation": "The Cup Series is the most elite level of NASCAR's three national series. The Grant Park 165 is Chicago's NASCAR Cup Series race."
         },
         {
-            "questionText": "Which NASCAR driver is known as the “The Intimidator”?",
+            "questionText": "Who is the reigning NASCAR Cup Series champion?",
+            "short": false,
             "options": [{
                 "text": "Kyle Busch",
                 "chosen": false
@@ -80,22 +84,23 @@
                 "chosen": false
             },
             {
-                "text": "Richard Petty",
+                "text": "Chase Elliott",
                 "chosen": false
             },
             {
-                "text": "Dale Earnhardt Sr.",
+                "text": "Ryan Blaney",
                 "chosen": false,
                 "correct": true
             }
         ],
         "correct": false,
-        "explanation": "Famously known for his skills behind the wheel and aggressive driving style, Earnhardt earned the nickname when he was pushed towards the infield; despite driving on the grass, he still came out in the lead."
+        "explanation": "Blaney won the NASCAR Cup Series championship in 2023, which was also his first national series title."
         },
         {
             "questionText": "Which car manufacturer is NOT involved with NASCAR?",
+            "short": true,
             "options": [{
-                "text": "Mercedes",
+                "text": "Dodge",
                 "chosen": false,
                 "correct": true
             },
@@ -113,7 +118,7 @@
             }
         ],
         "correct": false,
-        "explanation": "The current cars used in the Xfinity race are Chevrolet Camaro, Ford Mustang, and Toyota Supra."
+        "explanation": "The current manufacturers competing in NASCAR are Chevrolet, Ford, and Toyota."
         }
     ]
 }

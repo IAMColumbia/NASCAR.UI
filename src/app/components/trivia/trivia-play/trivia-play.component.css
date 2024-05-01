@@ -1,4 +1,11 @@
+#container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 #trivia{
+    position: relative;
     width: 100%;
     height: 100%;
     background: #00294A url(./assets/level-1-bg.svg);
@@ -8,6 +15,21 @@
     background-size: cover;
 
     padding: 34.87% 7.69% 
+}
+
+#confetti{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    margin: 0;
+    padding: 0;
+}
+
+#confetti img{
+    width: 100%;
+    height: 100%;
 }
 
 #content{
@@ -232,7 +254,16 @@
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
-    #trivia{
+    #streak{
+        width: 48px;
+        height: 48px;
+    }
+
+    #confetti{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /*#trivia{
         padding: 136px 30px
     }
 
@@ -251,10 +282,6 @@
     
     #question-text{
         font-size: 28px;
-    }
-    #streak{
-        width: 48px;
-        height: 48px;
     }
     
     #timer{
@@ -300,7 +327,7 @@
     .answer-choice-short{
         width:136px;
         height: 126px;
-    }
+    } */
   } /* closes 769px+ */
 
   @media all and (max-height: 667px) {

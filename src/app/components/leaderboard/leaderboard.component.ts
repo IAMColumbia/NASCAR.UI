@@ -121,26 +121,26 @@ export class LeaderboardComponent {
       }
 
       case 20:{
-        return "../../../assets/img/nascar-avatars/suarez-avatar.png"
+        return "../../../assets/img/nascar-avatars/suarez.png"
         
       }
       case 21:{
-        return "../../../assets/img/nascar-avatars/wallace-avatar.png"
+        return "../../../assets/img/nascar-avatars/wallace.png"
         
       }
       case 22:{
-        return "../../../assets/img/nascar-avatars/blaney-avatar.png"
+        return "../../../assets/img/nascar-avatars/blaney.png"
         
       }
       case 23:{
-        return "../../../assets/img/nascar-avatars/lajoie-avatar.png"
+        return "../../../assets/img/nascar-avatars/lajoie.png"
         
       }
       case 24:{
-        return "../../../assets/img/nascar-avatars/reddick-avatar.png"
+        return "../../../assets/img/nascar-avatars/reddick.png"
       }
       case 25:{
-        return "../../../assets/img/nascar-avatars/cindric-avatar.png"
+        return "../../../assets/img/nascar-avatars/cindric.png"
       }
     }
     return "../../../assets/img/player-avatars/WhiteHelmet.svg";

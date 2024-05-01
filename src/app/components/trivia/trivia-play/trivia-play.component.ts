@@ -15,6 +15,8 @@ export class TriviaPlayComponent {
   started: boolean = false;
   questionDisplay: boolean = false;
   answerDisplay: boolean = false;
+  confetti: boolean = false;
+  x:boolean = false;
 
   questionNum: number = 0;
   score: number = 0;
@@ -47,28 +49,33 @@ export class TriviaPlayComponent {
       this.score += (this.difficulty * 100);
       this.questions[this.questionNum].correct = true;
       this.streak++;
+      this.confetti = true;
     }
     else{
       this.streak = 0;
+      this.x = true;
     }
 
     //if last question go to end screen
     if(questionNumber === this.questions.length){
       setTimeout(() => {
+        this.confetti = false;
         const questions = this.questions;
         const score = this.score;
         this.StopQuestionTimer();
         this.ResetQuiz();
         this.results.emit({questions, score})
-      },500);
+      },1300);
     }
     else{
       setTimeout(() => {
+        this.confetti = false;
+        this.x = false;
         this.questionNum++;
         this.answerDisplay = false;
         this.timer = 2;
         this.DisplayQuestion();
-      },500);
+      },1300);
     }
   }
 
@@ -103,7 +110,7 @@ export class TriviaPlayComponent {
 
   ResetQuestionTimer(){
     this.StopQuestionTimer();
-    this.timer = 30;
+    this.timer = 15;
   }
   
   StartTimer(){

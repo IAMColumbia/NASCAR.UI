@@ -8,10 +8,5 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   constructor(private router: Router){}
-refresh(){
-  this.router.navigate(['/reaction-game']).then(()=>{
-    window.location.reload();
-  });
-  
-}
+
 }

@@ -1,49 +1,82 @@
 header {
-    background: white;
-    color: black;
+    position: relative;
     width: 100%;
-    font-size: 18px;
-    line-height: 1;
-    position: fixed;
-    z-index: 1;
-    top: 0px;
-}
+    z-index: 100;
+    color: #D4D4D4;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+    }
+
+
 
 a {
-    color: inherit;
-    display: inline-block;
-    padding: 15px 12px;
-    line-height: inherit;
+    color: #D4D4D4;
     cursor: pointer;
-    font-size: inherit;
-    font-family: inherit;
     background: none;
     border: medium;
     text-decoration: none;
+    margin: 0;
 }
 
 .container {
-    margin: 0px auto;
-    max-width: 1010px;
-    position: relative;
-}
-
-a.logo {
-    display: inline-block;
-    padding: 15px 12px;
-    line-height: inherit;
-    cursor: pointer;
-    font-size: inherit;
-    font-family: inherit;
-    border: medium;
-}
-
-a:hover {
-    background-color: #e72929;
-    color: white;
+    margin: 7.44% 7.44%;
 }
 
 nav {
-    vertical-align: top;
-    float: right;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+#nav-left{
+    display: flex;  
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#team-link{
+    text-align: left;
+    padding-left: 1.5px;
+    width: 100px;
+}
+
+#process-link{
+    text-align: left;
+    width: 100px;
+}
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+  .container {
+    margin: 43px 50px;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+#home-link a:hover{
+    font-style: italic;
+}
+
+
+} /* closes 769px+ */
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+    header{
+        font-size: 40px;
+        font-weight: 500;
+      }
+    #team-link{
+        width: 200px;
+    }
+    
+    #process-link{
+        width: 200px;
+    }
+} /* closes 1024px+ */

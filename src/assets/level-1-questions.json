@@ -1,0 +1,124 @@
+{
+    "questions": [{
+        "questionText": "How many stars are in the Chicago flag?",
+        "short": true,
+        "options": [{
+                "text": "3",
+                "chosen": false
+            },
+            {
+                "text": "5",
+                "chosen": false
+            },
+            {
+                "text": "4",
+                "chosen": false,
+                "correct": true
+                
+            },
+            {
+                "text": "1",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "../../../../assets/img/trivia/chicago-flag.png"
+        },
+        {
+            "questionText": "What type of pizza is Chicago known for?",
+            "short": false,
+            "options": [{
+                "text": "Thin Crust",
+                "chosen": false
+            },
+            {
+                "text": "Deep Dish",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "Stuffed Crust",
+                "chosen": false
+            },
+            {
+                "text": "Hawaiian",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "The classic Chicago Deep Dish pizza was created in Pizzeria Uno in 1943."
+        },
+        {
+            "questionText": "What is Chicago's most popular nickname?",
+            "short": false,
+            "options": [{
+                "text": "Empire City",
+                "chosen": false
+            },
+            {
+                "text": "Windy City",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "City of Wind",
+                "chosen": false
+            },
+            {
+                "text": "The Chi",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "The city's unique location conditions and urban structure create the perfect combination for strong winds to be felt."
+        },
+        {
+            "questionText": "What does the black and white checkered flag signify in a NASCAR race?",
+            "short": false,
+            "options": [{
+                "text": "End of Race",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "One lap remaing",
+                "chosen": false
+            },
+            {
+                "text": "Race stage has ended",
+                "chosen": false
+            },
+            {
+                "text": "Caution",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "Each car remaining on the track must cross the start-finish line and pass under the checkered flag to have its finishing position officially scored."
+        },
+        {
+            "questionText": "What does the first A in NASCAR stand for?",
+            "short": true,
+            "options": [{
+                "text": "Auto",
+                "chosen": false
+            },
+            {
+                "text": "Assembly",
+                "chosen": false
+            },
+            {
+                "text": "Association",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "Associating",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "NASCAR fully stands for National Association for Stock Car Auto Racing"
+        }
+    ]
+}

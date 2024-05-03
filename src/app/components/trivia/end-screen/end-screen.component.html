@@ -1,0 +1,203 @@
+<div id="end-screen">
+  <div
+    id="card-1"
+    class="end-card-position"
+    [ngClass]="{
+          'card-1-color': card1 === 1,
+          'card-2-color': card1 === 2,
+          'card-3-color': card1 === 3,
+          'card-4-color': card1 === 4,
+          'card-5-color': card1 === 5,
+          'card-6-color': card1 === 6,
+        }"
+    (click)="NextCard()"
+  >
+    <img id="flag-icon" src="../../../../assets/img/trivia/level-1-flag.svg" />
+    <div id="end-round" *ngIf="card1 === 1">
+      <div>
+        <h1>LEVEL {{ difficulty }}</h1>
+        <h3>COMPLETED</h3>
+      </div>
+
+      <div id="points">
+        <p>{{ score }} pts</p>
+      </div>
+
+      <img
+        *ngIf="score <= difficulty * 100"
+        src="../../../../assets/img/reaction/better-luck-next.svg"
+      />
+      <img
+        *ngIf="score == difficulty * 500"
+        src="../../../../assets/img/trivia/good-job.png"
+      />
+      <img
+        *ngIf="score > difficulty * 100 && score < difficulty * 500"
+        src="../../../../assets/img/trivia/keep-it-up.png"
+      />
+    </div>
+    <div id="explanation" *ngIf="card1 != 1">
+      <h2>Question {{ card1 - 1 }}</h2>
+      <p class="end-copy">{{ questions[endRoundIndex].questionText }}</p>
+      <div id="answer" class="correct-answer">
+        <p>{{ GetCorrectAnswer() }}</p>
+      </div>
+      <p
+        *ngIf="
+          questions[endRoundIndex].explanation !=
+          '../../../../assets/img/trivia/chicago-flag.png'
+        "
+        class="end-copy"
+      >
+        {{ questions[endRoundIndex].explanation }}
+      </p>
+      <img
+        *ngIf="
+          questions[endRoundIndex].explanation ==
+          '../../../../assets/img/trivia/chicago-flag.png'
+        "
+        class="end-copy-flag"
+        src="{{ questions[endRoundIndex].explanation }}"
+      />
+      <div id="user-answer">
+        <p>You answered:</p>
+        <div
+          id="answer"
+          [ngClass]="{
+                'correct-answer': GetCorrectAnswer() === GetUserAnswer(),
+                'wrong-answer': GetCorrectAnswer() != GetUserAnswer(),
+              }"
+        >
+          <p>{{ GetUserAnswer() }}</p>
+        </div>
+      </div>
+    </div>
+    <img id="swipe-arrow" src="../../../../assets/img/trivia/swipe-arrow.svg" />
+  </div>
+  <div
+    id="card-2"
+    class="end-card-content end-card-position"
+    [ngClass]="{
+          'card-1-color': card2 === 1,
+          'card-2-color': card2 === 2,
+          'card-3-color': card2 === 3,
+          'card-4-color': card2 === 4,
+          'card-5-color': card2 === 5,
+          'card-6-color': card2 === 6,
+        }"
+  >
+    <label *ngIf="card2 != 1">
+      Question {{ card2 - 1 }}
+      <img
+        *ngIf="!questions[card2 - 2].correct"
+        src="../../../../assets/img/trivia/incorrect-icon.svg"
+      />
+      <img
+        *ngIf="questions[card2 - 2].correct"
+        src="../../../../assets/img/trivia/correct-icon.svg"
+      />
+    </label>
+  </div>
+  <div
+    id="card-3"
+    class="end-card-content end-card-position"
+    [ngClass]="{
+          'card-1-color': card3 === 1,
+          'card-2-color': card3 === 2,
+          'card-3-color': card3 === 3,
+          'card-4-color': card3 === 4,
+          'card-5-color': card3 === 5,
+          'card-6-color': card3 === 6,
+        }"
+  >
+    <label *ngIf="card3 != 1">
+      Question {{ card3 - 1 }}
+      <img
+        *ngIf="!questions[card3 - 2].correct"
+        src="../../../../assets/img/trivia/incorrect-icon.svg"
+      />
+      <img
+        *ngIf="questions[card3 - 2].correct"
+        src="../../../../assets/img/trivia/correct-icon.svg"
+      />
+    </label>
+  </div>
+  <div
+    id="card-4"
+    class="end-card-content end-card-position"
+    [ngClass]="{
+          'card-1-color': card4 === 1,
+          'card-2-color': card4 === 2,
+          'card-3-color': card4 === 3,
+          'card-4-color': card4 === 4,
+          'card-5-color': card4 === 5,
+          'card-6-color': card4 === 6,
+        }"
+  >
+    <label *ngIf="card4 != 1">
+      Question {{ card4 - 1 }}
+      <img
+        *ngIf="!questions[card4 - 2].correct"
+        src="../../../../assets/img/trivia/incorrect-icon.svg"
+      />
+      <img
+        *ngIf="questions[card4 - 2].correct"
+        src="../../../../assets/img/trivia/correct-icon.svg"
+      />
+    </label>
+  </div>
+  <div
+    id="card-5"
+    class="end-card-content end-card-position"
+    [ngClass]="{
+          'card-1-color': card5 === 1,
+          'card-2-color': card5 === 2,
+          'card-3-color': card5 === 3,
+          'card-4-color': card5 === 4,
+          'card-5-color': card5 === 5,
+          'card-6-color': card5 === 6,
+        }"
+  >
+    <label *ngIf="card5 != 1">
+      Question {{ card5 - 1 }}
+      <img
+        *ngIf="!questions[card5 - 2].correct"
+        src="../../../../assets/img/trivia/incorrect-icon.svg"
+      />
+      <img
+        *ngIf="questions[card5 - 2].correct"
+        src="../../../../assets/img/trivia/correct-icon.svg"
+      />
+    </label>
+  </div>
+  <div
+    id="card-6"
+    class="end-card-content end-card-position"
+    [ngClass]="{
+          'card-1-color': card6 === 1,
+          'card-2-color': card6 === 2,
+          'card-3-color': card6 === 3,
+          'card-4-color': card6 === 4,
+          'card-5-color': card6 === 5,
+          'card-6-color': card6 === 6,
+        }"
+  >
+    <label *ngIf="card6 != 1">
+      Question {{ card6 - 1 }}
+      <img
+        *ngIf="!questions[card6 - 2].correct"
+        src="../../../../assets/img/trivia/incorrect-icon.svg"
+      />
+      <img
+        *ngIf="questions[card6 - 2].correct"
+        src="../../../../assets/img/trivia/correct-icon.svg"
+      />
+    </label>
+    <img
+      id="continue-btn"
+      class="button"
+      src="../../../../assets/img/trivia/continue-btn.svg"
+      (click)="NextLevel()"
+    />
+  </div>
+</div>

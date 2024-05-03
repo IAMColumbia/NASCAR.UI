@@ -1,0 +1,125 @@
+{
+    "questions": [{
+        "questionText": "Who has the most wins in NASCAR Cup Series history?",
+        "short": false,
+        "options": [{
+                "text": "Kyle Busch",
+                "chosen": false
+            },
+            {
+                "text": "Ricky Rudd",
+                "chosen": false
+            },
+            {
+                "text": "Richard Petty",
+                "chosen": false,
+                "correct": true
+                
+            },
+            {
+                "text": "Kyle Petty",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "Nicknamed \"The King,\" Richard Petty captured an impressive 200 NASCAR Cup Series wins during his career."
+        },
+        {
+            "questionText": "What is the oldest active NASCAR Cup Series team?",
+            "short": false,
+            "options": [{
+                "text": "Wood Brothers Racing",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "Front Row Motorsports",
+                "chosen": false
+            },
+            {
+                "text": "Rick Ware Racing",
+                "chosen": false
+            },
+            {
+                "text": "RFK Racing",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "Founded in 1950 by Glen Wood, Wood Brothers Racing has participated in more than 1700 NASCAR Cup Series races."
+        },
+        {
+            "questionText": "Who won the inaugural NASCAR Cup Series race in Chicago?",
+            "short": false,
+            "options": [{
+                "text": "Corey LaJoie",
+                "chosen": false
+            },
+            {
+                "text": "Shane van Gisbergen",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "Chase Elliot",
+                "chosen": false
+            },
+            {
+                "text": "Ryan Blaney",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "Gisbergen made history when he won his first NASCAR Cup Series race in his debut, making him the first one to do so in 60 years since Johnny Rutherford."
+        },
+        {
+            "questionText": "Who has won the most consecutive NASCAR Cup Series championships?",
+            "short": false,
+            "options": [{
+                "text": "William Byron",
+                "chosen": false
+            },
+            {
+                "text": "Jimmie Johnson",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "Richard Petty",
+                "chosen": false
+            },
+            {
+                "text": "Kyle Busch",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "Johnson, a NASCAR Hall of Famer, who still races part time for his Legacy Motor Club team, won a record five consecutive NASCAR Cup Series championships from 2006-2010."
+        },
+        {
+            "questionText": "Which driver won the inaugural NASCAR Xfinity Series race in Chicago?",
+            "short": false,
+            "options": [
+            {
+                "text": "Justin Allgaier",
+                "chosen": false
+            },
+            {
+                "text": "Sammy Smith",
+                "chosen": false
+            },
+            {
+                "text": "Austin Hill",
+                "chosen": false
+            },
+            {
+                "text": "Cole Custer",
+                "chosen": false,
+                "correct": true
+            }
+        ],
+        "correct": false,
+        "explanation": "Cole Custer won the 2023 NASCAR Xfinity Series race in Chicago before going on to win the NASCAR Xfinity Series Championship later that year."
+        }
+    ]
+}

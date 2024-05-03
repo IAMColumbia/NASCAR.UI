@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'nascarui'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9087F571CD7843DAA9F39FBE4BCC2FB8 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F70268642B394ADB8CCBDB59817F0097 }}
           package: .

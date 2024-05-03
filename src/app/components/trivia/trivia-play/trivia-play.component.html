@@ -1,10 +1,10 @@
 <div id="container">
-  <figure id="confetti" *ngIf="confetti">
-    <img src="../../../../assets/img/trivia/confetti.gif" />
-  </figure>
-  <figure id="confetti" *ngIf="x">
-    <img src="../../../../assets/img/trivia/X.gif" />
-  </figure>
+  <img
+    id="confetti"
+    *ngIf="confetti"
+    src="../../../../assets/img/trivia/confetti.gif"
+  />
+  <img id="confetti" *ngIf="x" src="../../../../assets/img/trivia/X.gif" />
   <div id="trivia">
     <div id="score">{{ score }} pts</div>
 

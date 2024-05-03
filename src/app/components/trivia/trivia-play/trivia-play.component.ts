@@ -31,6 +31,8 @@ export class TriviaPlayComponent {
     this.DisplayQuestion();
   }
 
+  constructor(){}
+
   DisplayQuestion(){
     this.questionDisplay = true;
     setTimeout(()=>{
@@ -41,7 +43,6 @@ export class TriviaPlayComponent {
 
   Answer(questionNumber: number, option: any){
     this.StopQuestionTimer();
-
     option.chosen = true;
 
     //if correct

@@ -124,8 +124,9 @@
     #logos{   
         width: 169.9px;
         height: auto;
-        left: 45%;
-        transform: translateX(-45%);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-110%);
     }
 
     #logos img{

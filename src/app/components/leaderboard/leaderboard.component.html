@@ -1,0 +1,183 @@
+<div id="leaderboard">
+  <div id="container">
+    <div id="content">
+      <div id="title"><p>SCORES</p></div>
+      <div id="scores">
+        <div id="score" *ngFor="let score of scores">
+          <div id="avatar-box">
+            <img id="avatar" src="{{ intToAvatar(score.avatar) }}" />
+            <img
+              id="nascar-label"
+              src="../../../assets/img/reaction/nascar-label.svg"
+              *ngIf="score.type == 'driver'"
+            />
+          </div>
+          <div id="username">{{ score.username }}</div>
+          <div id="time">
+            <p>{{ score.score }} ms</p>
+          </div>
+        </div>
+      </div>
+      <div id="paginator">
+        <svg
+          id="back-arrow"
+          width="12"
+          height="15"
+          viewBox="0 0 12 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          (click)="previousPage()"
+        >
+          <path
+            d="M10.3678 2L2 7.5L10.3678 13"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <div class="v-line"></div>
+        <p id="page-num">{{ index + 1 }}</p>
+        <div class="v-line"></div>
+        <svg
+          id="next-arrow"
+          width="12"
+          height="15"
+          viewBox="0 0 12 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          (click)="nextPage()"
+        >
+          <path
+            d="M1.68965 2L10.0575 7.5L1.68965 13"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div id="nav-bar">
+        <svg
+          id="home-icon"
+          viewBox="0 0 97 92"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          (click)="redirect('')"
+        >
+          <rect
+            x="-3"
+            y="3"
+            width="91"
+            height="86"
+            rx="10"
+            transform="matrix(-1 0 0 1 91 0)"
+            fill="#127BC0"
+            stroke="white"
+            stroke-width="6"
+            stroke-linejoin="round"
+          />
+          <rect
+            width="14.0317"
+            height="24.7619"
+            rx="3"
+            transform="matrix(-1 0 0 1 68.0932 47.2383)"
+            fill="white"
+          />
+          <rect
+            width="13.9959"
+            height="24.4928"
+            rx="3"
+            transform="matrix(-1 0 0 1 44.1567 47.238)"
+            fill="white"
+          />
+          <rect
+            width="11.5556"
+            height="12.381"
+            transform="matrix(-1 0 0 1 54.8868 47.238)"
+            fill="white"
+          />
+          <path
+            d="M51.5731 22.5467C50.379 21.1943 48.2698 21.1943 47.0756 22.5467L27.4651 44.7555C25.7548 46.6924 27.13 49.7412 29.7139 49.7412H68.9348C71.5187 49.7412 72.8939 46.6924 71.1836 44.7555L51.5731 22.5467Z"
+            fill="white"
+          />
+        </svg>
+        <svg
+          id="leaderboard-icon"
+          viewBox="0 0 124 103"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="-3"
+            y="3"
+            width="118"
+            height="97"
+            rx="10"
+            transform="matrix(-1 0 0 1 118 0)"
+            fill="#7D050F"
+            stroke="white"
+            stroke-width="6"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M76.0529 25.7501C76.0529 29.3733 76.3569 44.2996 75.6771 47.647C74.9972 50.9943 73.927 53.6457 72.6708 56.2076C71.4146 58.7696 69.343 60.8019 67.7016 62.1884C66.0603 63.5749 64.3012 64.2886 62.5246 64.2886C60.7481 64.2886 58.9889 63.5749 57.3476 62.1884C55.7063 60.8019 53.6347 58.7696 52.3784 56.2076C51.1222 53.6457 50.052 50.5564 49.3722 47.209C48.6923 43.8616 48.9964 29.3733 48.9964 25.7501L63.2762 25.7501L76.0529 25.7501Z"
+            fill="white"
+            stroke="white"
+            stroke-width="3"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M75.8855 29.2529H82C82 33.4813 81.5414 42.6146 81.2357 43.6294C80.8535 44.8979 78.5606 50.8176 72.446 53.7774"
+            stroke="white"
+            stroke-width="5"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M49.1637 29.2529H43.0492C43.0492 33.4813 43.5078 42.6146 43.8135 43.6294C44.1957 44.8979 46.4886 50.8176 52.6032 53.7774"
+            stroke="white"
+            stroke-width="5"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M53.3381 78.3018C53.3381 76.2112 54.3447 74.2061 56.1364 72.7278C57.9281 71.2495 60.3582 70.4189 62.8921 70.4189C65.4259 70.4189 67.856 71.2495 69.6478 72.7278C71.4395 74.2061 72.446 76.2112 72.446 78.3018L62.8921 78.3018H53.3381Z"
+            fill="white"
+            stroke="white"
+            stroke-width="3"
+            stroke-linejoin="round"
+          />
+          <rect
+            width="4.40952"
+            height="5.25525"
+            transform="matrix(-1 0 0 1 65.0969 64.2886)"
+            fill="white"
+          />
+        </svg>
+        <svg
+          id="home-icon"
+          viewBox="0 0 97 92"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          (click)="playGame()"
+        >
+          <rect
+            x="-3"
+            y="3"
+            width="91"
+            height="86"
+            rx="10"
+            transform="matrix(-1 0 0 1 91 0)"
+            fill="#FFD304"
+            stroke="white"
+            stroke-width="6"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M66.9253 44.9554C68.8065 46.1302 68.8065 48.8698 66.9253 50.0446L38.839 67.5839C36.8409 68.8317 34.25 67.3951 34.25 65.0393L34.25 29.9607C34.25 27.6049 36.8409 26.1683 38.8391 27.4161L66.9253 44.9554Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

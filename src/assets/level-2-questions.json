@@ -1,0 +1,124 @@
+{
+    "questions": [{
+        "questionText": "What driver made history as the first female driver to win a race in the NASCAR K&N Pro Series West?",
+        "short": false,
+        "options": [{
+                "text": "Danica Patrick",
+                "chosen": false
+            },
+            {
+                "text": "Sara Christian",
+                "chosen": false
+            },
+            {
+                "text": "Janet Guthrie",
+                "chosen": false
+                
+            },
+            {
+                "text": "Hailie Deegan",
+                "chosen": false,
+                "correct": true
+            }
+        ],
+        "correct": false,
+        "explanation": "Hailie Deegan is now racing full time in the NASCAR Xfinity Series, driving the No. 15 Ford Mustang for AM Racing."
+        },
+        {
+            "questionText": "In what year was the first NASCAR race?",
+            "short": true,
+            "options": [{
+                "text": "1950",
+                "chosen": false
+            },
+            {
+                "text": "1948",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "1994",
+                "chosen": false
+            },
+            {
+                "text": "1946",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "The first ever race event for NASCAR was held on February 15, 1948, at the beach-road course in Daytona."
+        },
+        {
+            "questionText": "What is NASCAR’s top racing series called?",
+            "short": false,
+            "options": [{
+                "text": "NASCAR World Championship Series",
+                "chosen": false
+            },
+            {
+                "text": "NASCAR Cup series",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "NASCAR Craftsman Truck series",
+                "chosen": false
+            },
+            {
+                "text": "NASCAR XFINITY series",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "The Cup Series is the most elite level of NASCAR's three national series. The Grant Park 165 is Chicago's NASCAR Cup Series race."
+        },
+        {
+            "questionText": "Who is the reigning NASCAR Cup Series champion?",
+            "short": false,
+            "options": [{
+                "text": "Kyle Busch",
+                "chosen": false
+            },
+            {
+                "text": "Ross Chastain",
+                "chosen": false
+            },
+            {
+                "text": "Chase Elliott",
+                "chosen": false
+            },
+            {
+                "text": "Ryan Blaney",
+                "chosen": false,
+                "correct": true
+            }
+        ],
+        "correct": false,
+        "explanation": "Blaney won the NASCAR Cup Series championship in 2023, which was also his first national series title."
+        },
+        {
+            "questionText": "Which car manufacturer is NOT involved with NASCAR?",
+            "short": true,
+            "options": [{
+                "text": "Dodge",
+                "chosen": false,
+                "correct": true
+            },
+            {
+                "text": "Chevrolet",
+                "chosen": false
+            },
+            {
+                "text": "Ford",
+                "chosen": false
+            },
+            {
+                "text": "Toyota",
+                "chosen": false
+            }
+        ],
+        "correct": false,
+        "explanation": "The current manufacturers competing in NASCAR are Chevrolet, Ford, and Toyota."
+        }
+    ]
+}

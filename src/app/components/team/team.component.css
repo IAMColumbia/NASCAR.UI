@@ -1,0 +1,234 @@
+#base {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-size: cover;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    position:relative;
+}
+
+nav {
+    position: relative;
+}
+
+.TabLeft {
+    width: 50%;
+}
+
+.TabLeft img{
+    width: 100%;
+    margin-top: 200px;
+}
+
+.TabRight{
+    right: 0;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 300px;
+}
+
+.ImgRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.ImgRowSelf {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 150px;
+}
+
+.RowItemSelf {
+    position: relative;
+    display: inline-block;
+ }
+
+ .RowItem {
+    position: relative;
+    display: block;
+    padding: 75px;
+    width: 50%;
+ }
+
+ .ParentImage {
+  display: block; /* Ensures that the parent image fills the container */
+  height: auto;
+    width: 100%;
+ }
+
+.ParentImage img {
+    width: 10%;
+}
+
+ .ChildImage1 {
+    position: absolute;
+    top: 68.2%; 
+    left: 22.95%; 
+    transform: translate(-50%, -50%); 
+    width: 3.8%;
+ }
+
+ .ChildImage2 {
+    position: absolute;
+    top: 68.2%; 
+    left: 27.25%; 
+    transform: translate(-50%, -50%); 
+    width: 3.8%;
+ }
+
+ .ChildImage3 {
+    position: absolute;
+    top: 68.2%; 
+    left: 31.7%; 
+    transform: translate(-50%, -50%); 
+    width: 3.8%;
+ }
+
+ #hide {
+    visibility: hidden;
+ }
+
+ @media only screen and (max-width: 600px) {
+
+    #hide {
+        display: none;
+    }
+
+    .TabLeft img{
+        width: 150%;
+        margin-top: 100px;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    .TabRight {
+        padding-top:20px;
+        padding-bottom: 20px;
+    }
+
+    .RowItem {
+        position: relative;
+        display: block;
+        padding-bottom: 75px;
+        padding: 0;
+        width: 80%;
+     }
+
+     .ParentImage {
+        display: block; /* Ensures that the parent image fills the container */
+        height: auto; 
+        padding-bottom: 40px;
+       }
+
+       .ChildImage1 {
+        position: absolute;
+        top: 68.2%; 
+        left: 14.5%; 
+        transform: translate(-50%, -50%); 
+        width: 5%;
+     }
+
+     .ChildImage2 {
+        position: absolute;
+        top: 68.2%; 
+        left: 21.15%; 
+        transform: translate(-50%, -50%); 
+        width: 5%;
+     }
+
+     .ChildImage3 {
+        position: absolute;
+        top: 68.2%; 
+        left: 27.9%; 
+        transform: translate(-50%, -50%); 
+        width: 5%;
+     }
+}
+
+  @media only screen and (min-width: 1024px) {
+    
+    #mobile {
+        display: none;
+    }
+
+    
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+ 
+    #hide {
+        display: none;
+    }
+
+    .TabLeft img{
+        width: 150%;
+        margin-top: 100px;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    .TabRight {
+        padding-top:20px;
+        padding-bottom: 20px;
+    }
+
+    .RowItem {
+        position: relative;
+        display: block;
+        padding-bottom: 75px;
+        padding: 0;
+        width: 80%;
+     }
+
+     .ParentImage {
+        display: block; /* Ensures that the parent image fills the container */
+        height: auto; 
+        padding-bottom: 40px;
+       }
+
+       .ChildImage1 {
+        position: absolute;
+        top: 68.2%; 
+        left: 14.5%; 
+        transform: translate(-50%, -50%); 
+        width: 5%;
+     }
+
+     .ChildImage2 {
+        position: absolute;
+        top: 68.2%; 
+        left: 21.15%; 
+        transform: translate(-50%, -50%); 
+        width: 5%;
+     }
+
+     .ChildImage3 {
+        position: absolute;
+        top: 68.2%; 
+        left: 27.9%; 
+        transform: translate(-50%, -50%); 
+        width: 5%;
+     }
+
+
+  }

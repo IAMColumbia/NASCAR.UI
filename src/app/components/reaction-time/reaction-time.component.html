@@ -1,39 +1,66 @@
-<div class="menu" *ngIf="!started && !showLeaderBoard">
-  <div class="container">
-    <div class="menu-content">
-      <h1>Are You Faster Than A NASCAR Driver?</h1>
-    </div>
-    <div id="btn-box">
-      <button class="btn" id="play-btn" type="button" (click)="startGame()">
-        Play
+<div id="base">
+  <div id="reaction-game">
+    <div id="overlay" *ngIf="tooSoon || instructions"></div>
+    <div id="pop-up" *ngIf="tooSoon">
+      <div id="pop-up-title">FALSE START!</div>
+      <img id="pop-up-flag" src="../../../assets/img/reaction/black-flag.png" />
+      <div id="pop-up-message">
+        Tap the screen when
+        <br />
+        the flag is waved!
+      </div>
+      <button
+        id="pop-up-btn-try-again"
+        class="pop-up-button"
+        (click)="resetGame()"
+      >
+        TRY AGAIN
       </button>
-      <br />
-      <button class="btn" id="leader-board-btn" (click)="displayLeaderBoard()">
-        Leaderboard
+    </div>
+
+    <div id="pop-up" *ngIf="instructions">
+      <div id="pop-up-title">GET READY!</div>
+      <img id="pop-up-flag" src="../../../assets/img/reaction/green-flag.png" />
+      <div id="pop-up-message">Tap the screen when<br />the flag is waved!</div>
+      <button
+        id="pop-up-btn-instruction"
+        class="pop-up-button"
+        (click)="startGame()"
+      >
+        START
       </button>
     </div>
+
+    <app-reaction-menu
+      *ngIf="Menu && !started && !showLeaderBoard && !finished && !AvatarSelect"
+      (displayAvatarMenu)="displayAvatarSelect($event)"
+      (leaderboard)="displayLeaderBoard($event)"
+    ></app-reaction-menu>
+
+    <div
+      class="clickable-area"
+      (click)="realClick()"
+      *ngIf="started && !finished && !showLeaderBoard"
+    >
+      <div class="start" *ngIf="started && !showMid && !showClick"></div>
+      <div class="mid" *ngIf="showMid"></div>
+      <div class="click" *ngIf="showClick && !showMid"></div>
+    </div>
+
+    <app-avatar-select
+      *ngIf="AvatarSelect && !showLeaderBoard"
+      (menu)="displayMenu($event)"
+      (play)="setUser($event)"
+    ></app-avatar-select>
+
+    <app-reaction-end
+      *ngIf="finished"
+      [user]="user"
+      [reactionTime]="reactionTime"
+      (leaderboard)="displayLeaderBoard($event)"
+      (playAgain)="resetGame()"
+    ></app-reaction-end>
+
+    <app-leaderboard *ngIf="showLeaderBoard"></app-leaderboard>
   </div>
 </div>
-
-<div class="clickable-area" (click)="realClick()" *ngIf="started && !finished">
-  <div class="start" *ngIf="started && !showMid && !showClick"></div>
-  <div class="mid" *ngIf="showMid"></div>
-  <div class="click" *ngIf="showClick && !showMid"></div>
-</div>
-
-<div class="menu" *ngIf="finished && !showLeaderBoard">
-  <div class="container">
-    <div class="menu-content">
-      <h1>SCORE</h1>
-      <h2>Attempt: {{ reactionTime }}</h2>
-      <h2>Best: 100ms</h2>
-    </div>
-    <div id="btn-box">
-      <button class="btn" (click)="resetGame()">Play Again</button>
-      <br />
-      <button class="btn" (click)="displayLeaderBoard()">Leaderboard</button>
-    </div>
-  </div>
-</div>
-
-<app-leaderboard *ngIf="showLeaderBoard"></app-leaderboard>
